@@ -1,0 +1,44 @@
+body {
+    font-family: 'Arial Narrow', arial;
+    background-color :#554bc4;
+}
+h1 {
+    color: #dad4ff;
+    text-shadow: 0 0 3px #000000;
+}
+a {
+    border-radius: 5px;
+    padding: 5px;
+    width: 300px;
+    height: 25px;
+    background-color: #cecaf8;
+    color: black;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+a: :active{
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    background-color: #a49bff;
+    font-weight: bold;
+}
+li {
+    margin-bottom: 3px;
+    font-size: large;
+    list-style-type: none;
+}
+img {
+    padding-top: 100px;
+    padding-right: 250px;
+    float: right;
+}
+#main {
+    margin-left: 75px;
+    margin-top: 75px;
+    display: inline-block;
+}
