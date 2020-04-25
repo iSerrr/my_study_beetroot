@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    color: #000;
+}
+.section_1 {
+    font-family: "Proxima Nova", sans-serif;
+}
+.section_1 .wrapper_icon {
+    display: inline-block;
+}
+.section_1 .icon {
+    width: 64px;
+    height: 64px;
+    background-color: #1275b9;
+    border-radius: 50%;
+    border: 1px solid #1275b9;;
+    text-align: center;
+    display: inline-block;
+    display:  table-cell;
+    vertical-align:  middle;
+    transition: all .1s ease-in;
+}
+.section_1 svg {
+    fill: #fff;
+}
+.section_1 ul {
+    font-size: 0; 
+    text-align: center;
+}
+.section_1 li {
+    display: inline-block;
+    width: 220px;
+    text-align: center;
+    padding-top: 56px;
+    padding-bottom: 66px;
+    margin: 0 50px;
+}
+.section_1 h3 {
+    text-transform: uppercase;
+    margin: 20px 0 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+.section_1 p {
+    margin: 22px 0 0;
+    color: #9d9d9d;
+    font-size: 14px;
+    font-weight: 300;
+}
+.section_1 a:hover svg {
+    fill: #1275b9;
+    transition: all .1s ease-in;
+}
+.section_1 a:hover .icon {
+    background-color: #fff;
+    border: 1px solid #1275b9;
+    transition: all .1s ease-in;
+}
