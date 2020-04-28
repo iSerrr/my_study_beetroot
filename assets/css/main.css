@@ -53,9 +53,9 @@ section .icon_boxes ul {
     font-size: 0;
 }
 section .icon_boxes ul li {
+    padding: 0 30px;
     float: left;
     background-color: #f7f7f7;
-    padding: 0 30px;
     text-align: center;
     font-size: 15px;
     display: inline-block;
@@ -78,6 +78,7 @@ section .icon_boxes ul li h3 {
     font-size: 21px;
     font-weight: 600;
     text-transform: uppercase;
+    height: 40px;
 }
 section .icon_boxes ul li p {
     padding: 33px 0;
