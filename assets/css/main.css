@@ -22,16 +22,18 @@ section .main {
 section .main li {
     width: 360px;
     height: 440px;
-    padding: 0 102px;
+    padding: 10px 102px;
     background-color: #fff;
     text-align: center;
     box-shadow: 0px 0px 3px #00000050;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 section .main li:nth-child(2) {
     height: 500px;
 }
 section ul li h2 {
-    margin: 30px 0 10px;
     font-family: "MisoRU", sans-serif;
     color: #02995b;
     font-size: 70px;
@@ -39,17 +41,14 @@ section ul li h2 {
     letter-spacing: 1.75px;
 }
 section ul li h3 {
-    margin-top: 24px;
     font-family: "MisoRU", sans-serif;
     font-size: 56px;
     font-weight: 400;
 }
 section ul li p {
-    margin: 15px 0 36px;
     font-size: 18px;
     font-family: 'Lato', sans-serif;    
     font-weight: 300;
     letter-spacing: 0.5px;
     line-height: 26px;
 }
-
