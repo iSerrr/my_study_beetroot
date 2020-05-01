@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Hans Kendrick 3", sans-serif;
+    background-color: #e2e7ec;
+}
+section {
+    margin: 0 auto 0 auto;
+    width: 1120px;
+    height: 1300px;
+}
+.wrapper-content {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.wrapper-content > a {
+    margin-top: 20px;
+}
+.b-box {
+    width: 740px;
+    height: 540px;
+    background: linear-gradient(355deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6727065826330532) 40%, rgba(0,0,0,0) 100%);
+}
+.b-box-bg-img {
+    position: absolute;
+    z-index: -1;
+}
+.b-box-description {
+    
+    margin: 404px 0 0 46px;
+    position: absolute;
+    z-index: 1;
+}
+.date {
+    color: #818181;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.33px;
+}
+.title {
+    width: 433px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.s-box {
+    background-color: #fff;
+    width: 360px;
+    height: 540px;
+    padding-bottom: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.s-box .title {
+    width: 307px;
+    color: #1d1d1d;
+    font-size: 22px;
+}
+.s-box-icon {
+    margin-top: 42px;
+}
+.s-box img ~ * {
+    margin-left: 28px;
+}
+.loading {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    opacity: 0.5;
+    font-size: 11px;
+}
+.loading li {
+    margin-left: 13px;
+}
+.loading li:nth-child(2) {
+    padding: 7px;
+}
