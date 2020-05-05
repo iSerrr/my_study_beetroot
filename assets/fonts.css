@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Futura PT Heavy"; 
+    src: url("fonts/futura-pt-heavy.ttf") format("truetype"); 
+}
+@font-face {
+    font-family: "Proxima Nova"; 
+    src: url("fonts/proxima-nova.ttf") format("truetype"); 
+}
+@font-face {
+    font-family: "Playfair Display"; 
+    src: url("fonts/playfairdisplay-regular.ttf") format("truetype"); 
+}
+@font-face {
+    font-family: "Georgia italic"; 
+    src: url("fonts/georgia-italic.ttf") format("truetype"); 
+}
+@font-face {
+    font-family: "Georgia"; 
+    src: url("fonts/georgia.ttf") format("truetype"); 
+}
