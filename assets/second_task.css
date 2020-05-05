@@ -7,9 +7,9 @@
 section {
     border-top: 1px solid transparent;
     width: 1200px;
-    height: 889px;
     background-color: #464f54;
     margin: 149px auto 0 auto;
+    padding-bottom: 10px;
 }
 .title {
     color: #fff;
@@ -50,14 +50,12 @@ section {
     padding: 0 69px;
     margin: 149px auto 0 auto;
     width: 1064px;
-    height: 751px;
     background-color: #fff;
 }
 .content {
-    padding: 196px 0 202px 55px;
+    padding: 196px 0 20px 55px;
     border-left: 2px solid #e8eced;;
     width: 877px;
-    height: 100%;
 }
 .title p:nth-child(1) {
     color: #767676;
