@@ -2,3 +2,16 @@ nav ul a {
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 18px;
 }
+.basic-nav {
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 2;
+}
+.nav-bg {
+    position: fixed;
+    z-index: 0;
+    width: 100vw;
+    height: 85px;
+    background-color: #1e88e5;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.555);
+}

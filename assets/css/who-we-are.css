@@ -1,0 +1,92 @@
+.who-we-are {
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+}
+.who-we-are h2 {
+    text-align: center;
+    color: #3c3c3c;
+    font-family: "Lato Bold", sans-serif;
+    font-size: 34px;
+    text-transform: uppercase;
+    letter-spacing: 8.95px;
+}
+.who-we-are h2::after {
+    display: block;
+    margin: 0 auto;
+    width:45px;
+    height: 20px;
+    border-bottom:4px solid #dddbdb;
+    content:"";
+}
+.who-we-are > p {
+    text-align: center;
+    width: 561px;
+    color: #3c3c3c;
+    font-family: "Lato Light", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+.who-we-are-main-ul {
+    margin: 60px 0 120px;
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+}
+.who-we-are-main-ul li {
+    color: #646464;
+    color: #282528;
+    font-family: "Lato Bold", sans-serif;
+    font-size: 18px;
+    position: relative;
+    width: 268px;
+    height: 324px;
+    overflow: hidden;
+}
+.who-we-are-main-ul li p {
+    margin-top: 12px;
+    line-height: 18px;
+    width: 120px;
+}
+.who-we-are-main-ul li > p > span {
+    color: #646464;
+    font-size: 14px;
+    font-family: "Lato Light", sans-serif;
+}
+.who-we-are-img img {
+    height: 268px;
+}
+.who-we-are-social {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 268px;
+    height: 268px;
+    background-color: #00aed9;
+    transform: translatey(-268px);
+    transition: 1s;
+}
+.who-we-are-main-ul li:hover .who-we-are-social   {
+    transform: translatey(0px);
+}
+.who-we-are-social > a > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 42px;
+    height: 42px;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    transition: 0.5s;
+}
+.who-we-are-social > a:hover div {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #00aed9;
+}
