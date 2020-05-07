@@ -30,13 +30,13 @@
     font-size: 16px;
     line-height: 24px;
 }
-.who-we-are-main-ul {
+.who-we-are .mainUl {
     margin: 60px 0 120px;
     width: 1170px;
     display: flex;
     justify-content: space-between;
 }
-.who-we-are-main-ul li {
+.who-we-are .mainUl li {
     color: #646464;
     color: #282528;
     font-family: "Lato Bold", sans-serif;
@@ -45,21 +45,38 @@
     width: 268px;
     height: 324px;
     overflow: hidden;
+    perspective: 1000px;
+
 }
-.who-we-are-main-ul li p {
-    margin-top: 12px;
+.who-we-are .mainUl li p {
+    margin-top: 280px;
     line-height: 18px;
     width: 120px;
 }
-.who-we-are-main-ul li > p > span {
+.who-we-are .mainUl li > p > span {
     color: #646464;
     font-size: 14px;
     font-family: "Lato Light", sans-serif;
 }
-.who-we-are-img img {
+.who-we-are .mainUl li .imgBx {
+    position: absolute;
+    transform-origin: top;
+    transform: rotatex(0deg);
+    perspective: 1000px:
+    transform-style: preserve-3d;
+    transition:0.5s;
+    transition-delay: 0.2s;
+}
+.who-we-are .mainUl li:hover .imgBx {
+    transform: rotatex(-90deg);
+    perspective: 1000px:
+    transform-style: preserve-3d;
+    opacity: 0;
+}
+.who-we-are .mainUl li .imgBx img {
     height: 268px;
 }
-.who-we-are-social {
+.who-we-are .mainUl li .socialWraper {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -67,13 +84,18 @@
     width: 268px;
     height: 268px;
     background-color: #00aed9;
-    transform: translatey(-268px);
-    transition: 1s;
+    transform-origin: bottom;
+    transform: rotatex(90deg);
+    transform-style: preserve-3d;
+    transition:0.5s;
+    opacity: 0;
 }
-.who-we-are-main-ul li:hover .who-we-are-social   {
-    transform: translatey(0px);
+.who-we-are .mainUl li:hover .socialWraper {
+    transform: rotatex(0deg);
+    opacity: 1;
+    transition-delay: 0.35s;
 }
-.who-we-are-social > a > div {
+.who-we-are .mainUl li .socialWraper .socialBx > a > div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,7 +108,17 @@
     color: #fff;
     transition: 0.5s;
 }
-.who-we-are-social > a:hover div {
+.who-we-are .mainUl li .socialWraper .socialBx {
+    transition: 0.5s;
+    display: flex;
+    transform: scale(0,0);
+}
+.who-we-are .mainUl li:hover .socialWraper .socialBx {
+    transform: scale(1,1);
+    transition-delay: 0.8s;
+}
+.who-we-are .mainUl li .socialWraper .socialBx > a:hover div {
     background-color: transparent;
     transform: translateY(-10px);
+    transition-delay: 0s;
 }
