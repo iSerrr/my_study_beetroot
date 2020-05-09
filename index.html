@@ -2,20 +2,24 @@
 <html lang="en">
 <head>
 
-    <!-- Підключення скидання стилів -->
-    <link rel="stylesheet" href="assets/css/reset.css">
-
     <!-- Підключення стилів MATERIALIZE -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+    <!-- Підключення скидання стилів -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+
     <!-- Підлючення шрифта PT SANS NARROW -->
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+
+    <!-- Підлючення шрифта Quicksand -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Підключення стилів  навігації-->
     <link rel="stylesheet" href="assets/css/nav-css.css">
 
     <!-- Підключення основних стилів -->
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/ico-moon.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +27,7 @@
     <title>Document</title>
 
 </head>
+
 <body>
     
     <!-- Навігація -->
@@ -35,6 +40,155 @@
         </div>
     </nav>
     <!-- END Навігація -->
+
+    <div class="wrapperBx">
+
+      <div class="conteiner">
+
+        <div class="conteinerBg"></div>
+
+        <div class="content">
+
+          <ul class="nav-auth">
+
+            <li><a href="#sign"">Sign In</a></li>
+
+            <li><a href="#join">Join us<span class="icon-checkmark"></span></a></li>
+
+          </ul>
+
+            <form name="sign" action="#" method="get">
+
+              <div class="sign-inCon" id="sign">
+
+                <h3>Username</h3>
+
+                <input type="text" name="username" id="username" minlength="3" placeholder="example@ex.ua" required>
+                <div class="error">error</div>
+                <h3>Password</h3>
+                
+                <input type="password" name="Password" id="Password" minlength="3" required>
+                <div class="error">error</div>
+
+                <input class="checkbox" name="data_save" type="checkbox" id="keep_me" value="yes"><label for="keep_me">Keep me signed in</label>
+              
+                <button type="submit" class="button">Sign in</button>
+
+                <ul class="forg-creat">
+
+                  <li><a href="#">Forgot password</a></li>
+
+                  <li><a href="#">Create an account</a></li>
+
+                </ul>
+
+              </div>
+
+            </form>
+
+            <form name=join" action="#" method="get">
+
+              <div class="sign-inCon" id="join">
+
+                <h3>Username</h3>
+
+                <input type="text" name="join-username" id="username" minlength="3" placeholder="example@ex.ua" required>
+                <div class="error">error</div>
+                <h3>Password</h3>
+                
+                <input type="password" name="join-password" id="Password" minlength="3" required>
+                <div class="error">error</div>
+
+                <h3>Repeat Password</h3>
+                
+                <input type="password" name="join-password-repeat" id="Password_repeat" minlength="3" required>
+                <div class="error">error</div>
+              
+                <button type="submit" class="button">Join in</button>
+
+              </div>
+
+            </form>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <div class="contact-us">
+
+      <div class="header">
+        <h1>Contact</h1>
+        <p>
+          For new projects, ideas, business or anything
+you'd like to discuss, contact with me!
+        </p>
+      </div>
+      <ul class="content">
+        <li>
+
+          <form action="#" method="get">
+            
+            <input type="text" name="name" id="name" required minlength="3" placeholder="Auskteez Tran">
+
+            <input type="text" name="email" id="email" required minlength="3" placeholder="Your email...">
+
+            <input type="text" name="phone" id="phone" required minlength="9" placeholder="Your phone number...">
+
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your messge..."></textarea>
+            
+          </form>
+
+        </li>
+
+        <li>
+
+          <ul>
+
+            <li>
+              <p>ADDRESS</p>
+              <p>123 City name, Street, City, Country</p>
+
+            </li>
+            <li>
+
+              <p> EMAIL</p>
+              <p>cahee@domain.com</p>
+
+            </li>
+            <li>
+
+              <p>PHONE</p>
+              <p>+012 345 6789</p>
+
+            </li>
+
+          </ul>
+
+        </li>
+      </ul>
+      
+      <div class="footer">
+
+      <div>
+        <p>© 2015 Company. All right reserved.</p>
+
+        <img src="assets/img/task_2/logo-small.png" alt="">
+        
+        <p>Made with love by Auskteez</p>
+
+      </div>
+        
+
+
+
+      </div>
+
+    </div>
+
+
         
 </body>
 

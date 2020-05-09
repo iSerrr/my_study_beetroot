@@ -1,0 +1,243 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.wrapperBx {
+    top: 64px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5eeee;
+}
+.conteiner {
+    position: relative;
+    box-shadow: 0 0 20px rgba(2, 41, 120, 0.1);
+    background-image: linear-gradient(32deg, #3023ae 0%, #c86dd7 100%);    
+    width: 400px;
+    height: 496px;
+    box-shadow: 0px 30px 26px -23px rgba(0,0,0,0.76);
+    color: #fbf6e4;
+}
+.conteiner a {
+    color: #e1c2f1;
+}
+.conteiner a:hover {
+    color: #fff;
+}
+/* Зробив таким чином, тому що, у випадку задання парамтрів фона для .conteiner градієнта та img одночасно, картинка виглядає значно яскравіше ніж у ТЗ */
+.wrapperBx .conteinerBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/task_1/vector_smart_object.png);
+    opacity: .4;
+    z-index: 0;
+}
+.wrapperBx .content {
+    padding: 50px 70px;
+    position: absolute;
+    z-index: 1;
+}
+.wrapperBx .content .nav-auth {
+    display: flex;
+    margin-bottom: 51px;
+}
+.wrapperBx .content .nav-auth li {
+    margin-right: 26px;
+}
+.wrapperBx .content .nav-auth a {
+    font-size: 18px;
+}
+.wrapperBx .content .nav-auth a:hover {
+}
+.wrapperBx .content .nav-auth a:active {
+    border-bottom: 2px solid #e66a64;  
+}
+.wrapperBx .content .sign-inCon input {
+    color: #fff;
+    padding-left: 10px;
+    margin: 10px 0 0;
+    width: 260px;
+    height: 42px;
+    border: 2px solid rgba(191, 185, 204, 0.54);
+    background-color: transparent;
+}
+.wrapperBx .content .sign-inCon input:focus {
+    border: 2px solid #23ae92; 
+}
+.wrapperBx .content .sign-inCon input:focus+label::before {
+    border: 1px solid #23ae92; 
+}
+.wrapperBx .content .sign-inCon h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+.wrapperBx .content .sign-inCon .error {
+    opacity: 0;
+    color: red;
+    font-size: 14px;
+}
+.wrapperBx .content .sign-inCon input:invalid+.error {
+    opacity: 1;
+}
+
+.wrapperBx .content .sign-inCon .checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.wrapperBx .content .sign-inCon .checkbox+label {
+    cursor: pointer;
+    color: rgba(191, 185, 204, 0.54);
+    font-size: 13px;
+    font-weight: 700;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+  }
+.wrapperBx .content .sign-inCon .checkbox+label::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(191, 185, 204, 0.54);
+    transform: translateX(-20px);
+}
+.wrapperBx .content .sign-inCon .checkbox:checked+label::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #23ae92;
+    background-color: #23ae92;
+    content: "\e900";
+    font-family: 'icomoon' !important;
+    color: #fff;
+    font-size: 10px;
+}
+.wrapperBx .content .sign-inCon .checkbox:checked+label {
+    color: #fff;
+}
+.wrapperBx .content .sign-inCon .button{
+    margin-top: 23px;
+    color: #fff;
+    padding-left: 10px;
+    width: 260px;
+    height: 42px;
+    border: 2px solid rgba(191, 185, 204, 0.54);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #23ae92;
+    border: 2px solid #23ae92;
+    transition: all 0.5s;
+}
+.wrapperBx .content .sign-inCon .button:hover {
+    border: 2px solid #fbf6e4;
+}
+.wrapperBx .content .sign-inCon .button:focus {
+    border: 2px solid #fbf6e4;
+}
+.wrapperBx .content .sign-inCon .forg-creat {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.wrapperBx .content .sign-inCon .forg-creat a {
+    font-size: 13px;
+    font-weight: 400;
+    border-bottom: 1px solid #b9b9cc;
+    padding-bottom: 3px;
+}
+
+#sign:not(:target) {
+    display: none;
+}
+#join:not(:target) {
+    display: none;
+}
+.contact-us {
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url(../img/task_2/bg.png);
+    background-size: 100%;
+}
+.contact-us .header {
+    font-size: 17px;
+    margin-top: 50px;
+    margin-bottom: 46px;
+    width: 350px;
+    text-align: center;
+}
+.contact-us .header h1{
+    font-weight: bold;
+    font-size: 90px;
+}
+.contact-us .content {
+    display: flex;
+    justify-content: space-between;
+    width: 1170px;
+}
+.contact-us .content >li {
+    width: 500px;
+}
+.contact-us .content>li input {
+    color: #fff;
+    width: 500px;
+    height: 50px;
+    background-color: #00c4c4;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    border-left: 5px solid #00c4c4;
+    opacity: .5;
+}
+.contact-us .content>li input:nth-child(4) {
+    height: 250px;
+}
+.contact-us .content>li input:focus {
+    border-left: 5px solid #355b82;
+    opacity: 1;
+}
+
+.contact-us .content>li textarea {
+    color: #fff;
+    width: 500px;
+    height: 250px;
+    background-color: #00c4c4;
+    padding-left: 20px;
+    border-left: 5px solid #00c4c4;
+    opacity: .5;
+    padding-top: 15px;
+    margin-bottom: 115px;
+}
+.contact-us .content>li textarea:focus {
+    border-left: 5px solid #355b82;
+    opacity: 1;
+}
+.contact-us .content li ul li p:nth-last-child(2) {
+    font-weight: bold;
+}
+.contact-us .content li ul li {
+    margin-bottom: 10px;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    width: 100%;
+    height: 90px;
+    background-color: #262626;
+    align-items: center;
+}    
+.footer img {
+    height: 27px;
+}    
+.footer di                         
