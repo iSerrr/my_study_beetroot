@@ -1,0 +1,78 @@
+.services  {
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+    background-color:  #70bfff;
+    display: flex;
+    justify-content: center;
+}
+.services .wrapper-services {
+    display: flex;
+    justify-content: space-between;
+    width: 1070px;
+}
+.services .wrapper-services .main {
+    margin-top: 69px;
+    width: 400px;
+}
+.services .wrapper-services .main li {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.services .wrapper-services .main li a {
+    color: #262626;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    height: 100px;
+    transition: all 0.4s ease-in-out;
+}
+.services .wrapper-services .main li a:hover {
+    background-color: #1B96FC;
+    /* color: #fff; */
+}
+.services .wrapper-services .main li a:hover div {
+    border-color: #fff;
+}
+.services .wrapper-services .main li a:hover svg {
+    fill: #fff;
+    transform: scale(1.2);
+}
+.services .wrapper-services .main div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 99px;
+    border-left: 1px solid #9d9d9d;
+}
+.services .wrapper-services .main li a p {
+    text-align: center;
+    width: 300px;
+}
+.services .wrapper-services .main svg {
+    transition: all 0.25s ease-in-out;
+    transform: scale(1);
+    height: 47px;
+}
+.services .wrapper-services .imageBx {
+    position: relative;
+    width: 560px;
+    height: 527px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: url('../img/img_services.png') no-repeat right;
+}
+.services .wrapper-services .imageBx h1 {
+    color: #fff;
+    font-size: 90px;
+    font-weight: 700;
+}
+
