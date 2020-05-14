@@ -1,4 +1,44 @@
+nav {
+    background-color: #1e88e5;
+    position: fixed;
+    width: 100%;
+    height: 46px;
+}
+nav ul {
+    padding-right: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 nav ul a {
+    color: #fff;
     font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
+}
+nav ul li {
+    transition: all 0.5s ease-in-out;
+    padding: 10px 15px;
+}
+nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.384);
+    color: #1e88e5;
+}
+nav ul li:hover a {
+    color: #1e88e5;
+}
+
+.basic-nav {
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 2;
+}
+.nav-bg {
+    position: fixed;
+    z-index: 0;
+    width: 100vw;
+    height: 85px;
+    background-color: #1e88e5;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.555);
 }
