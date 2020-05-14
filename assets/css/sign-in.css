@@ -1,0 +1,140 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+    height: 100vh;
+    color: #fbf6e4;
+    transition: all .5s ease-in-out;
+}
+input {
+    outline: none;
+}
+.formBx {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 496px;
+    box-shadow: 0 0 20px rgba(2, 41, 120, 0.1);
+    background-color: #166a6a;
+    background-image: linear-gradient(32deg, #3023ae 0%, #c86dd7 100%);
+}
+.formBx .imgBG {
+    z-index: -1;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url('../img/task_2/vector_smart_object.png');
+}
+.formBx .content {
+    width: 100%;
+    padding: 52px 70px 60px;
+}
+.formBx .content .nav {
+    margin-bottom: 40px;
+}
+.formBx .content .nav a {
+    margin-right: 26px;
+    padding-bottom: 4px;
+    color: #fbf6e4;
+    font-size: 18px;
+    font-weight: 700;
+    color: #e1c2f1;
+}
+.formBx .content .nav a:hover {
+    color: #fbf6e4;
+    border-bottom: 2px solid #e66a64;
+}
+.formBx .content form .title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.formBx .content form .text  {
+    padding: 0 15px;
+    background-color: transparent;
+    width: 100%;
+    height: 42px;
+    border: 2px solid rgba(191, 185, 204, 0.54);
+    margin-bottom: 18px;
+    color: #fbf6e4;
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+}
+.formBx .content form .text:hover {
+    background-color: rgba(255, 255, 255, 0.082);
+}
+.formBx .content form .text:focus {
+    border-color: #23ae92;
+    background-color: rgba(255, 255, 255, 0.082);
+}
+.formBx .content form .text:invalid {
+    border-color: red;
+}
+#keep-me {
+    opacity: 0;
+}
+.formBx .content form .check {
+    position: relative;
+    padding-left: 5px;
+    cursor: pointer;
+    color: #fbf6e4;
+    font-family: Quicksand;
+    font-size: 13px;
+    font-weight: 700;
+}
+.formBx .content form .check::before {
+    font-size: 10px;
+    font-family: 'icomoon';
+    text-align: center;
+    position: absolute;
+    left: -17px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    content: "";    
+    width: 16px;
+    height: 14px;
+    padding-top: 2px;
+    background-color: #23ae92; 
+}
+.formBx .content form #keep-me:checked+.check::before {
+    content: "\e900"; 
+}
+
+.formBx .content form button {
+    cursor: pointer;
+    width: 261px;
+    height: 42px;
+    margin-top: 41px;
+    background-color: #23ae92;
+    border: 2px solid #23ae92;
+    color: #fbf6e4;
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+.formBx .content form button:hover {
+    border-color: #88d1c2;
+}
+.formBx .content .forgot {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.formBx .content .forgot a{
+    color: #b9b9cc;
+    font-size: 13px;
+    font-weight: 400;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.formBx .content .forgot a:hover {
+    color: #fff;
+}
+
+
+
+
