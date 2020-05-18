@@ -1,0 +1,12 @@
+// Displa flex space-betwen/center
+@mixin dfSC {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+// Displa flex center/center
+@mixin dfCC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

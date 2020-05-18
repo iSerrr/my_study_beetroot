@@ -1,39 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <!-- *Підлючення шрифта Pacifico -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Підключення скидання стилів -->
-    <link rel="stylesheet" href="assets/css/reset.css">
-
-    <!-- Підключення стилів MATERIALIZE -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Підлючення шрифта PT SANS NARROW -->
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
-
-    <!-- Підключення стилів  навігації-->
-    <link rel="stylesheet" href="assets/css/nav-css.css">
+    <!-- *Підлючення шрифта Raleway -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Підключення основних стилів -->
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Document</title>
+  </head>
 
-</head>
-<body>
-    
-    <!-- Навігація -->
-    <nav class="basic-nav">
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="index.html">Task 1</a></li>
-        <li><a href="second_task.html">Task 2</a></li>
+  <body>
+    <!-- Початок header -->
+    <header>
+      <div class="headrer-body">
+        <div class="header-line">
+          <p class="header-line__logo logo logo-black">Cahee</p>
+
+          <nav class="main-menu">
+            <a href="#" class="main-menu__link">HOME</a>
+            <a href="#" class="main-menu__link">ABOUT</a>
+            <a href="#" class="main-menu__link">SERVICES</a>
+            <a href="#" class="main-menu__link">GALLERY</a>
+            <a href="#" class="main-menu__link">BLOG</a>
+            <a href="#" class="main-menu__link">HOME</a>
+            <a href="#" class="main-menu__link">CONTACT</a>
+          </nav>
+        </div>
+        <div class="header-body__title title-h3">
+          <h3>Fresh Life</h3>
+        </div>
+        <div class="header-body__subtitle subtitle subtitle-black">
+          <p>
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+          </p>
+        </div>
+        <div class="header-body__button">
+          <button class="button button-orange">GET FREE NOW</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Кінець header -->
+
+    <!-- Початок блоку about-us -->
+    <section class="about wrapper">
+      <a name="about"></a>
+
+      <div class="about-services-content">
+        <div class="about-services-content__img">
+          <img src="assets/img/about/plate.png" alt="plate" />
+        </div>
+
+        <div class="about-services-content__description">
+          <h2 class="content-title content-title--white">About Us</h2>
+
+          <p class="content__description content__description--white">
+            Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum.
+          </p>
+          <p class="content__description content__description--white">
+            Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error
+            sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+            eaque ipsa quae ab illo inventore.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Кінець блоку about-us -->
+
+    <!-- Початок блоку our-services -->
+    <section class="services wrapper">
+      <a name="services"></a>
+
+      <!-- Початок wrapper-services -->
+      <div class="about-services-content">
+        <!-- Початок список main -->
+        <ul class="about-services-content__list">
+          <li>
+            <a href="#">
+              <p>Online Shopping</p>
+
+              <div class="about-services-content__list__icon-box">
+                <svg>
+                  <use xlink:href="assets/img/services/icon.svg#basket"></use>
+                </svg>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <p>Quality Product</p>
+              <div class="about-services-content__list__icon-box">
+                <svg>
+                  <use xlink:href="assets/img/services/icon.svg#beet"></use>
+                </svg>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <p>Domestic & International Delivery</p>
+              <div class="about-services-content__list__icon-box">
+                <svg>
+                  <use xlink:href="assets/img/services/icon.svg#glob"></use>
+                </svg>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <p>Well Organized</p>
+              <div class="about-services-content__list__icon-box">
+                <svg>
+                  <use xlink:href="assets/img/services/icon.svg#carrot"></use>
+                </svg>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- Кінець список main -->
+
+        <div
+          class="about-services-content__img about-services-content__img--bg"
+        >
+          <h2 class="content-title content-title--white">Our Services</h2>
+        </div>
+      </div>
+      <!-- Кінець wrapper-services -->
+    </section>
+    <!-- Кінець блоку our-services -->
+
+    <!-- Початок блоку gallery -->
+    <section class="gallery">
+      <a name="gallery"></a>
+
+      <h2>Gallery</h2>
+
+      <p>
+        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+
+      <div class="galleryBx">
+        <img src="assets/gallery/img_01.jpg" alt="" />
+
+        <div>
+          <img src="assets/gallery/img_02.jpg" alt="" />
+          <img src="assets/gallery/img_03.jpg" alt="" />
+        </div>
+
+        <img src="assets/gallery/img_04.jpg" alt="" />
+        <img src="assets/gallery/img_05.jpg" alt="" />
+      </div>
+
+      <button>VIEW MORE</button>
+    </section>
+    <!-- Кінець блоку gallery -->
+
+    <!-- Початок блоку subscribe-to-us -->
+    <section class="subscribe-to-us">
+      <div class="subwrapper">
+        <h4>Subscribe To Us</h4>
+        <p>
+          Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+
+        <!-- Початок блоку form-sub -->
+        <div class="form-sub">
+          <form action="#" method="get">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email address..."
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              minlength="4"
+              required
+            />
+            <button>SUBSCRIBE</button>
+          </form>
+        </div>
+        <!-- Кінець блоку form-sub -->
+      </div>
+    </section>
+    <!-- Початок блоку form-sub -->
+
+    <!-- Початок блоку blog -->
+    <section class="blog">
+      <a name="blog"></a>
+
+      <h2>Blog</h2>
+
+      <p>
+        Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit.
+      </p>
+
+      <!-- Початок blog-main -->
+      <ul class="blog-main">
+        <li>
+          <a href="">
+            <div class="blog-img-gradient-content">
+              <p>20 <span>NOV</span></p>
+              <p>
+                Green Smoothies: Too Much of a Good Thing?
+                <br />
+                <span>By Auskteez - 2 hours ago</span>
+              </p>
+            </div>
+            <div class="blog-img">
+              <img src="assets/blog/img_01.jpg" alt="img_01" />
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="">
+            <div class="blog-img-gradient-content">
+              <p>14 <span>NOV</span></p>
+              <p>
+                Growing Food and a “Thirst” for Innovation
+                <br />
+                <span>By Auskteez - 3 hours ago</span>
+              </p>
+            </div>
+            <div class="blog-img">
+              <img src="assets/blog/img_02.jpg" alt="img_01" />
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="">
+            <div class="blog-img-gradient-content">
+              <p>10 <span>NOV</span></p>
+              <p>
+                Pesticides & Food: What You Need to Know
+                <br />
+                <span>By Auskteez - 6 hours ago</span>
+              </p>
+            </div>
+            <div class="blog-img">
+              <img src="assets/blog/img_03.jpg" alt="img_01" />
+            </div>
+          </a>
+        </li>
       </ul>
-    </nav>
-    <!-- END Навігація -->
-        
-</body>
+      <!-- END blog-main -->
 
+      <input class="blog-button" type="button" value="VIEW MORE" />
+    </section>
+    <!-- Кінець блоку blog -->
+
+    <!-- Початок footer -->
+    <section class="contact">
+      <a name="contact"></a>
+
+      <h2>Contact</h2>
+
+      <p>
+        For new projects, ideas, business or anything you'd like to discuss,
+        contact with me!
+      </p>
+
+      <!-- Початок списку contactBx -->
+      <ul class="contactBx">
+        <li>
+          <form id="contact" name="contact" action="#" method="get">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Auskteez Tran"
+            />
+
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Your email..."
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            />
+
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="Your phone number..."
+              pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+            />
+
+            <textarea
+              name="text"
+              id="text"
+              placeholder="Your messge..."
+            ></textarea>
+
+            <button form="contact">Submit</button>
+          </form>
+        </li>
+
+        <li>
+          <!-- Початок підсписку example -->
+          <ul class="example">
+            <li>
+              <p>ADDRESS</p>
+
+              <p>123 City name, Street, City, Country</p>
+            </li>
+
+            <li>
+              <p>EMAIL</p>
+
+              <p>cahee@domain.com</p>
+            </li>
+
+            <li>
+              <p>PHONE</p>
+
+              <p>+012 345 6789</p>
+            </li>
+          </ul>
+          <!-- Кінець підсписку example -->
+        </li>
+      </ul>
+      <!-- Кінець списку contactBx -->
+    </section>
+    <!-- Кінець секції contact -->
+
+    <!-- Початок footer -->
+    <footer>
+      <ul>
+        <li>© 2015 Company. All right reserved.</li>
+
+        <li>Cahee</li>
+
+        <li>
+          Made with <span><a href="#">love</a></span> by Auskteez
+        </li>
+      </ul>
+    </footer>
+    <!-- Кінець footer -->
+  </body>
 </html>
