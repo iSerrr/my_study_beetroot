@@ -23,12 +23,11 @@
   </head>
 
   <body>
-    <!-- Початок header -->
+    <!-- !Початок header -->
     <header>
-      <div class="headrer-body">
-        <div class="header-line">
-          <p class="header-line__logo logo logo-black">Cahee</p>
-
+      <div class="header-container">
+        <div class="header-container__top-line">
+          <p class="header-container__logo logo logo--black">Cahee</p>
           <nav class="main-menu">
             <a href="#" class="main-menu__link">HOME</a>
             <a href="#" class="main-menu__link">ABOUT</a>
@@ -39,42 +38,39 @@
             <a href="#" class="main-menu__link">CONTACT</a>
           </nav>
         </div>
-        <div class="header-body__title title-h3">
-          <h3>Fresh Life</h3>
-        </div>
-        <div class="header-body__subtitle subtitle subtitle-black">
-          <p>
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-          </p>
-        </div>
-        <div class="header-body__button">
-          <button class="button button-orange">GET FREE NOW</button>
-        </div>
+        <h3 class="header-container__title title-h3">
+          Fresh Life
+        </h3>
+        <p class="header-container__subtitle subtitle subtitle--black">
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco.
+        </p>
+        <button class="header-container__button button button--orange">
+          GET FREE NOW
+        </button>
       </div>
     </header>
+    <!-- !Кінець header -->
 
-    <!-- Кінець header -->
-
-    <!-- Початок блоку about-us -->
-    <section class="about wrapper">
-      <a name="about"></a>
-
-      <div class="about-services-content">
-        <div class="about-services-content__img">
-          <img src="assets/img/about/plate.png" alt="plate" />
+    <!-- !Початок блоку about-us -->
+    <section class="about">
+      <div class="about__conteiner">
+        <div class="about__img-box">
+          <img
+            class="about__img"
+            src="assets/img/about/plate.png"
+            alt="plate"
+          />
         </div>
-
-        <div class="about-services-content__description">
-          <h2 class="content-title content-title--white">About Us</h2>
-
-          <p class="content__description content__description--white">
+        <div class="about__content">
+          <h2 class="about__title title title--white">About Us</h2>
+          <p class="about__subtitle subtitle subtitle--white">
             Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit
             esse cillum.
           </p>
-          <p class="content__description content__description--white">
+          <p class="about__subtitle subtitle subtitle--white">
             Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error
             sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
             eaque ipsa quae ab illo inventore.
@@ -82,128 +78,110 @@
         </div>
       </div>
     </section>
-    <!-- Кінець блоку about-us -->
+    <!-- !Кінець блоку about-us -->
 
-    <!-- Початок блоку our-services -->
-    <section class="services wrapper">
-      <a name="services"></a>
-
-      <!-- Початок wrapper-services -->
-      <div class="about-services-content">
-        <!-- Початок список main -->
-        <ul class="about-services-content__list">
-          <li>
-            <a href="#">
-              <p>Online Shopping</p>
-
-              <div class="about-services-content__list__icon-box">
-                <svg>
-                  <use xlink:href="assets/img/services/icon.svg#basket"></use>
-                </svg>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              <p>Quality Product</p>
-              <div class="about-services-content__list__icon-box">
-                <svg>
-                  <use xlink:href="assets/img/services/icon.svg#beet"></use>
-                </svg>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              <p>Domestic & International Delivery</p>
-              <div class="about-services-content__list__icon-box">
-                <svg>
-                  <use xlink:href="assets/img/services/icon.svg#glob"></use>
-                </svg>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#">
-              <p>Well Organized</p>
-              <div class="about-services-content__list__icon-box">
-                <svg>
-                  <use xlink:href="assets/img/services/icon.svg#carrot"></use>
-                </svg>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- Кінець список main -->
-
-        <div
-          class="about-services-content__img about-services-content__img--bg"
-        >
-          <h2 class="content-title content-title--white">Our Services</h2>
+    <!-- !Початок блоку our-services -->
+    <section class="services">
+      <div class="services-conteiner">
+        <nav class="services-menu">
+          <a href="#" class="services-menu__link">
+            <p class="services-menu__item">Online Shopping</p>
+            <div class="services-menu__icon">
+              <svg>
+                <use xlink:href="assets/img/services/icon.svg#basket"></use>
+              </svg>
+            </div>
+          </a>
+          <a href="#" class="services-menu__link">
+            <p class="services-menu__item">Quality Product</p>
+            <div class="services-menu__icon">
+              <svg>
+                <use xlink:href="assets/img/services/icon.svg#beet"></use>
+              </svg>
+            </div>
+          </a>
+          <a href="#" class="services-menu__link">
+            <p class="services-menu__item">Domestic & International Delivery</p>
+            <div class="services-menu__icon">
+              <svg>
+                <use xlink:href="assets/img/services/icon.svg#glob"></use>
+              </svg>
+            </div>
+          </a>
+          <a href="#" class="services-menu__link">
+            <p class="services-menu__item">Well Organized</p>
+            <div class="services-menu__icon">
+              <svg>
+                <use xlink:href="assets/img/services/icon.svg#carrot"></use>
+              </svg>
+            </div>
+          </a>
+        </nav>
+        <div class="services-img-box">
+          <img src="assets/img/services/services.png" alt="" />
+          <h2 class="services-img-box__title title title-white">
+            Our Services
+          </h2>
         </div>
       </div>
-      <!-- Кінець wrapper-services -->
     </section>
-    <!-- Кінець блоку our-services -->
+    <!-- !Кінець wrapper-services -->
 
-    <!-- Початок блоку gallery -->
+    <!-- !Початок блоку gallery -->
     <section class="gallery">
-      <a name="gallery"></a>
-
-      <h2>Gallery</h2>
-
-      <p>
-        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
-
-      <div class="galleryBx">
-        <img src="assets/gallery/img_01.jpg" alt="" />
-
-        <div>
-          <img src="assets/gallery/img_02.jpg" alt="" />
-          <img src="assets/gallery/img_03.jpg" alt="" />
+      <div class="gallery-conteiner">
+        <h2 class="gallery-conteiner__title title title-black">Gallery</h2>
+        <p class="gallery-conteiner__subtitle subtitle subtitle-black">
+          Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <div class="gallery-body">
+          <img src="assets/img/gallery/img_01.jpg" alt="" />
+          <div>
+            <img src="assets/img/gallery/img_02.jpg" alt="" />
+            <img src="assets/img/gallery/img_03.jpg" alt="" />
+          </div>
+          <img src="assets/img/gallery/img_04.jpg" alt="" />
+          <img src="assets/img/gallery/img_05.jpg" alt="" />
         </div>
-
-        <img src="assets/gallery/img_04.jpg" alt="" />
-        <img src="assets/gallery/img_05.jpg" alt="" />
+        <button class="gallery-conteiner__button button button-purple">
+          VIEW MORE
+        </button>
       </div>
-
-      <button>VIEW MORE</button>
     </section>
-    <!-- Кінець блоку gallery -->
+    <!-- !Кінець блоку gallery -->
 
-    <!-- Початок блоку subscribe-to-us -->
-    <section class="subscribe-to-us">
-      <div class="subwrapper">
-        <h4>Subscribe To Us</h4>
-        <p>
+    <!-- !Початок блоку subscribe -->
+    <section class="subscribe">
+      <div class="subscribe-conteiner">
+        <h4 class="subscribe-conteiner__title-h4">Subscribe To Us</h4>
+        <p class="subscribe-conteiner__subtitle subtitle subtitle-black">
           Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
         </p>
-
-        <!-- Початок блоку form-sub -->
-        <div class="form-sub">
-          <form action="#" method="get">
+        <div class="subscribe-conteiner__form-email-conteiner">
+          <form
+            class="subscribe-conteiner__form-email"
+            id="subscribe-email"
+            action="#"
+            method="get"
+          >
             <input
+              class="subscribe-conteiner__input-email"
               type="email"
               name="email"
-              id="email"
               placeholder="Your email address..."
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              minlength="4"
-              required
             />
-            <button>SUBSCRIBE</button>
+            <button class="subscribe-conteiner__button button button-green">
+              SUBSCRIBE
+            </button>
           </form>
         </div>
-        <!-- Кінець блоку form-sub -->
       </div>
     </section>
+    <!-- !Кінець блоку subscribe -->
+
     <!-- Початок блоку form-sub -->
 
     <!-- Початок блоку blog -->

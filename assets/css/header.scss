@@ -5,28 +5,33 @@ header {
   flex-direction: column;
   align-items: center;
 }
-.headrer-body {
+.header-container {
   width: 1200px;
   height: 100vh;
-}
-.header-line {
-  padding-top: 18px;
-  height: 85px;
+
+  &__top-line {
+    padding-top: 18px;
+    height: 85px;
+  }
+
   &__logo {
-  }
-}
-.logo {
-  display: inline-block;
-  font-family: Pacifico;
-  &-black {
     font-size: 50px;
-    color: $black-1;
   }
-  &-white {
-    color: $white-2;
-    font-size: 25px;
+
+  &__title {
+    margin-top: 245px;
+  }
+
+  &__subtitle {
+    width: 370px;
+    padding: 4px 0 0 5px;
+  }
+
+  &__button {
+    margin: 31px 0 0 5px;
   }
 }
+// ! Стилі для Header
 .main-menu {
   padding-top: 32px;
   float: right;
@@ -44,35 +49,57 @@ header {
     }
   }
 }
-.header-body {
-  &__title {
-    margin-top: 245px;
+// !стилі для секції About
+.about {
+  display: flex;
+  justify-content: center;
+  background-color: #00c4c4;
+  background-image: radial-gradient(
+    circle 1125px at center,
+    rgba(0, 196, 196, 0.9) 0%,
+    rgba(0, 183, 183, 0.9) 32%,
+    rgba(0, 173, 173, 0.9) 68%,
+    rgba(0, 156, 156, 0.9) 100%
+  );
+
+  &__conteiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    height: 100vh;
+  }
+
+  &__content {
+    width: 500px;
   }
 
   &__subtitle {
-    width: 370px;
-    padding: 4px 0 0 5px;
-  }
-
-  &__button {
-    margin: 31px 0 0 5px;
+    margin: 10px 0;
   }
 }
-.title-h3 {
-  color: $black-1;
-  font-size: 60px;
-  font-weight: 400;
-}
-.subtitle {
-  font-family: Raleway;
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 27px;
-  &-black {
+// !Стилі для незалежних та дублюючих блоків
+.logo {
+  display: inline-block;
+  font-family: Pacifico;
+  &--black {
+    font-size: 50px;
     color: $black-1;
   }
-  &-white {
+  &--white {
+    color: $white-2;
+    font-size: 25px;
+  }
+}
+.title {
+  font-family: Raleway;
+  font-size: 90px;
+  font-weight: 700;
+  &--white {
     color: $white-1;
+  }
+  &--black {
+    color: $black-1;
   }
 }
 .button {
@@ -87,10 +114,168 @@ header {
   line-height: 27px;
   text-transform: uppercase;
   border: 2px solid transparent;
-  &-orange {
+  &--orange {
     background-color: #ff6033;
+  }
+  &--purple {
+    background-color: #5585a2;
+  }
+  &--green {
+    background-color: #96b92c;
   }
   &:hover {
     border-color: #fff;
+  }
+}
+.title-h3 {
+  color: $black-1;
+  font-size: 60px;
+  font-weight: 400;
+}
+.subtitle {
+  font-family: Raleway;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 27px;
+  &--black {
+    color: $black-1;
+  }
+  &--white {
+    color: $white-1;
+  }
+}
+// !Стилі блоку services
+.services {
+  background-color: #70bfff;
+  display: flex;
+  justify-content: center;
+}
+.services-conteiner {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.services-menu {
+  &__link {
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    background-color: $white-1;
+    color: $black-1;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    &:hover {
+      background-color: #ffbe66;
+      color: #fff;
+      & svg {
+        fill: #fff;
+      }
+    }
+  }
+  &__item {
+    width: 300px;
+    text-align: center;
+  }
+  &__icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-left: 1px solid #9d9d9d;
+    & svg {
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.services-img-box {
+  height: 527px;
+  position: relative;
+  &__title {
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: -90px;
+    transform: translateY(-50%);
+  }
+}
+// !Стилі для блоку gallery
+.gallery {
+  background-color: #ffe92f;
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+.gallery-conteiner {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    margin-top: 100px;
+  }
+  &__subtitle {
+    margin: 25px 0 10px 0;
+    width: 577px;
+  }
+  &__button {
+    margin: 50px 0 120px 0;
+  }
+}
+.gallery-body {
+  display: flex;
+  flex-wrap: wrap;
+  img {
+    cursor: pointer;
+    opacity: 0.9;
+    margin: 30px 30px 0 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    &:hover {
+      opacity: unset;
+    }
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+// !Стилі для блоку subscribe
+.subscribe {
+  background-image: url("../img/sub/bg.jpg");
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+.subscribe-conteiner {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__title-h4 {
+    color: $black-1;
+    font-family: Raleway;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  &__subtitle {
+    width: 550px;
+    margin: 10px 0 15px 0;
+  }
+  &__form-email {
+    display: flex;
+    height: 100px;
+  }
+  &__input-email {
+    width: 570px;
+    height: 55px;
+    padding: 20px;
+    margin: 0 30px 0 0;
+    border: 2px solid $black-1;
   }
 }
