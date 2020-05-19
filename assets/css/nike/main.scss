@@ -1,0 +1,190 @@
+@import "../reset.scss";
+@font-face {
+  font-family: "MuseoSansRounded";
+  src: url(../../fonts/MuseoSansRounded-100.ttf);
+}
+* {
+  outline: none;
+}
+.sales-page {
+  font-family: "MuseoSansRounded";
+  background-image: url("../../img/nike/bg.png");
+  background-size: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__conteiner {
+    width: 686px;
+    height: 391px;
+    box-shadow: 0 0 65px rgba(0, 0, 0, 0.82);
+    border-radius: 10px;
+    background-color: #111a28;
+    transform: scale(1);
+    padding: 24px 21px;
+    display: flex;
+  }
+
+  &__column {
+    &--right {
+      margin-left: 70px;
+    }
+  }
+
+  &__img-conteiner {
+    margin-top: 69px;
+    padding-left: 15px;
+  }
+
+  &__img {
+  }
+
+  &__img-selector {
+    margin-top: 75px;
+  }
+
+  &__title {
+    margin-top: 50px;
+  }
+
+  &__subtitle {
+    margin-top: 10px;
+  }
+
+  &__rating {
+    margin-top: 20px;
+  }
+
+  &__form {
+    margin-top: 27px;
+  }
+}
+.nike-logo {
+}
+.img-selector {
+  display: flex;
+  justify-content: center;
+  &__items {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    margin-right: 9px;
+    &:hover {
+      border-color: #7e838b;
+      transform: scale(1.3);
+    }
+  }
+
+  &__items--dark-blue {
+    background-color: #1f273f;
+  }
+
+  &__items--white {
+    background-color: #fff;
+  }
+
+  &__items--red {
+    background-color: #ed3333;
+  }
+
+  &__items--aqua {
+    background-color: #29e3ea;
+  }
+}
+.sales-title-h3 {
+  opacity: 0.54;
+  width: 185px;
+  color: #e1e1e1;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.48px;
+}
+.sales-subtitle {
+  width: 172px;
+  opacity: 0.54;
+  color: #e1e1e1;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.28px;
+}
+
+.buy-form {
+  &__size-select {
+    cursor: pointer;
+    width: 69px;
+    height: 32px;
+    border: 1px solid #ffffff;
+    background-color: #111a28;
+    color: #fff;
+    opacity: 0.26;
+    &:focus {
+      opacity: unset;
+    }
+    &:hover {
+      opacity: unset;
+    }
+  }
+
+  &__qty-select {
+    cursor: pointer;
+    width: 69px;
+    height: 32px;
+    border: 1px solid #ffffff;
+    background-color: #111a28;
+    color: #fff;
+    opacity: 0.26;
+    &:focus {
+      opacity: unset;
+    }
+    &:hover {
+      opacity: unset;
+    }
+  }
+
+  &__button {
+    margin-top: 29px;
+    cursor: pointer;
+    width: 184px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    background-color: #4c525a;
+    opacity: 0.26;
+    color: #e1e1e1;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.28px;
+    &:focus {
+      opacity: unset;
+    }
+    &:hover {
+      opacity: unset;
+    }
+  }
+}
+.rating {
+  &__list {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  &__checkbox {
+    display: none;
+    &:checked ~ .rating__label {
+      color: #f6c327;
+    }
+    &:hover ~ .rating__label {
+      color: #f6c327;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    cursor: pointer;
+    color: #9da1a7;
+    margin: 0 1px;
+  }
+}
