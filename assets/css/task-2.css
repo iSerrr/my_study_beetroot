@@ -1,129 +1,199 @@
+body {
+  font-family: "Lato", sans-serif;
+}
 header {
-    display: none;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background: url('../img/hero-bg.jpg.png') 100%;
-    text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/task-2/hero-bg.jpg.png);
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-header h3 {
-    margin-top: 90px;
-    width: 600px;
-    color: #ffffff;
-    font-family: Lato;
-    font-size: 54px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 8.62px;
+section,
+footer {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 0;
 }
-header p {
-    margin-top: 40px;
-    width: 580px;
-    color: #ffffff;
-    font-family: Lato;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 29px;
-    text-transform: uppercase;
-    /* Text style for "W, e’ve be" */
-    letter-spacing: 0.9px;
+footer {
+  padding: 0;
 }
-/* about-us */
-section {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    }
+.logo-header {
+  font-size: 67px;
+  color: #fff;
+}
+.header-title {
+  margin-top: 50px;
+  text-align: center;
+  width: 591px;
+  color: #ffffff;
+  font-size: 54px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 8.62px;
+}
+.header-description {
+  margin-top: 40px;
+  color: #ffffff;
+  text-align: center;
+  width: 579px;
+  font-family: Lato;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 29px;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+}
 .about-us {
-    display: none;
-    padding: 160px 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.content {
-    position: relative;
-    text-align: center;
-    width: 902px;
-    border: 2px solid #3c3c3c;
-    padding: 10px 178px;
+.title-h2 {
+  text-align: center;
+  width: 315px;
+  position: relative;
+  font-family: Lato;
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 8.95px;
 }
- .content h4 {
-    position: absolute;
-    left: 50%;
-    top: -20px;
-    transform: translateX(-50%);
-    background-color: #fff;
-    text-align: center;
-    width: 420px;
-    color: #3c3c3c;
-    font-size: 34px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 8.95px;
+.title-h2::before,
+.title-h2::after {
+  position: absolute;
+  top: 50%;
+  left: -292px;
+  content: "";
+  display: block;
+  width: 250px;
+  height: 2px;
 }
-.content p {
-    margin-top: 15px;
+.title-h2::after {
+  left: 358px;
+}
+.title-h2--black {
+  color: #3c3c3c;
+}
+.title-h2--white {
+  color: #fff;
+}
+.title-h2--black::before,
+.title-h2--black::after {
+  background-color: #3c3c3c;
+}
+.title-h2--white::before,
+.title-h2--white::after {
+  background-color: #fff;
+}
+.description {
+  margin-top: -20px;
+  padding: 70px 178px 30px;
+  text-align: center;
+  width: 902px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  border: 2px solid #3c3c3c;
+  border-top: none;
+}
+.description span {
+  display: block;
+}
+.description--black {
+  border-color: #3c3c3c;
+  color: #3c3c3c;
+}
+.description--white {
+  border-color: #fff;
+  color: #fff;
 }
 .services {
-    display: flex;
-    padding: 128px 0;
-    background-image: url(/assets/img/services.jpg.png);
+  background-image: url(../img/task-2/services.jpg.png);
 }
-.white p, .white h4, .content .white {
-    color: #fff;
-}
-.services .content {
-    border-color: #fff;
-}
-/* what we do */
 .what-we-do {
-    display: flex;
-    margin-top: 100px;
-    padding-bottom: 100px;
+  background-image: url(../img/task-2/);
 }
-.what-we-do .content {
-    padding-top: 100px;
-
+.icon {
+  margin-top: 35px;
+  font-size: 80px;
 }
-.what-we-do .content p {
-    margin: 20px;
-    margin-bottom: 80px;
+.subtitle {
+  margin-top: 55px;
+  color: #3c3c3c;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5.26px;
+  margin-bottom: 37px;
 }
-.what-we-do .content .title {
-    margin-bottom: 10px;
-    color: #3c3c3c;
-    font-family: Lato;
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    /* Text style for "Developmen" */
-    letter-spacing: 5.26px;
+.gallery {
+  padding: 0;
 }
-.contact-us {
-    padding-top: 100px;
-    padding-bottom: 100px;
+.gallery-conteiner {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.contact-us button {
-    cursor: pointer;
-    text-transform: uppercase;
-    margin-top: 20px;
-    color: #fff;
-    width: 395px;
-    height: 58px;
-    border: 2px solid #3c3c3c;
-    background-color: #3c3c3c;
+.img-conteiner {
+  cursor: pointer;
+  margin-bottom: 5px;
+  position: relative;
+  opacity: 0.85;
 }
-.contact-us button:hover {
-    background-color: #7c7c7c;
+.img-conteiner:hover {
+  opacity: unset;
 }
-.galery {
-    width: 100%;
+.galerry-img {
+  height: 188px;
 }
-.galery .main {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.gallery-title {
+  position: absolute;
+  top: 120px;
+  left: 40px;
+  color: #ffffff;
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* Text style for "MArket" */
+  letter-spacing: 8.95px;
 }
-img {
-    height: 188px;
+.button {
+  margin-top: 40px;
+  cursor: pointer;
+  width: 395px;
+  height: 58px;
+  border: 2px solid #3c3c3c;
+  background-color: #3c3c3c;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2.54px;
+}
+.button:hover {
+  background-color: #696969;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  color: #3c3c3c;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 70px;
+}
+.footer-icon {
+  font-size: 35px;
+  margin-right: 25px;
 }
