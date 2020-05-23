@@ -1,39 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <!-- *Підключення шрифта Lato -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Підключення скидання стилів -->
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- *Підключення скидання стилів -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
 
-    <!-- Підключення стилів MATERIALIZE -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- *Підключення основних стилів -->
+    <link rel="stylesheet" href="assets/css/main.css" />
 
-    <!-- Підлючення шрифта PT SANS NARROW -->
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <!-- *Підключення стилів icomoon -->
+    <link rel="stylesheet" href="assets/style.css" />
 
-    <!-- Підключення стилів  навігації-->
-    <link rel="stylesheet" href="assets/css/nav-css.css">
+    <meta charset="UTF-8" />
 
-    <!-- Підключення основних стилів -->
-    <link rel="stylesheet" href="assets/css/main.css">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
 
     <title>Document</title>
+  </head>
+  <body>
+    <!-- *Початок секції header -->
+    <header class="header section">
+      <div class="header__conteiner">
+        <div class="header__logo basic-logo basic-logo--white">
+          <span class="icon-1"></span>
+        </div>
+        <h1 class="header__title">
+          WORKING WITH design LAB
+        </h1>
+        <p class="header_description">
+          We’ve been helping startups launch and grow their businesses. We help
+          you to fill the gap between development, design and product
+          management.
+        </p>
+      </div>
+    </header>
+    <!-- *Кінець секції header -->
 
-</head>
-<body>
-    
-    <!-- Навігація -->
-    <nav class="basic-nav">
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="index.html">Task 1</a></li>
-        <li><a href="second_task.html">Task 2</a></li>
-      </ul>
-    </nav>
-    <!-- END Навігація -->
-        
-</body>
+    <!-- *Початок секції about-us -->
+    <section class="about-us section">
+      <div class="content-container content-container--black-border">
+        <h2 class="title-h2 title-h2--black">ABOUT US</h2>
+        <p class="description description--black">
+          When you work with us, you are part of a team of committed
+          collaborators. All aspects of our software development process are
+          integrated, iterative and agile.
+        </p>
+        <p class="description description--black">
+          Our approach unifies design, development and product management to
+          create exceptional products. We start each project by understanding
+          your business goals, the user’s needs and the product requirements.
+          Then we help translate them into effective and elegant solutions.
+        </p>
+      </div>
+    </section>
+    <!-- *Кінець секції about-us -->
 
+    <!-- *Початок секції services -->
+    <section class="services section">
+      <div class="content-container content-container--white-border">
+        <h2 class="title-h2 title-h2--white">
+          SERVICES
+        </h2>
+        <p class="description description--white">
+          Before we sign a contract or write a line of code our team will spend
+          the necessary time needed to understand your product vision. The
+          outcome of this scoping session is a proposal or high-level statement
+          of work.
+        </p>
+        <p class="description description--white">
+          Based on your requirements, we can provide a complete offering or just
+          the pieces you need.
+        </p>
+      </div>
+    </section>
+    <!-- *Кінець секції services -->
+
+    <!-- *Початок секції what-we-do -->
+    <section class="what-we-do section">
+      <div class="content-container content-container--black-border">
+        <h2 class="title-h2 title-h2--black">
+          what we do
+        </h2>
+        <span class="what-we-do__icon icon-Shape_2"></span>
+        <h3 class="what-we-do__subtitle">
+          DESIGN
+        </h3>
+        <p class="description description--black">
+          Our design practice offers a full range of services including branding
+          strategy, interaction and visual design and user experience testing.
+          Throughout your project, our designers create and implement visual
+          designs and workflows, solicit user feedback, and work with you to
+          make sure what gets built is what is needed.
+        </p>
+        <span class="what-we-do__icon icon-Shape_3"></span>
+        <h3 class="what-we-do__subtitle">
+          Development
+        </h3>
+        <p class="description description--black">
+          All engineers are fluent in the latest enterprise, mobile and web
+          development technologies. They collaborate with your team to write,
+          test, and improve code on a daily basis, using proven practices such
+          as test-driven development and pair programing.
+        </p>
+        <span class="what-we-do__icon icon-Shape_4"></span>
+        <h3 class="what-we-do__subtitle">
+          Product Management
+        </h3>
+        <p class="description description--black">
+          Planning and development is iterative. Because we are constantly
+          coding and testing, the products we build are always ready to go live.
+          This iterative process allows for changes as business requirements
+          evolve.
+        </p>
+      </div>
+    </section>
+    <!-- *Кінець секції what-we-do -->
+
+    <!-- *Початок секції gallery -->
+    <section class="gallery">
+      <div class="gallery__img-conteiner">
+        <img src="assets/img/gallery/01.jpg" alt="" class="gallery__img" />
+        <p class="gallery__img-title">topworkz</p>
+      </div>
+      <div class="gallery__img-conteiner gallery__img-conteiner--center">
+        <img
+          src="assets/img/gallery/02.jpg"
+          alt=""
+          class="gallery__img gallery__img--center"
+        />
+        <p class="gallery__img-title">joint</p>
+      </div>
+      <div class="gallery__img-conteiner">
+        <img src="assets/img/gallery/03.jpg" alt="" class="gallery__img" />
+        <p class="gallery__img-title">MArket</p>
+      </div>
+      <div class="gallery__img-conteiner">
+        <img src="assets/img/gallery/04.jpg" alt="" class="gallery__img" />
+        <p class="gallery__img-title">worktop</p>
+      </div>
+      <div class="gallery__img-conteiner gallery__img-conteiner--center">
+        <img
+          src="assets/img/gallery/05.jpg"
+          alt=""
+          class="gallery__img gallery__img--center"
+        />
+        <p class="gallery__img-title">lable</p>
+      </div>
+      <div class="gallery__img-conteiner">
+        <img src="assets/img/gallery/06.jpg" alt="" class="gallery__img" />
+        <p class="gallery__img-title">Kyiv</p>
+      </div>
+    </section>
+    <!-- *Кінець секції gallery -->
+
+    <!-- *Початок секції contact-us -->
+    <section class="contact-us section">
+      <div class="content-container content-container--black-border">
+        <h2 class="title-h2 title-h2--black">
+          CONTACT us
+        </h2>
+        <p class="description description--black">
+          When you work with us, you are part of a team of committed
+          collaborators. All aspects of our software development process are
+          integrated, iterative and agile.
+        </p>
+        <p class="description description--black">
+          Our approach unifies design, development and product management to
+          create exceptional products. We start each project by understanding
+          your business goals, the user’s needs and the product requirements.
+          Then we help translate them into effective and elegant solutions.
+        </p>
+        <form action="#" method="get">
+          <button class="contact-us__button">CONTACT us</button>
+        </form>
+      </div>
+    </section>
+    <!-- *Кінець секції contact-us -->
+
+    <!-- *Початок секції footer -->
+    <footer class="footer">
+      <div class="footer__conteiner">
+        <div class="footer__logo basic-logo basic-logo--black">
+          <span class="icon-1"></span>
+        </div>
+
+        © 2014. All Rights Reserved Ellipsis.com
+      </div>
+    </footer>
+    <!-- *Кінець секції footer -->
+  </body>
 </html>

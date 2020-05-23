@@ -1,0 +1,323 @@
+// ! Стилы базових елементів
+.content-container {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 902px;
+  border: 2px solid;
+  border-top: none;
+  padding: 77px 120px 29px;
+  &--black-border {
+    border-color: #3c3c3c;
+  }
+  &--white-border {
+    border-color: #fff;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding: 45px 10px 25px;
+  }
+  @media (max-width: 767px) {
+    padding: 45px 10px 25px;
+  }
+}
+.title-h2 {
+  font-family: "Lato", sans-serif;
+  width: 60%;
+  position: absolute;
+  top: -21px;
+  left: 50%;
+  transform: translatex(-50%);
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 8.95px;
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: -33.33%;
+    content: "";
+    display: block;
+    background-color: #3c3c3c;
+    width: 33.33%;
+    height: 2px;
+  }
+  &::after {
+    left: 100%;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 24px;
+    top: -14.5px;
+  }
+  @media (max-width: 767px) {
+    font-size: 15px;
+    top: -9px;
+  }
+  &--black {
+    color: #3c3c3c;
+    &::before,
+    &::after {
+      background-color: #3c3c3c;
+    }
+  }
+  &--white {
+    color: #fff;
+    &::before,
+    &::after {
+      background-color: #fff;
+    }
+  }
+}
+.description {
+  margin-bottom: 10px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  &--black {
+    color: #3c3c3c;
+  }
+  &--white {
+    color: #fff;
+  }
+}
+.basic-logo {
+  font-size: 45px;
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    font-size: 75px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 60px;
+  }
+  &--white {
+    color: #fff;
+  }
+  &--black {
+    color: #3c3c3c;
+    font-size: 35px;
+  }
+}
+.section {
+  padding: 100px 15px;
+  &:nth-child(6) {
+    padding: 100px 15px 0;
+  }
+}
+// !Стилі для header
+.header {
+  max-width: 1920px;
+  height: 100vh;
+  background-color: cadetblue;
+  background: url("../img/header/hero-bg.jpg.jpg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-attachment: unset;
+  //   background-size: 100%;
+  @media (orientation: portrait) {
+    background-size: auto 100%;
+  }
+  @media (min-width: 768px) and (max-width: 1140px) {
+    background-size: auto 100%;
+  }
+  @media (max-width: 767px) {
+    background-size: auto 100%;
+  }
+  &_description {
+    font-family: "Lato", sans-serif;
+    width: 50%;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    line-height: 29px;
+    @media (min-width: 768px) and (max-width: 1023px) {
+    }
+    @media (max-width: 767px) {
+      width: 85%;
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+  }
+  &__conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    height: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__logo {
+    margin-top: 10px;
+  }
+  &__title {
+    margin: 20px 0px 35px;
+    width: 50%;
+    font-family: "Lato", sans-serif;
+    color: #fff;
+    font-size: 54px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 8.62px;
+    @media (min-width: 768px) and (max-width: 1023px) {
+      width: 65%;
+      font-size: 45px;
+    }
+    @media (max-width: 767px) {
+      font-size: 30px;
+      width: 90%;
+    }
+  }
+}
+// ! Стиль для блоку abut-us
+.about-us {
+}
+// ! Стилі для services
+.services {
+  background-image: url("../img/services/services.jpg.jpg");
+  background-position: right top;
+}
+// ! Стиль для блоку what-we-do
+.what-we-do {
+  &__icon {
+    display: block;
+    margin-top: 50px;
+    font-size: 75px;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 68px;
+    }
+    @media (max-width: 767px) {
+      font-size: 60px;
+    }
+  }
+  &__subtitle {
+    margin: 30px 0;
+    font-family: "Lato", sans-serif;
+    color: #3c3c3c;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5.26px;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 17px;
+    }
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+}
+// ! Стиль для блоку gallery
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__img-conteiner {
+    cursor: pointer;
+    opacity: 0.9;
+    overflow: hidden;
+    width: 28.6458%;
+    position: relative;
+    &:hover {
+      opacity: unset;
+    }
+    &--center {
+      width: 41.7708%;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      width: 100%;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  &__img {
+    width: 100%;
+
+    &--center {
+      @media (min-width: 768px) and (max-width: 1024px) {
+        width: 145%;
+      }
+      @media (max-width: 767px) {
+        width: 145%;
+      }
+    }
+  }
+  &__img-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 8.95px;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      left: 50%;
+      transform: translate(-50%);
+      bottom: 30px;
+    }
+    @media (max-width: 767px) {
+      left: 50%;
+      transform: translate(-50%);
+      bottom: 30px;
+    }
+  }
+}
+// ! Стиля для блоку contact-us
+.contact-us {
+  &__button {
+    margin-top: 20px;
+    cursor: pointer;
+    width: 40.88%;
+    height: 50px;
+    border: 2px solid #3c3c3c;
+    background-color: #3c3c3c;
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    /* Text style for "CONTACT us" */
+    letter-spacing: 2.54px;
+    &:hover {
+      background-color: #8f8f8f;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      width: 60%;
+    }
+    @media (max-width: 767px) {
+      width: 70%;
+    }
+  }
+}
+// ! Стилі для блоку footer
+.footer {
+  &__logo {
+    margin-right: 20px;
+  }
+  &__conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 25%;
+    height: 15vh;
+    color: #3c3c3c;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      width: 60%;
+    }
+    @media (max-width: 767px) {
+      width: 80%;
+      font-size: 12px;
+    }
+  }
+}
