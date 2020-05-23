@@ -1,0 +1,15 @@
+// !Sass
+@import "variables.scss"; // !Sass Variables
+@import "mixins.scss"; // !Sass Mixins
+
+// !Base
+@import "body.scss"; // !Style only for body
+@import "reset.scss"; // !Reset/normalize
+@import "typography.scss"; // !Font and typography
+
+// !Components
+@import "buttons.scss"; // !Buttons
+
+// !Section
+@import "header.scss"; // !Header
+@import "footer.scss"; // !Footer
