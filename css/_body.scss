@@ -1,0 +1,11 @@
+.PA-center {
+  @include PA-center;
+}
+
+.about-us__button {
+  font-size: 35px;
+  &--red {
+    border-color: red;
+    background-color: #fff;
+  }
+}

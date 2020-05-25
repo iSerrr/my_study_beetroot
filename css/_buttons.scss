@@ -1,0 +1,139 @@
+// ! Option button hover efect to-step-border
+.button-two-step-border {
+  position: relative;
+  cursor: pointer;
+  border: 2px solid;
+  padding: 10px 20px;
+  background-color: #fff;
+  &:hover::after {
+    transform: translateX(-50%) scaleX(0);
+    transition: 0.5s;
+  }
+  &:hover::before {
+    transform: translateY(-50%) scaleY(0);
+    transition: 0.5s;
+    transition-delay: 0.3s;
+  }
+  &::before,
+  &::after {
+    display: block;
+    background-color: inherit;
+    transform-origin: center;
+    transition: 0.5s;
+    content: "";
+    position: absolute;
+    z-index: 10;
+    width: calc(100% + 4px);
+    height: 60%;
+    top: 50%;
+    left: -2px;
+    transform: translateY(-50%) scaleY(1);
+  }
+  &::after {
+    width: 80%;
+    height: calc(100% + 4px);
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(1);
+    transition-delay: 0.3s;
+  }
+  &__text {
+    position: relative;
+    z-index: 100;
+  }
+}
+
+// !Style button-four-step-border (тестовий варіант,не готовий до кінця)
+// ? install paste next html code for your file
+// *<button class="button-four-step-border">
+//   *<span></span>
+//   *<span></span>
+//   *<span class="button-four-step-border__text">BUTTON</span>
+// *</button>
+.button-four-step-border {
+  position: relative;
+  cursor: pointer;
+  border: 3px solid #000;
+  padding: 10px 20px;
+  &:hover span:nth-child(1)::after {
+    transform: scaleX(1);
+    transition: 0.4s;
+  }
+  &:hover span:nth-child(1):before {
+    transform: scaleX(1);
+    transition: 0.4s;
+    transition-delay: calc(0.4s * 2);
+  }
+  &:hover span:nth-child(2):after {
+    transform: scaleY(1);
+    transition: 0.4s;
+    transition-delay: calc(0.4s * 3);
+  }
+  &:hover span:nth-child(2):before {
+    transform: scaleY(1);
+    transition: 0.4s;
+    transition-delay: 0.4s;
+  }
+  &__text {
+    color: #000;
+    position: relative;
+    z-index: 100;
+  }
+  & span:nth-child(1) {
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    &::after,
+    &::before {
+      position: absolute;
+      left: -3px;
+      display: block;
+      content: "";
+      width: calc(100% + 6px);
+      height: 4px;
+      background-color: inherit;
+      transform-origin: left;
+      transform: scaleX(0);
+    }
+    &::after {
+      top: -3px;
+    }
+    &::before {
+      bottom: -3px;
+      left: -3px;
+      transform-origin: right;
+      transform: scaleX(0);
+    }
+  }
+  & span:nth-child(2) {
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    &::after,
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -3px;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: inherit;
+      transform-origin: bottom;
+      transform: scaleY(0);
+    }
+    &::before {
+      transform-origin: top;
+      transform: scaleY(0);
+      left: 3px;
+    }
+  }
+}
