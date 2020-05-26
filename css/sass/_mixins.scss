@@ -5,3 +5,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+//  ! Breakpoints
+$mobile: 480px;
+$tablets-min: 481px;
+$tablets-max: 768px;
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+@mixin tablets {
+  @media (min-width: $tablets-min and $tablets-max) {
+    @content;
+  }
+}

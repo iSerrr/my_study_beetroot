@@ -16,45 +16,97 @@
   <body>
     <!-- * Початок секції header -->
     <header class="header section">
+      <a class="anchor" name="header"></a>
       <div class="header__top-line">
         <div class="header__top-container">
           <div class="header__logo basic-logo basic-logo--black">Cahee</div>
           <nav class="main-menu">
             <div class="burger">
-              <a href="">
+              <input
+                class="burger__checkbox"
+                type="checkbox"
+                name="burger-toggle"
+                id="burger-toggle"
+              />
+              <label class="burger__label" for="burger-toggle">
                 <span class="burger__line burger__line--top"></span>
                 <span class="burger__line burger__line--middle"></span>
                 <span class="burger__line burger__line--bottom"></span>
-              </a>
+              </label>
+              <div class="cahee-mobile-menu">
+                <ul class="cahee-mobile-menu__list">
+                  <li class="cahee-mobile-menu__item">
+                    <a
+                      href="#header"
+                      class="cahee-mobile-menu__link cahee-mobile-menu__link--active"
+                    >
+                      <span class="cahee-mobile-menu__icon icon-house"></span>
+                      HOME
+                    </a>
+                  </li>
+                  <li class="cahee-mobile-menu__item">
+                    <a href="#about-us" class="cahee-mobile-menu__link">
+                      <span
+                        class="cahee-mobile-menu__icon icon-information"
+                      ></span>
+                      ABOUT
+                    </a>
+                  </li>
+                  <li class="cahee-mobile-menu__item">
+                    <a href="#services" class="cahee-mobile-menu__link">
+                      <span class="cahee-mobile-menu__icon icon-server"></span>
+                      SERVICES
+                    </a>
+                  </li>
+                  <li class="cahee-mobile-menu__item">
+                    <a href="#gallery" class="cahee-mobile-menu__link">
+                      <span class="cahee-mobile-menu__icon icon-images"></span>
+                      GALLERY
+                    </a>
+                  </li>
+                  <li class="cahee-mobile-menu__item">
+                    <a href="#blog" class="cahee-mobile-menu__link">
+                      <span class="cahee-mobile-menu__icon icon-edit"></span>
+                      BLOG
+                    </a>
+                  </li>
+                  <li class="cahee-mobile-menu__item">
+                    <a href="#contact-us" class="cahee-mobile-menu__link">
+                      <span class="cahee-mobile-menu__icon icon-mail"></span>
+                      CONTACT
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <ul class="main-menu__list">
               <li>
-                <a href="" class="main-menu__link main-menu__link--active">
+                <a href="#header" class="main-menu__link">
                   HOME
                 </a>
               </li>
               <li>
-                <a href="" class="main-menu__link">
+                <a href="#about-us" class="main-menu__link">
                   ABOUT
                 </a>
               </li>
               <li>
-                <a href="" class="main-menu__link">
+                <a href="#services" class="main-menu__link">
                   SERVICES
                 </a>
               </li>
               <li>
-                <a href="" class="main-menu__link">
+                <a href="#gallery" class="main-menu__link">
                   GALLERY
                 </a>
               </li>
               <li>
-                <a href="" class="main-menu__link">
+                <a href="#blog" class="main-menu__link">
                   BLOG
                 </a>
               </li>
               <li>
-                <a href="" class="main-menu__link">
+                <a href="#contact-us" class="main-menu__link">
                   CONTACT
                 </a>
               </li>
@@ -79,12 +131,10 @@
 
     <!-- * Початок секції about-us -->
     <section class="about-us section">
+      <a class="anchor" name="about-us"></a>
       <div class="about-us__conteiner">
         <div class="about-us__img-box">
-          <img
-            class="about-us__img"
-            src="assets-cahhe/img/about-us/plate.png"
-          />
+          <img class="about-us__img" src="assets/img/about-us/plate.png" />
         </div>
         <div class="about-us__description">
           <h1 class="title-h1 title-h1--white">
@@ -109,15 +159,14 @@
 
     <!-- * Початок секції services -->
     <section class="services section">
+      <a class="anchor" name="services"></a>
       <div class="services__conteiner">
         <nav class="services-menu">
           <a href="#" class="services-menu__link">
             <p class="services-menu__item">Online Shopping</p>
             <div class="services-menu__icon">
               <svg class="services-menu__svg">
-                <use
-                  xlink:href="assets-cahhe/img/services/icon.svg#basket"
-                ></use>
+                <use xlink:href="assets/img/services/icon.svg#basket"></use>
               </svg>
             </div>
           </a>
@@ -125,7 +174,7 @@
             <p class="services-menu__item">Quality Product</p>
             <div class="services-menu__icon">
               <svg class="services-menu__svg">
-                <use xlink:href="assets-cahhe/img/services/icon.svg#beet"></use>
+                <use xlink:href="assets/img/services/icon.svg#beet"></use>
               </svg>
             </div>
           </a>
@@ -133,7 +182,7 @@
             <p class="services-menu__item">Domestic & International Delivery</p>
             <div class="services-menu__icon">
               <svg class="services-menu__svg">
-                <use xlink:href="assets-cahhe/img/services/icon.svg#glob"></use>
+                <use xlink:href="assets/img/services/icon.svg#glob"></use>
               </svg>
             </div>
           </a>
@@ -141,16 +190,14 @@
             <p class="services-menu__item">Well Organized</p>
             <div class="services-menu__icon">
               <svg class="services-menu__svg">
-                <use
-                  xlink:href="assets-cahhe/img/services/icon.svg#carrot"
-                ></use>
+                <use xlink:href="assets/img/services/icon.svg#carrot"></use>
               </svg>
             </div>
           </a>
         </nav>
         <div class="services__img-box">
           <img
-            src="assets-cahhe/img/services/services.png"
+            src="assets/img/services/services.png"
             alt="services"
             class="services__img"
           />
@@ -164,6 +211,7 @@
 
     <!-- * Початок секції gallery -->
     <section class="gallery section">
+      <a class="anchor" name="gallery"></a>
       <h1 class="gallery__title title-h1 title-h1--black">
         Gallery
       </h1>
@@ -175,7 +223,7 @@
       <div class="gallery__cconteiner">
         <div class="gallery__img-box">
           <img
-            src="assets-cahhe/img/gallery/img_01.jpg"
+            src="assets/img/gallery/img_01.jpg"
             alt=""
             class="gallery__img"
           />
@@ -183,14 +231,14 @@
 
         <div class="gallery__img-box">
           <img
-            src="assets-cahhe/img/gallery/img_02.jpg"
+            src="assets/img/gallery/img_02.jpg"
             alt=""
             class="gallery__img"
           />
         </div>
         <div class="gallery__img-box">
           <img
-            src="assets-cahhe/img/gallery/img_03.jpg"
+            src="assets/img/gallery/img_03.jpg"
             alt=""
             class="gallery__img"
           />
@@ -198,14 +246,14 @@
 
         <div class="gallery__img-box">
           <img
-            src="assets-cahhe/img/gallery/img_04.jpg"
+            src="assets/img/gallery/img_04.jpg"
             alt=""
             class="gallery__img"
           />
         </div>
         <div class="gallery__img-box">
           <img
-            src="assets-cahhe/img/gallery/img_05.jpg"
+            src="assets/img/gallery/img_05.jpg"
             alt=""
             class="gallery__img"
           />
@@ -217,6 +265,7 @@
 
     <!-- * Початок секції subscribe -->
     <section class="subscribe section">
+      <a class="anchor" name="subscribe"></a>
       <div class="subscribe__conteiner">
         <h2 class="subscribe__title">
           Subscribe To Us
@@ -243,6 +292,7 @@
 
     <!-- * Початок секції blog -->
     <section class="blog section">
+      <a class="anchor" name="blog"></a>
       <div class="blog__conteiner">
         <h1 class="title-h1 title-h1--white">
           Blog
@@ -254,11 +304,7 @@
         </p>
         <div class="blog__blog-gallery">
           <div class="blog__img-box">
-            <img
-              src="assets-cahhe/img/blog/img_01.jpg"
-              alt=""
-              class="blog-img"
-            />
+            <img src="assets/img/blog/img_01.jpg" alt="" class="blog-img" />
             <div class="blog-img-hover">
               <p class="blog-img__date">20 NOV</p>
               <p class="blog-img__description">
@@ -268,11 +314,7 @@
             </div>
           </div>
           <div class="blog__img-box">
-            <img
-              src="assets-cahhe/img/blog/img_02.jpg"
-              alt=""
-              class="blog-img"
-            />
+            <img src="assets/img/blog/img_02.jpg" alt="" class="blog-img" />
             <div class="blog-img-hover">
               <p class="blog-img__date">14 NOV</p>
               <p class="blog-img__description">
@@ -282,11 +324,7 @@
             </div>
           </div>
           <div class="blog__img-box">
-            <img
-              src="assets-cahhe/img/blog/img_03.jpg"
-              alt=""
-              class="blog-img"
-            />
+            <img src="assets/img/blog/img_03.jpg" alt="" class="blog-img" />
             <div class="blog-img-hover">
               <p class="blog-img__date">10 NOV</p>
               <p class="blog-img__description">
@@ -303,6 +341,7 @@
 
     <!-- * Початок секції contact-us -->
     <section class="contact-us section">
+      <a class="anchor" name="contact-us"></a>
       <h1 class="title-contact-us title-h1 title-h1--black">
         Contact
       </h1>
