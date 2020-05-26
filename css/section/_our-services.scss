@@ -84,8 +84,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  &__svg {
-    width: 50%;
+    font-size: 40px;
+    color: $black-1;
   }
 }
