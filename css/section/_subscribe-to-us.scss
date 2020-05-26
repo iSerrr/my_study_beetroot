@@ -1,0 +1,57 @@
+.subscribe {
+  height: auto;
+  background-image: url(../assets-cahhe/img/sub/bg.jpg);
+  background-position: right top;
+  @include mobile {
+    background-image: none;
+    background-color: #fff;
+    margin-right: 0;
+    width: 100%;
+  }
+  &__conteiner {
+    max-width: 1200px;
+    padding: 140px 15px;
+    margin: 0 auto;
+    @include mobile {
+      padding: 70px 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  &__title {
+    color: $black-1;
+    font-family: $R-bold;
+    font-size: 40px;
+  }
+  &__description {
+    max-width: 550px;
+    margin: 25px 0;
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  &__input-email {
+    width: 47.5%;
+    height: 50px;
+    border: 1px solid $black-1;
+    padding-left: 15px;
+    margin-right: 30px;
+    @include mobile {
+      margin: 0 0 20px;
+      width: 100%;
+    }
+    &::placeholder {
+      opacity: 0.5;
+      color: $black-1;
+      font-family: $R-light;
+      font-size: 15px;
+    }
+  }
+}

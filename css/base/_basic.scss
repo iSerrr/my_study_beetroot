@@ -1,0 +1,149 @@
+* {
+  transition: all 0.2s ease-in-out;
+}
+.section {
+  width: 100%;
+  height: 100vh;
+  @include mobile {
+    height: auto;
+  }
+}
+.title-h1 {
+  font-family: $R-bold;
+  font-size: 90px;
+  @include mobile {
+    font-size: 50px;
+    text-align: center;
+  }
+  &--white {
+    color: $white-1;
+  }
+  &--black {
+    color: $black-1;
+  }
+}
+.description {
+  font-family: $R-light;
+  font-size: 17px;
+  font-weight: 300;
+  @include mobile {
+    text-align: justify;
+  }
+  &--black {
+    color: $black-1;
+  }
+  &--white {
+    color: $white-1;
+  }
+}
+.basic-button {
+  cursor: pointer;
+  padding: 11px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  color: $white-1;
+  font-family: $R-light;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  @include mobile {
+    width: 100%;
+  }
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  &--orange {
+    background-color: #ff6033;
+  }
+  &--purple {
+    background-color: #5585a2;
+  }
+  &--green {
+    background-color: #96b92c;
+  }
+  &--red {
+    background-color: #f72b3b;
+  }
+}
+.main-menu {
+  &__list {
+    display: flex;
+
+    @include mobile {
+      display: none;
+    }
+  }
+  &__link {
+    margin-right: 20px;
+    padding-top: 10px;
+    color: $black-1;
+    font-family: $R-bold;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-top: 2px solid transparent;
+    &:hover {
+      border-top: 2px solid #ff6033;
+    }
+    &--active {
+      border-color: #ff6033;
+    }
+  }
+}
+.basic-logo {
+  font-family: Pacifico;
+  &--black {
+    color: $black-1;
+  }
+  &--white {
+    color: $white-1;
+  }
+}
+.burger {
+  display: none;
+  cursor: pointer;
+  transition: 0.5s;
+  overflow: hidden;
+  margin-right: 10px;
+  position: relative;
+  width: 40px;
+  height: 25px;
+  @include mobile {
+    display: block;
+  }
+  &:hover &__line--top {
+    transform: rotate(30deg) scaleX(1.1);
+    transition-delay: 0.3s;
+  }
+  &:hover &__line--middle {
+    transform: translateY(-50%) translateX(-100%);
+    transition-delay: 0s;
+  }
+  &:hover &__line--bottom {
+    transform: rotate(-30deg) scaleX(1.1);
+    transition-delay: 0.3s;
+  }
+  &__line {
+    width: 100%;
+    height: 2px;
+    display: block;
+    background-color: $black-1;
+    position: absolute;
+    left: 0;
+    transform-origin: left;
+    &--top {
+      transform: rotate(0deg) scaleX(1);
+      transition-delay: 0;
+      top: 0;
+    }
+    &--middle {
+      top: 50%;
+      transform: translateY(-50%) translateX(0);
+      transition-delay: 0.3s;
+    }
+    &--bottom {
+      transform: rotate(0deg) scaleX(1);
+      transition-delay: 0;
+      bottom: 0;
+    }
+  }
+}

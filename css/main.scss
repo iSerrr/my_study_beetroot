@@ -1,15 +1,24 @@
 // !Sass
-@import "variables.scss"; // !Sass Variables
-@import "mixins.scss"; // !Sass Mixins
+@import "sass/variables.scss"; // !Sass Variables
+@import "sass/mixins.scss"; // !Sass Mixins
 
 // !Base
-@import "body.scss"; // !Style only for body
-@import "reset.scss"; // !Reset/normalize
-@import "typography.scss"; // !Font and typography
+@import "base/body.scss"; // !Style only for body
+@import "base/basic.scss"; // !Стилі для загальних блоків
+@import "base/reset.scss"; // !Reset/normalize
+@import "base/typography.scss"; // !Font and typography
 
 // !Components
-@import "buttons.scss"; // !Buttons
+@import "components/buttons.scss"; // !Buttons
+@import "components/components.scss"; // !Сomponents (menu...)
+@import "components/modules.scss"; // !Modules (grid scheme)
 
 // !Section
-@import "header.scss"; // !Header
-@import "footer.scss"; // !Footer
+@import "section/header.scss"; // !Header
+@import "section/footer.scss"; // !Footer
+@import "section/about-us.scss"; // !About Us
+@import "section/our-services.scss"; // !Our Services
+@import "section/gallery.scss"; // !Gallery
+@import "section/subscribe-to-us.scss"; // !Subscribe To Us
+@import "section/blog.scss"; // !Blog
+@import "section/contact-us.scss"; // !contact-us
