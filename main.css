@@ -209,29 +209,33 @@
 
 @font-face {
   font-family: Raleway-Light;
-  src: url(../../assets/fonts/Raleway-Light.ttf);
+  src: url(./assets/fonts/Raleway-Light.ttf);
 }
 @font-face {
   font-family: Raleway-Bold;
-  src: url(../../assets/fonts/Raleway-Bold.ttf);
+  src: url(./assets/fonts/Raleway-Bold.ttf);
 }
 @font-face {
   font-family: Raleway-Heavy;
-  src: url(../../assets/fonts/Raleway-Heavy.ttf);
+  src: url(./assets/fonts/Raleway-Heavy.ttf);
 }
 @font-face {
   font-family: Pacifico;
-  src: url(../../assets/fonts/Pacifico-Regular.ttf);
+  src: url(./assets/fonts/Pacifico-Regular.ttf);
 }
 @font-face {
   font-family: "icomoon";
   src: url("./assets/fonts/icomoon.eot?xfmxwq");
-  src: url("./assets/fonts/icomoon.eot?xfmxwq#iefix") format("embedded-opentype"), url("./assets/fonts/icomoon.ttf?xfmxwq") format("truetype"), url("./assets/fonts/icomoon.woff?xfmxwq") format("woff"), url("./assets/fonts/icomoon.svg?xfmxwq#icomoon") format("svg");
+  src: url("./assets/fonts/icomoon.eot?xfmxwq#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/icomoon.ttf?xfmxwq") format("truetype"),
+    url("./assets/fonts/icomoon.woff?xfmxwq") format("woff"),
+    url("./assets/fonts/icomoon.svg?xfmxwq#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
-[class^=icon-],
+[class^="icon-"],
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
@@ -346,7 +350,8 @@
   transition: 0.5s;
   transition-delay: 0.3s;
 }
-.button-two-step-border::before, .button-two-step-border::after {
+.button-two-step-border::before,
+.button-two-step-border::after {
   display: block;
   background-color: inherit;
   transform-origin: center;
@@ -412,7 +417,8 @@
   width: 100%;
   height: 100%;
 }
-.button-four-step-border span:nth-child(1)::after, .button-four-step-border span:nth-child(1)::before {
+.button-four-step-border span:nth-child(1)::after,
+.button-four-step-border span:nth-child(1)::before {
   position: absolute;
   left: -3px;
   display: block;
@@ -441,7 +447,8 @@
   width: 100%;
   height: 100%;
 }
-.button-four-step-border span:nth-child(2)::after, .button-four-step-border span:nth-child(2)::before {
+.button-four-step-border span:nth-child(2)::after,
+.button-four-step-border span:nth-child(2)::before {
   position: absolute;
   top: 0;
   left: -3px;
@@ -470,7 +477,8 @@
   grid-row: 1/3;
   grid-column: 1/5;
 }
-.test_grid_gallery div:nth-child(2), .test_grid_gallery div:nth-child(3) {
+.test_grid_gallery div:nth-child(2),
+.test_grid_gallery div:nth-child(3) {
   grid-column: 5/7;
 }
 .test_grid_gallery div:nth-child(4) {
@@ -646,7 +654,13 @@
   display: flex;
   align-items: center;
   background-color: #00c4c4;
-  background-image: radial-gradient(circle 1125px at center, rgba(0, 196, 196, 0.9) 0%, rgba(0, 183, 183, 0.9) 32%, rgba(0, 173, 173, 0.9) 68%, rgba(0, 156, 156, 0.9) 100%);
+  background-image: radial-gradient(
+    circle 1125px at center,
+    rgba(0, 196, 196, 0.9) 0%,
+    rgba(0, 183, 183, 0.9) 32%,
+    rgba(0, 173, 173, 0.9) 68%,
+    rgba(0, 156, 156, 0.9) 100%
+  );
 }
 @media (max-width: 480px) {
   .about-us {
@@ -840,7 +854,8 @@
   grid-row: 1/3;
   grid-column: 1/5;
 }
-.gallery__cconteiner div:nth-child(2), .gallery__cconteiner div:nth-child(3) {
+.gallery__cconteiner div:nth-child(2),
+.gallery__cconteiner div:nth-child(3) {
   grid-column: 5/7;
 }
 .gallery__cconteiner div:nth-child(4) {
@@ -1009,7 +1024,11 @@
   left: 0;
   color: #fff;
   background: #262626;
-  background: linear-gradient(180deg, rgba(38, 38, 38, 0) 56%, rgba(28, 28, 28, 0.9220063025) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(38, 38, 38, 0) 56%,
+    rgba(28, 28, 28, 0.9220063025) 100%
+  );
 }
 @media (max-width: 480px) {
   .blog-img-hover {
