@@ -69,7 +69,7 @@
         <h2 class="header__title">
           Fresh Life
         </h2>
-        <p class="description description--black">
+        <p class="header__description description description--black">
           Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
           enim ad minim veniam, quis nostrud exercitation ullamco.
         </p>
@@ -176,37 +176,37 @@
         exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
       <div class="gallery__cconteiner">
-        <div class="gallery__img-box gallery__img-box--size-L">
+        <div class="gallery__img-box">
           <img
             src="assets-cahhe/img/gallery/img_01.jpg"
             alt=""
             class="gallery__img"
           />
         </div>
-        <div class="gallery__img-box--extra">
-          <div class="gallery__img-box">
-            <img
-              src="assets-cahhe/img/gallery/img_02.jpg"
-              alt=""
-              class="gallery__img"
-            />
-          </div>
-          <div class="gallery__img-box gallery__img-box">
-            <img
-              src="assets-cahhe/img/gallery/img_03.jpg"
-              alt=""
-              class="gallery__img"
-            />
-          </div>
+
+        <div class="gallery__img-box">
+          <img
+            src="assets-cahhe/img/gallery/img_02.jpg"
+            alt=""
+            class="gallery__img"
+          />
         </div>
-        <div class="gallery__img-box gallery__img-box--size-M">
+        <div class="gallery__img-box">
+          <img
+            src="assets-cahhe/img/gallery/img_03.jpg"
+            alt=""
+            class="gallery__img"
+          />
+        </div>
+
+        <div class="gallery__img-box">
           <img
             src="assets-cahhe/img/gallery/img_04.jpg"
             alt=""
             class="gallery__img"
           />
         </div>
-        <div class="gallery__img-box gallery__img-box--size-M">
+        <div class="gallery__img-box">
           <img
             src="assets-cahhe/img/gallery/img_05.jpg"
             alt=""
@@ -219,19 +219,185 @@
     <!-- * Кінець секції gallery -->
 
     <!-- * Початок секції subscribe -->
-    <section class="subscribe section"></section>
+    <section class="subscribe section">
+      <div class="subscribe__conteiner">
+        <h2 class="subscribe__title">
+          Subscribe To Us
+        </h2>
+        <p class="description description--black subscribe__description">
+          Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+        <form class="subscribe__form" id="sub" action="#" method="get">
+          <input
+            class="subscribe__input-email"
+            type="email"
+            name="email"
+            id="email"
+            required
+            minlength="6"
+            placeholder="Your email address..."
+          />
+          <button class="basic-button basic-button--green">SUBSCRIBE</button>
+        </form>
+      </div>
+    </section>
     <!-- * Кінець секції subscribe -->
 
     <!-- * Початок секції blog -->
-    <section class="blog section"></section>
+    <section class="blog section">
+      <div class="blog__conteiner">
+        <h1 class="title-h1 title-h1--white">
+          Blog
+        </h1>
+        <p class="blog__description description description--white">
+          Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit.
+        </p>
+        <div class="blog__blog-gallery">
+          <div class="blog__img-box">
+            <img
+              src="assets-cahhe/img/blog/img_01.jpg"
+              alt=""
+              class="blog-img"
+            />
+            <div class="blog-img-hover">
+              <p class="blog-img__date">20 NOV</p>
+              <p class="blog-img__description">
+                Green Smoothies: Too Much of a Good Thing?
+              </p>
+              <p class="blog-img__author">By Auskteez - 2 hours ago</p>
+            </div>
+          </div>
+          <div class="blog__img-box">
+            <img
+              src="assets-cahhe/img/blog/img_02.jpg"
+              alt=""
+              class="blog-img"
+            />
+            <div class="blog-img-hover">
+              <p class="blog-img__date">14 NOV</p>
+              <p class="blog-img__description">
+                Growing Food and a “Thirst” for Innovation
+              </p>
+              <p class="blog-img__author">By Auskteez - 3 hours ago</p>
+            </div>
+          </div>
+          <div class="blog__img-box">
+            <img
+              src="assets-cahhe/img/blog/img_03.jpg"
+              alt=""
+              class="blog-img"
+            />
+            <div class="blog-img-hover">
+              <p class="blog-img__date">10 NOV</p>
+              <p class="blog-img__description">
+                Pesticides & Food: What You Need to Know
+              </p>
+              <p class="blog-img__author">By Auskteez - 6 hours ago</p>
+            </div>
+          </div>
+        </div>
+        <button class="basic-button basic-button--red">VIEW MORE</button>
+      </div>
+    </section>
     <!-- * Кінець секції blog -->
 
-    <!-- * Початок секції blog -->
-    <section class="blog section"></section>
-    <!-- * Кінець секції blog -->
+    <!-- * Початок секції contact-us -->
+    <section class="contact-us section">
+      <h1 class="title-contact-us title-h1 title-h1--black">
+        Contact
+      </h1>
+      <p class="contact-us__description description description--black">
+        For new projects, ideas, business or anything you'd like to discuss,
+        contact with me!
+      </p>
+      <div class="contact-us__conteiner">
+        <div>
+          <form method="GET" id="contact" action="#" class="contact-us-form">
+            <input
+              class="contact-us-form__item contact-us-form__text"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Auskteez Tran"
+            />
+            <input
+              class="contact-us-form__item contact-us-form__text"
+              type="text"
+              name="email"
+              id="email"
+              required
+              minlength="6"
+              placeholder="Your email..."
+            />
+            <input
+              class="contact-us-form__item contact-us-form__text"
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="Your phone number..."
+            />
+            <textarea
+              class="contact-us-form__item contact-us-form__text-area"
+              name="text-area"
+              id="text-area"
+              cols="30"
+              rows="10"
+              placeholder="Your messge..."
+            ></textarea>
+            <button
+              class="contact-us-form__item contact-us-form__button contact-us__button basic-button"
+            >
+              OK
+            </button>
+          </form>
+        </div>
+        <div>
+          <p
+            class="contact-us__description-adres contact-us__description-adres--bold"
+          >
+            ADDRESS
+          </p>
+          <p class="contact-us__description-adres">
+            123 City name, Street, City, Country
+          </p>
+          <p
+            class="contact-us__description-adres contact-us__description-adres--bold"
+          >
+            EMAIL
+          </p>
+          <p class="contact-us__description-adres">
+            cahee@domain.com
+          </p>
+          <p
+            class="contact-us__description-adres contact-us__description-adres--bold"
+          >
+            PHONE
+          </p>
+          <p class="contact-us__description-adres">
+            +012 345 6789
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- * Кінець секції contact-us -->
 
     <!-- * Початок секції footer -->
-    <footer class="footer section"></footer>
+    <footer class="footer section">
+      <div class="footer__conteiner">
+        <p class="footer__all-right">
+          © 2015 Company. All right reserved.
+        </p>
+        <p class="basic-logo basic-logo--white footer__logo">
+          Cahee
+        </p>
+        <p class="footer__author">
+          Made with <span class="footer__author--red">love</span> by Auskteez
+        </p>
+      </div>
+    </footer>
     <!-- * Кінець секції footer -->
   </body>
 </html>

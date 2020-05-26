@@ -1,0 +1,35 @@
+// !Імпорт шрифтів
+@import "font-face.scss";
+
+// !Імпорт зміних
+@import "variables.scss";
+
+// !Імпорт mixin
+@import "_mixins.scss";
+
+// !Стилі для загальних блоків
+@import "basic.scss";
+
+// !Стилі для секції header
+@import "header.scss";
+
+// !Стилі для секції About Us
+@import "about-us.scss";
+
+// !Стилі для секції Our Services
+@import "our-services.scss";
+
+// !Стиля для секції Gallery
+@import "gallery.scss";
+
+// !Стиля для секції Subscribe To Us
+@import "subscribe-to-us.scss";
+
+// !Стиля для секції Blog
+@import "blog.scss";
+
+// !Стиля для секції contact-us
+@import "contact-us.scss";
+
+// !Стиля для секції footer
+@import "footer.scss";
