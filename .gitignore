@@ -1,7 +1,4 @@
 
-# Created by https://www.gitignore.io/api/windows,visualstudio
-# Edit at https://www.gitignore.io/?templates=windows,visualstudio
-
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -378,7 +375,38 @@ healthchecksdb
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
 
-# End of https://www.gitignore.io/api/windows,visualstudio
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
 
-# Config  prepros file
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Prepros ###
+# Config Prepros files to ignore
+prepros.cfg
+prepros-6.config
 prepros.config
+
+structure.txt
