@@ -1,0 +1,28 @@
+.btn-nean-UI {
+  width: 203px;
+  height: 54px;
+  border-radius: 27px;
+  color: #ffffff;
+  font-family: $B-bold;
+  font-size: 18px;
+  letter-spacing: 1.44px;
+  cursor: pointer;
+  &--base {
+    box-shadow: 2px 4px 18px rgba(133, 192, 247, 0.31);
+    background-color: #6fcffb;
+    &:hover {
+      border: 2px solid #6fcffb;
+      background-color: #fff;
+      color: #6fcffb;
+    }
+  }
+  &--popular {
+    box-shadow: 2px 4px 18px rgba(253, 141, 123, 0.31);
+    background-color: #fd8d7b;
+    &:hover {
+      border: 2px solid #fd8d7b;
+      background-color: #fff;
+      color: #fd8d7b;
+    }
+  }
+}
