@@ -1,1 +1,21 @@
-
+// ! Display Flex column center center
+@mixin flex_row_center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+// ! Display Flex column center center
+@mixin flex_column_center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+//  ! Positin centering (-%50,-50%)
+@mixin pos_50_50 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

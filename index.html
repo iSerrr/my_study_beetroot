@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
 
+    <!-- ! Import to google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- ! сonnect a css file -->
     <link rel="stylesheet" href="main.css" />
 
@@ -15,9 +21,46 @@
     <title>Document</title>
   </head>
   <body>
-    <h1 class="h1-examle">
-      <p class="h1-examle__bold">Presetting</p>
-      before starting the project
-    </h1>
+    <!-- ! Start header -->
+    <header class="header">
+      <div class="header__conteiner _conteiner">
+        <h1 class="header__title">Bhromaon</h1>
+        <p class="header__subtitle">Safe Travel Anywhere</p>
+        <form class="search" action="#" method="get">
+          <input
+            class="search__input"
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search Your Travel Destination"
+          />
+          <button class="search__btn btn">
+            Search
+            <span class="icon-search search__icon"></span>
+          </button>
+        </form>
+        <a href="#" class="header__scroll-down">Scroll Down</a>
+      </div>
+      <nav class="main-menu">
+        <div class="main-menu__conteiner _conteiner">
+          <p class="main-menu__title">Bhromaon</p>
+          <ul class="main-menu__list">
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">Who We Are</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">What We Do</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link">Travel With Us</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__link"> Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- ! End header -->
   </body>
 </html>
