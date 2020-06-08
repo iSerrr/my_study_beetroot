@@ -3,12 +3,12 @@
 //  ! Icommoon
 @font-face {
   font-family: "icomoon";
-  src: url("./assets/fonts/icomoon.eot?p1pwww");
-  src: url("./assets/fonts/icomoon.eot?p1pwww#iefix")
+  src: url("./assets/fonts/icomoon.eot?me1r43");
+  src: url("./assets/fonts/icomoon.eot?me1r43#iefix")
       format("embedded-opentype"),
-    url("./assets/fonts/icomoon.ttf?p1pwww") format("truetype"),
-    url("./assets/fonts/icomoon.woff?p1pwww") format("woff"),
-    url("./assets/fonts/icomoon.svg?p1pwww#icomoon") format("svg");
+    url("./assets/fonts/icomoon.ttf?me1r43") format("truetype"),
+    url("./assets/fonts/icomoon.woff?me1r43") format("woff"),
+    url("./assets/fonts/icomoon.svg?me1r43#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -30,6 +30,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-close:before {
+  content: "\e903";
+}
 .icon-angle-down-circle:before {
   content: "\e900";
 }

@@ -1,6 +1,7 @@
 //! Sass
 @import "sass/variables.scss"; //! Sass Variables
 @import "sass/mixins.scss"; //! Sass Mixins
+@import "sass/responsive.scss"; //! Sass Responsive
 
 //! Base
 @import "base/reset.scss"; //!Reset/normalize
@@ -15,5 +16,6 @@
 
 //! Section
 @import "section/header.scss"; //! Header
+@import "section/why-choose-us.scss"; //! Why-choose-us
 @import "section/footer.scss"; //! Footer
 //? ...more section

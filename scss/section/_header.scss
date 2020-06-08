@@ -1,14 +1,16 @@
 .header {
   color: $white-1;
   position: relative;
-  background-image: url(./assets/img/header/bg.jpg);
-  background-size: contain 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url(./assets/img/header/bg.jpg) no-repeat 50% / cover;
   height: 100vh;
   &__conteiner {
     height: 100%;
     @include flex_column_center;
+    @include mobile {
+      padding: 100px 15px 20px;
+      justify-content: space-between;
+      text-align: center;
+    }
   }
   &__title {
     font-size: 48px;
@@ -16,6 +18,9 @@
     text-transform: uppercase;
     letter-spacing: 3.1px;
     margin: 52px 0 4px 0;
+    @include mobile {
+      font-size: 40px;
+    }
   }
   &__subtitle {
     font-size: 22px;
@@ -23,6 +28,9 @@
     line-height: 26px;
     letter-spacing: 5.3px;
     margin-bottom: 46px;
+    @include mobile {
+      font-size: 28px;
+    }
   }
   &__scroll-down {
     position: relative;
@@ -48,6 +56,12 @@
     &::after {
       transform: translateY(-100%) rotate(-135deg);
     }
+    @include mobile {
+      display: none;
+    }
+    @include tablets {
+      display: none;
+    }
   }
 }
 .search {
@@ -55,6 +69,14 @@
   font-size: 0px;
   @include flex_row_center;
   margin-bottom: 115px;
+  @include mobile {
+    @include flex_column_center;
+    margin-bottom: 0;
+  }
+  @include tablets {
+    @include flex_column_center;
+    margin-bottom: 0;
+  }
   &__input {
     height: 60px;
     max-width: 500px;
@@ -63,17 +85,33 @@
     width: calc(500 / 1110 * 100%);
     border: none;
     padding-left: calc(125 / 1110 * 100%);
-    color: #999999;
+    color: $black-1;
     font-size: 14px;
     font-weight: 400;
     line-height: 26px;
     letter-spacing: 2.8px;
+    &::placeholder {
+      color: $silver-1;
+    }
+    @include mobile {
+      width: 100%;
+      min-width: initial;
+      margin-bottom: 10px;
+    }
+    @include tablets {
+      width: 90%;
+      min-width: initial;
+      margin-bottom: 10px;
+    }
   }
   &__btn {
     padding: 5px 0 0 23px;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include mobile {
+      width: 100%;
+    }
   }
   &__icon {
     margin-left: 11px;
