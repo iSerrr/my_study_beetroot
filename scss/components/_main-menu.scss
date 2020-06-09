@@ -1,0 +1,174 @@
+.main-menu {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background-color: $blue;
+  @include mobile {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+  }
+  @include tablets {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+  }
+  &__conteiner {
+    height: 100%;
+    @include flex_row_center;
+    justify-content: space-between;
+    @include mobile {
+      padding: 30px 15px;
+      align-items: flex-start;
+    }
+    @include tablets {
+      padding: 30px 30px;
+      align-items: flex-start;
+    }
+  }
+  &__title {
+    color: $white-1;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.08px;
+  }
+  &__list {
+    height: 100%;
+    display: flex;
+    margin: 0px -21px 0 0;
+    @include mobile {
+      background-color: $blue;
+      position: absolute;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+      padding: 15px 15px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transform: translateX(-100%);
+      transition: all 0.4s ease-in-out;
+      &:target {
+        transform: translateX(0);
+      }
+    }
+    @include tablets {
+      background-color: $blue;
+      position: absolute;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+      padding: 30px 30px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transform: translateX(-100%);
+      transition: transform 0.4s ease-in-out;
+      &:target {
+        transform: translateX(0);
+      }
+    }
+  }
+  &__item {
+    height: 100%;
+    @include mobile {
+      height: auto;
+    }
+    @include tablets {
+      height: auto;
+    }
+  }
+  &__link {
+    display: block;
+    @include flex_column_center;
+    min-width: 138px;
+    height: 100%;
+    color: $white-1;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 3px 21px 0;
+    letter-spacing: -0.06px;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      background-color: $blue-h;
+    }
+    @include mobile {
+      text-align: center;
+      font-size: 28px;
+      padding: 35px 21px;
+    }
+    @include tablets {
+      font-size: 30px;
+      padding: 35px 21px;
+    }
+    @media (max-width: 810px) {
+      padding: 35px 10px;
+    }
+  }
+  &__burger {
+    @include flex_column_center;
+    display: none;
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 25px;
+    @include mobile {
+      display: flex;
+    }
+    @include tablets {
+      display: flex;
+    }
+  }
+  &__burger-line {
+    display: block;
+    background-color: $white-1;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transition: 0.2s;
+    transition-delay: 0.3s;
+    &::before,
+    &::after {
+      visibility: visible;
+      width: inherit;
+      height: inherit;
+      display: block;
+      content: "";
+      position: absolute;
+      border-radius: inherit;
+      left: 0;
+      background-color: inherit;
+      transform-origin: left;
+      transition: 0.3s;
+      transition-delay: 0;
+    }
+    &::before {
+      top: 0;
+      transform: translateY(0) rotate(0deg) scaleX(1);
+    }
+    &::after {
+      top: 100%;
+      transform: translateY(-100%) rotate(0) scale(1);
+    }
+  }
+  &__mobile-desc {
+    @include flex_row_center;
+    justify-content: space-between;
+    display: none;
+    @include mobile {
+      display: flex;
+    }
+    @include tablets {
+      display: flex;
+    }
+  }
+  &__mobile-close-link {
+    font-size: 35px;
+    color: $white-1;
+    text-decoration: none;
+  }
+}

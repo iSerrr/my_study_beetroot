@@ -1,0 +1,121 @@
+.what-our-tourist-say {
+  height: 100vh;
+  background: url(../../assets/img/what-our-tourist-say/bg.jpg) no-repeat 50% /
+    cover;
+  @include mobile {
+    min-height: 880px;
+  }
+  &__conteiner {
+    height: 100%;
+    @include flex_column_center;
+    @include mobile {
+      padding: 50px 15px;
+    }
+    @include tablets {
+      padding: 30px 15px;
+    }
+  }
+  &__title {
+    margin: 0 0 91px 0;
+  }
+  &__content {
+    position: relative;
+    width: 100%;
+    font-size: 0;
+    background-color: #333333;
+    min-height: 284px;
+    max-height: 284px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 0 82px 0;
+    @include mobile {
+      @include flex_column_center;
+      max-height: initial;
+      height: auto;
+      margin: 0 0 0 0;
+    }
+    @include tablets {
+      @include flex_column_center;
+      max-height: initial;
+      height: auto;
+      margin: 0 0 0 0;
+    }
+  }
+  &__column {
+    cursor: pointer;
+    width: calc(665 / 1110 * 100%);
+    padding: 50px 35px 15px 60px;
+    overflow: hidden;
+    margin: 0 0 45px;
+    @include mobile {
+      width: 100%;
+      padding: 0 15px;
+      text-align: justify;
+      text-align-last: center;
+    }
+    @include tablets {
+      width: 100%;
+      text-align: justify;
+      text-align-last: center;
+    }
+  }
+  &__imgBx {
+    width: calc(445 / 1110 * 100%);
+    min-width: 445px;
+    @include mobile {
+      width: 100%;
+      min-width: initial;
+    }
+    @include tablets {
+      width: 100%;
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+  &__quote-title {
+    color: $white-3;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin: 0 0 33px 0;
+    @include mobile {
+      margin: 25px 0 25px 0;
+      font-size: 30px;
+    }
+    @include tablets {
+      font-size: 30px;
+    }
+  }
+  &__quote {
+    overflow: hidden;
+    max-height: 284px;
+    text-align: justify;
+    width: calc(551 / 1110 * 100%);
+    color: $white-2;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -1.1px;
+    @include mobile {
+      font-size: 18px;
+    }
+    @include tablets {
+      font-size: 18px;
+    }
+  }
+}
+.icon-quote {
+  position: relative;
+  width: 20px;
+  display: inline-block;
+  margin: 0 5px 0 0;
+  font-size: 20px;
+  color: #5474fd;
+  &::before {
+    position: absolute;
+    top: -29px;
+  }
+}

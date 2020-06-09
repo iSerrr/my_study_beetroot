@@ -1,0 +1,56 @@
+.btn {
+  cursor: pointer;
+  min-width: 150px;
+  height: 60px;
+  border: 2px solid $white-1;
+  background-color: $blue;
+  color: $white-1;
+  font-family: "Aleo", serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  transition: all 0.1s ease-in-out;
+  &:hover {
+    background-color: $blue-h;
+  }
+  span {
+    position: relative;
+    z-index: 2;
+  }
+  &--glass {
+    color: $white-1;
+    font-family: "Aleo", serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    width: 225px;
+    min-width: 225px;
+    height: 60px;
+    @include mobile {
+      width: 100%;
+    }
+    &::before {
+      top: 0;
+      left: 0;
+      z-index: 1;
+      position: absolute;
+      content: "";
+      display: block;
+      background-color: #496bfe;
+      width: 200%;
+      height: 200%;
+      transform: translateX(-200px) rotate(46deg);
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      background-color: $blue;
+    }
+    &:hover::before {
+      transform: translateX(0) rotate(0deg);
+    }
+  }
+}

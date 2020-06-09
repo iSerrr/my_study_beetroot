@@ -1,40 +1,105 @@
 .why-choose-us {
   background: url(../../assets/img/why-choose-us/bg.jpg) no-repeat 50% / cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 900px;
   &__conteiner {
-    @include flex_row_center;
-    justify-content: space-between;
-    height: 100vh;
-  }
-  &__row {
-    width: calc(530 / 1110 * 100%);
+    @include flex_column_center;
+    height: 100%;
+    min-height: 560px;
+    max-height: 600px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    @include mobile {
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+      min-height: initial;
+      max-height: initial;
+    }
+    @include tablets {
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: center;
+      min-height: initial;
+      max-height: initial;
+    }
   }
   &__title {
+    width: calc(530 / 1110 * 100%);
     margin: 64px 0 59px 0;
+    @include mobile {
+      width: 100%;
+      text-align: center;
+      margin: 0 0 30px 0;
+    }
+    @include tablets {
+      width: 100%;
+      text-align: center;
+      margin: 0 0 30px 0;
+    }
   }
   &__desc {
-    width: 100%;
+    width: calc(530 / 1110 * 100%);
     margin: 0 0 26px 0;
+    @include mobile {
+      width: 100%;
+      text-align: justify;
+      text-align-last: center;
+      margin: 0 0 30px 0;
+    }
+    @include tablets {
+      width: 100%;
+      text-align: justify;
+      text-align-last: center;
+      margin: 0 0 30px 0;
+    }
   }
   &__btn {
     margin: 16px 0 0 0;
+    @include mobile {
+      margin: 20px 0 0;
+      order: 1;
+    }
+    @include tablets {
+      margin: 20px calc(256.5 / 738 * 100%) 0;
+      order: 1;
+    }
   }
   &__imgBx {
     max-width: 350px;
-    width: calc(350 / 530 * 100%);
-    &:first-child {
-      margin: 0 0 0 calc(55 / 530 * 100%);
+    width: calc(350 / 1110 * 100%);
+    @include mobile {
+      width: 100%;
+    }
+    @include tablets {
+      width: 48%;
+    }
+    &:nth-child(5) {
+      margin: calc(50 / 1110 * 100%) calc(125 / 1110 * 100%) 0
+        calc(55 / 1110 * 100%);
+      @include mobile {
+        margin: 0 0 10px;
+      }
+      @include tablets {
+        margin: initial;
+      }
     }
     &:last-child {
-      margin: 0 0 5px calc(180 / 530 * 100%);
+      margin: 0 0 calc(50 / 1110 * 100%) calc(180 / 1110 * 100%);
+      @include mobile {
+        margin: initial;
+      }
+      @include tablets {
+        margin: initial;
+      }
     }
   }
   &__img {
     width: 100%;
   }
-}
-.title {
-}
-.desc {
-}
-.btn--glas {
 }

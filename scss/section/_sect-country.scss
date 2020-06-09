@@ -1,0 +1,79 @@
+.sect-country {
+  height: 100vh;
+  &--first {
+    background: url(./assets/img/sect-country/bg_1.jpg) no-repeat 50% / cover;
+    & > div {
+      @include flex_row_start_center;
+      @include mobile {
+        @include flex_row_center;
+      }
+      @include tablets {
+        @include flex_row_center;
+      }
+    }
+  }
+  &--second {
+    background: url(./assets/img/sect-country/bg_2.jpg) no-repeat 50% / cover;
+    & > div {
+      @include flex_row_end_center;
+      @include mobile {
+        @include flex_row_center;
+      }
+      @include tablets {
+        @include flex_row_center;
+      }
+    }
+  }
+  &__conteiner {
+    height: 100%;
+  }
+  &__content {
+    margin: 129px 0 0 0;
+    width: 540px;
+    height: 371px;
+    background-color: rgba(35, 35, 35, 0.85);
+    padding: 50px 15px 0 30px;
+    color: $white-2;
+    @include mobile {
+      height: auto;
+      margin: 50px 0 0 0;
+      padding: 50px 30px;
+      text-align: center;
+    }
+    @include tablets {
+      padding: 50px 30px;
+      text-align: center;
+    }
+  }
+}
+.cuntry {
+  &__title {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    padding: 0 0 30px 0;
+  }
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 0 0 21px 0;
+    letter-spacing: -0.95px;
+    color: $white-1;
+  }
+  &__desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    padding: 0 0 43px 0;
+    letter-spacing: -0.99px;
+    @include mobile {
+      text-align: justify;
+      text-align-last: center;
+    }
+    @include tablets {
+      text-align: justify;
+      text-align-last: center;
+    }
+  }
+}

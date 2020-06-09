@@ -11,11 +11,15 @@
 
 //! Components
 @import "components/buttons.scss"; //! Buttons
+@import "components/main-menu.scss"; //! Main-Menu
 @import "components/components.scss"; //! Сomponents (menu...)
 @import "components/modules.scss"; //! Modules (grid scheme)
 
 //! Section
 @import "section/header.scss"; //! Header
-@import "section/why-choose-us.scss"; //! Why-choose-us
+@import "section/why-choose-us.scss"; //! Why Choose Us
+@import "section/how-it-works.scss"; //! How It Works
+@import "section/sect-country.scss"; //! Sect Country 1-2
+@import "section/what-our-tourist-say.scss"; //! What Our Tourist Say
 @import "section/footer.scss"; //! Footer
 //? ...more section

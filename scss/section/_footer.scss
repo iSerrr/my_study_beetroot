@@ -1,0 +1,43 @@
+.footer {
+  height: 268px;
+  background-color: #232323;
+  padding: 121px 15px 0;
+  &__conteiner {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 166px;
+  }
+  &__title-logo {
+    font-family: "Josefin Sans", sans-serif;
+    color: $white-1;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+    margin: 0 0 11px 0;
+  }
+  &__subtitle {
+    font-family: "Josefin Sans", sans-serif;
+    color: $white-1;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.45px;
+    margin: 0 0 28px 0;
+  }
+  &__social-list {
+    margin: 0 0 0 -4px;
+    @include flex_row_beetween;
+  }
+  &__social-item {
+  }
+  &__social-link {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    color: $white-2;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}

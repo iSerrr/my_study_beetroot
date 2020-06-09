@@ -5,12 +5,40 @@
   justify-content: center;
   align-items: center;
 }
+// ! Display Flex row start center
+@mixin flex_row_start_center {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+// ! Display Flex row end center
+@mixin flex_row_end_center {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+//! Display Flex row beetwen
+@mixin flex_row_beetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 // ! Display Flex column center center
 @mixin flex_column_center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+// ! Display Flex column start center
+@mixin flex_column_start {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 //  ! Position centering (-%50,-50%)
 @mixin pos_50_50 {
