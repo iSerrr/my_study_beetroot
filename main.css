@@ -709,7 +709,7 @@ body {
 }
 
 .why-choose-us {
-  background: url(../../assets/img/why-choose-us/bg.jpg) no-repeat 50%/cover;
+  background: url(./assets/img/why-choose-us/bg.jpg) no-repeat 50%/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1116,7 +1116,7 @@ body {
 
 .what-our-tourist-say {
   height: 100vh;
-  background: url(../../assets/img/what-our-tourist-say/bg.jpg) no-repeat 50%/cover;
+  background: url(./assets/img/what-our-tourist-say/bg.jpg) no-repeat 50%/cover;
 }
 @media (max-width: 480px) {
   .what-our-tourist-say {
