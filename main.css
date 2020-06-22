@@ -20,3 +20,7 @@
 .js-homework__item:nth-child(2n) {
   background-color: #6b811b;
 }
+text {
+  text-decoration: underline;
+  background-color: #e7e7e7;
+}
