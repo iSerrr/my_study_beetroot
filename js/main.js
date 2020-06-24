@@ -1,6 +1,5 @@
-
 // ! Об'єкти
-console.log(``)
+document.write(`-------- Завдання 1. Автомобілі --------`);
 // ?1. Создать объект, описывающий автомобиль (производитель, модель, год выпуска, средняя скорость), и следующие функции для работы с этим объектом:
 let car = {
   make: "Audi",
@@ -22,11 +21,12 @@ showAllObj(car);
 
 //todo Функция для подсчета необходимого времени для преодоления переданного расстояния со средней скоростью. Учтите, что через каждые 4 часа дороги водителю необходимо делать перерыв на 1 час.
 
-function calctimeOfdist(obj, dist) {
-  return dist / obj.avrSpeed + Math.floor(((dist / obj.avrSpeed) - 1) / 4);
-}
-console.log(calctimeOfdist(car, 1500));
+let calctimeOfdist = (obj, dist) => dist / obj.avrSpeed + Math.floor(((dist / obj.avrSpeed) - 1) / 4);
 
+document.write(`Даному авто, для подолдання 1500 км, необхідно: ${calctimeOfdist(car, 1500)} годин.`);
+
+
+console.log(`-------- Завдання 2. на дроби --------`);
 // ?2. Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, и следующие функции для работы с этим объектом:
 let fraction1 = {
   larger: 4,
@@ -37,13 +37,16 @@ let fraction2 = {
   smaller: 5,
 }
 
+//! додаткова функція для зручного виводу
+let showFrac = (obj1, obj2, res) => obj1.larger + '/' + obj1.smaller + " і " + obj2.larger + '/' + obj2.smaller + ' = ' + res.larger + '/' + res.smaller;
+
 //todo Функция сложения 2-х объектов-дробей;
 function summFrac(obj1, obj2) {
   return {
     larger: ((obj1.smaller * obj2.smaller) / obj1.smaller * obj1.larger) + ((obj1.smaller * obj2.smaller) / obj2.smaller * obj2.larger), smaller: (obj1.smaller * obj2.smaller)
   };
 };
-console.log(`Додавання ${fraction1.larger}/${fraction1.smaller} + ${fraction2.larger}/${fraction2.smaller} = ${summFrac(fraction1, fraction2).larger}/${summFrac(fraction1, fraction2).smaller}`);
+console.log(`Додавання ${showFrac(fraction1, fraction2, reducFrac(summFrac(fraction1, fraction2)))}`);
 
 //todo Функция вычитания 2-х объектов-дробей;
 function difFrac(obj1, obj2) {
@@ -51,7 +54,7 @@ function difFrac(obj1, obj2) {
     larger: ((obj1.smaller * obj2.smaller) / obj1.smaller * obj1.larger) - ((obj1.smaller * obj2.smaller) / obj2.smaller * obj2.larger), smaller: (obj1.smaller * obj2.smaller)
   };
 };
-console.log(`Віднімання ${fraction1.larger}/${fraction1.smaller} - ${fraction2.larger}/${fraction2.smaller} = ${difFrac(fraction1, fraction2).larger}/${difFrac(fraction1, fraction2).smaller}`);
+console.log(`Віднімання ${showFrac(fraction1, fraction2, reducFrac(difFrac(fraction1, fraction2)))}`);
 
 //todo Функция умножения 2-х объектов-дробей;
 function multiFrac(obj1, obj2) {
@@ -60,15 +63,14 @@ function multiFrac(obj1, obj2) {
   };
 };
 
-console.log(`Множення ${fraction1.larger}/${fraction1.smaller} * ${fraction2.larger}/${fraction2.smaller} = ${multiFrac(fraction1, fraction2).larger}/${multiFrac(fraction1, fraction2).smaller}`);
+console.log(`Множення ${showFrac(fraction1, fraction2, reducFrac(multiFrac(fraction1, fraction2)))}`);
 
 //todo Функция деления 2-х объектов-дробей;
 
 function divFrac(obj1, obj2) {
   return { larger: (obj1.larger * obj2.smaller), smaller: (obj1.smaller * obj2.larger) };
 };
-console.log(`Ділення ${fraction1.larger}/${fraction1.smaller} * ${fraction2.larger}/${fraction2.smaller} = ${divFrac(fraction1, fraction2).larger}/${divFrac(fraction1, fraction2).smaller}`);
-
+console.log(`Ділення ${showFrac(fraction1, fraction2, reducFrac(divFrac(fraction1, fraction2)))}`);
 
 
 //todo Функция сокращения объекта-дроби.
@@ -77,15 +79,19 @@ function reducFrac(obj) {
   for (let i = 0; i <= obj.larger; i++) {
     if (obj.larger % i === 0 && obj.smaller % i === 0) { x = i };
   }
-  if (x > 0) obj.larger /= x, obj.smaller /= x;
+  if (x > 0) return { larger: obj.larger /= x, smaller: obj.smaller /= x };
 };
 
-let newFrac = divFrac(fraction1, fraction2);
+let newFrac = {
+  larger: 5,
+  smaller: 10,
+};
 
-console.log(`До cкорочення  = ${newFrac.larger}/${newFrac.smaller}`)
+console.log(`До cкорочення = ${newFrac.larger} / ${newFrac.smaller}`)
 reducFrac(newFrac);
-console.log(`Після cкорочення  = ${newFrac.larger}/${newFrac.smaller}`)
+console.log(`Після cкорочення = ${newFrac.larger} / ${newFrac.smaller}`)
 
+console.log(`\n--------Завдання 3. з датами--------`);
 // ?3. Создать объект, описывающий время (часы, минуты, секунды), и следующие функции для работы с этим объектом:
 //! Зробив усі фінкції через return для комфортнішого маніпулюванням даними.
 let date = new Date(2014, 0, 1, 14, 30, 45);
