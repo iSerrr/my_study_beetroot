@@ -24,3 +24,14 @@ text {
   text-decoration: underline;
   background-color: #e7e7e7;
 }
+.table {
+    width: 100%;
+    background: #fff;
+    color: #fff;
+    border-spacing: 1px;
+   }
+   .table td, th {
+     text-align: center;
+    background: rgb(26, 102, 201);
+    padding: 5px;
+   }
