@@ -49,16 +49,14 @@ class Marker {
   }
 
   print(text) {
-    document.write(`<p style="color:${this.color};">${text.slice(0, this.volume / 0.5)}</p>`);
+    document.write(`<p style="color:${this.color};">${text.slice(0, this.volume / 0.5 + (text.length - text.replace(/\s/g, '').length))}</p>`);
   }
 }
 
 let marker = new Marker({
   color: 'red',
-  volume: 25
+  volume: 2
 })
-console.log(marker);
-marker.print('Lorem ipsum dolor, sit amet consectetur adipisicing elit.Laudantium, eos vel ipsum quo optio beatae vero nobis sunt delectus est aliquid et rerum reprehenderit numquam tenetur repellendus quaerat, ullam debitis ?');
 
 class MarkerRepair extends Marker {
   constructor(options) {
@@ -72,9 +70,8 @@ let marker2 = new MarkerRepair({
   color: "green",
   volume: 45
 })
-marker2.print('Lorem ipsum dolor, sit amet consectetur adipisicing elit.Laudantium, eos vel ipsum quo optio beatae vero nobis sunt delectus est aliquid et rerum reprehenderit numquam tenetur repellendus quaerat, ullam debitis ?');
+marker.print('L o r e m');
 marker2.repair(85);
-marker2.print('Перезапрвали і далі -- Lorem ipsum dolor, sit amet consectetur adipisicing elit.Laudantium, eos vel ipsum quo optio beatae vero nobis sunt delectus est aliquid et rerum reprehenderit numquam tenetur repellendus quaerat, ullam debitis ?');
 
 // поле, которое хранит цвет маркера;
 // поле, которое хранит количество чернил в маркере (в процентах);
