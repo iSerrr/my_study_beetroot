@@ -1,140 +1,118 @@
-//? 1) Реализовать класс, описывающий окружность. В классе должны быть следующие компоненты:
+//! Список пісень
+const playList = [
+  {
+    author: "LED ZEPPELIN",
+    song: "STAIRWAY TO HEAVEN"
+  },
 
-class Circle {
+  {
+    author: "QUEEN",
+    song: "BOHEMIAN RHAPSODY"
+  },
 
-  constructor(options) {
-    this.radius = options.radius
-  }
+  {
+    author: "LYNYRD SKYNYRD",
+    song: "FREE BIRD"
+  },
 
-  get showRadius() {
-    return this.radius + ' см'
-  }
-  get showDiamert() {
-    return this.radius * 2 + ' см'
-  }
+  {
+    author: "DEEP PURPLE",
+    song: "SMOKE ON THE WATER"
+  },
 
-  set newRadius(newValue) {
-    this.radius = newValue;
-  }
-  area() {
-    return Math.ceil(Math.PI * (this.radius ** 2)) + ' см'
-  }
-  length() {
-    return Math.ceil(this.radius * Math.PI * 2) + ' см'
-  }
-}
+  {
+    author: "JIMI HENDRIX",
+    song: "ALL ALONG THE WATCHTOWER"
+  },
 
-let circle = new Circle({
-  radius: 10
+  {
+    author: "AC/DC",
+    song: "BACK IN BLACK"
+  },
+
+  {
+    author: "QUEEN",
+    song: "WE WILL ROCK YOU"
+  },
+
+  {
+    author: "METALLICA",
+    song: "ENTER SANDMAN"
+  }
+];
+
+const task1 = document.querySelector('.task-1');
+
+let ul = document.createElement('ol');
+
+playList.forEach(element => {
+  const li = document.createElement('li');
+  li.innerHTML = `${element.author} - ${element.song}`;
+  ul.append(li);
 });
 
-document.write(`Круг із радіусом ${circle.showRadius}<br>діаметр - ${circle.showDiamert}<br>площа круга - ${circle.area()}<br>довжина круга - ${circle.length()}`);
-document.write(`<p>Задамо новий радіус 25</p>`);
-circle.newRadius = 25;
-document.write(`Круг із радіусом ${circle.showRadius}<br>діаметр - ${circle.showDiamert}<br>площа круга - ${circle.area()}<br>довжина круга - ${circle.length()}`);
+task1.append(ul);
 
-// поле, хранящее радиус окружности;
-// get-свойство, возвращающее радиус окружности;
-// set-свойство, устанавливающее радиус окружности;
-// get-свойство, возвращающее диаметр окружности;
-// метод, вычисляющий площадь окружности;
-// метод, вычисляющий длину окружности.
-// Продемонстрировать работу свойств и методов. 
+//! попАп
 
-//? 2) Реализовать класс, описывающий простой маркер. В классе должны быть следующие компоненты:
-class Marker {
-  constructor(options) {
-    this.color = options.color;
-    this.volume = options.volume;
-  }
+const popUp = document.createElement('div');
+popUp.className = 'pop-up';
 
-  print(text) {
-    document.write(`<p style="color:${this.color};">${text.slice(0, this.volume / 0.5 + (text.length - text.replace(/\s/g, '').length))}</p>`);
-  }
-}
+const popUpContnet = document.createElement('p');
+popUpContnet.innerHTML = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur voluptate consequuntur quo reprehenderit porro esse deserunt, maiores impedit vero illum rem recusandae cupiditate quas accusantium dolore quisquam placeat, ratione repudiandae eos? Eveniet reprehenderit aperiam debitis possimus ullam quae in, ex veniam. Ratione totam, alias, esse nostrum animi quam sed enim repellat earum sapiente, sint nam. Corrupti commodi assumenda excepturi quod dolor incidunt? Sequi consequatur est voluptatibus aut nam, esse itaque aspernatur excepturi harum, enim atque? Inventore quis vel, laborum dolor ad ipsa magni quam ut? Cumque cupiditate sint voluptatibus culpa voluptas in repellendus possimus laudantium vero harum quae modi itaque quos maiores, rerum sapiente sunt aspernatur, delectus magnam repellat id repudiandae? Cum veritatis facere consequuntur adipisci nesciunt provident rerum fuga porro minus quibusdam quam incidunt, earum accusantium magni atque quod consequatur repellendus, est, excepturi laboriosam natus omnis. Nisi, harum architecto atque libero possimus qui id aliquam odio, alias, error dolor.';
 
-let marker = new Marker({
-  color: 'red',
-  volume: 2
-})
+const closeBtn = document.createElement('p');
+closeBtn.className = 'close';
+closeBtn.innerHTML = 'Закрити';
 
-class MarkerRepair extends Marker {
-  constructor(options) {
-    super(options)
-  }
-  repair(vol) {
-    this.volume = vol;
-  }
-}
-let marker2 = new MarkerRepair({
-  color: "green",
-  volume: 45
-})
-marker.print('L o r e m');
-marker2.repair(85);
+const popUpConteiner = document.createElement('div');
+popUpConteiner.className = 'pop-up__conteiner';
+popUpConteiner.append(popUpContnet, closeBtn);
 
-// поле, которое хранит цвет маркера;
-// поле, которое хранит количество чернил в маркере (в процентах);
-// метод для печати (метод принимает строку и выводит текст соответствующим цветом; текст выводится до тех пор, пока в маркере есть чернила; один не пробельный символ – это 0,5% чернил в маркере).
-// Реализовать класс, описывающий заправляющийся маркер, унаследовав его от простого маркера и добавив метод для заправки маркера.
-// Продемонстрировать работу написанных методов. 
+popUp.append(popUpConteiner);
 
-//? 3) Реализовать класс Employee, описывающий работника, и создать массив работников банка.
+const openBtn = document.createElement('p');
+openBtn.className = 'open';
+openBtn.innerHTML = 'ВІДКРИТИ';
 
-class Employee {
-  constructor(options) {
-    this.name = options.name;
-    this.age = options.age;
-    this.exp = options.exp;
-  }
-}
-let employee01 = new Employee({
-  name: 'John',
-  age: 35,
-  exp: 7
-});
-let employee02 = new Employee({
-  name: 'Sarra',
-  age: 31,
-  exp: 5
-});
-let employee03 = new Employee({
-  name: 'Mike',
-  age: 39,
-  exp: 11
-});
-let employee04 = new Employee({
-  name: 'Jimmy',
-  age: 28,
-  exp: 2
-});
-let employee05 = new Employee({
-  name: 'Anna',
-  age: 27,
-  exp: 1
+document.querySelector('.task-2').append(popUp, openBtn);
+
+openBtn.onclick = () => {
+  popUp.classList.add('active');
+};
+closeBtn.onclick = () => {
+  popUp.classList.remove('active');
+};
+
+//! Світлофор
+
+const trafficLight = document.createElement('div');
+trafficLight.className = 'traffic-light';
+
+// Кількість ламп світлофору залежить від к-оті елементів масиву із кольорами, але то вже не зовсім світлофор))
+const itemColor = ['green', 'orange', 'red'];
+
+let k = 0;
+itemColor.forEach(element => {
+  const trafficLlightItem = document.createElement('div');
+  trafficLlightItem.className = 'traffic-light__item';
+  trafficLlightItem.style.backgroundColor = element;
+  trafficLight.append(trafficLlightItem);
 });
 
-let EmployeeOfBank = [employee01, employee02, employee03, employee04, employee05];
-console.table(EmployeeOfBank);
+const trafficLightToogle = document.createElement('button');
+trafficLightToogle.className = 'traffic-light-toogle';
+trafficLightToogle.innerHTML = 'Переключатель';
 
-//Реализовать класс EmpTable для генерации HTML-кода таблицы со списком работников банка. Массив работников необходимо передавать через конструктор, а получать HTML-код с помощью метода getHtml().
+document.querySelector('.task-3').append(trafficLight, trafficLightToogle);
 
-class EmpTable {
-  constructor(arr) {
-    this.arr = arr;
+let i = 0;
+
+trafficLightToogle.onclick = () => {
+  i++;
+  if (i > trafficLight.children.length) { i = 1 };
+  for (let j = 0; j < trafficLight.children.length; j++) {
+    trafficLight.children[j].classList.remove('active');
   }
-
-  get getHtml() {
-    document.write(`<table class="table">`);
-    document.write(`<tr><th>Ім'я</th><th>Вік</th><th>Досвід</th></tr>`);
-    this.arr.forEach(element => {
-      document.write(`<tr><td>${element.name}</td><td>${element.age}</td><td>${element.exp}</td></tr>`);
-    });
-    document.write(`</table>`)
-  }
-}
-
-//Создать объект класса EmpTable и вывести на экран результат работы метода getHtml().
-
-let empTable = new EmpTable(EmployeeOfBank);
-empTable.getHtml;
+  trafficLight.children[i - 1].classList.add('active');
+};
