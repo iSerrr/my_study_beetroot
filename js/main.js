@@ -1,118 +1,205 @@
-//! Список пісень
-const playList = [
-  {
-    author: "LED ZEPPELIN",
-    song: "STAIRWAY TO HEAVEN"
-  },
+// ! --------------------< Завдання 1 >------------------
+const taskBlock = document.querySelectorAll('.task-block');
 
-  {
-    author: "QUEEN",
-    song: "BOHEMIAN RHAPSODY"
-  },
+const textRead = document.createElement('div');
+textRead.className = 'text-read-edit';
+textRead.innerText = 'Початковий текст';
 
-  {
-    author: "LYNYRD SKYNYRD",
-    song: "FREE BIRD"
-  },
+const textEdit = document.createElement('textarea');
+textEdit.className = 'text-read-edit active';
 
-  {
-    author: "DEEP PURPLE",
-    song: "SMOKE ON THE WATER"
-  },
+taskBlock[0].append(textRead);
 
-  {
-    author: "JIMI HENDRIX",
-    song: "ALL ALONG THE WATCHTOWER"
-  },
+const edit = () => {
+    textRead.replaceWith(textEdit);
+    textEdit.value = textRead.innerText;
+};
 
-  {
-    author: "AC/DC",
-    song: "BACK IN BLACK"
-  },
+const save = () => {
+    textEdit.replaceWith(textRead);
+    textRead.innerText = textEdit.value;
+};
 
-  {
-    author: "QUEEN",
-    song: "WE WILL ROCK YOU"
-  },
-
-  {
-    author: "METALLICA",
-    song: "ENTER SANDMAN"
-  }
+document.addEventListener('keydown', (event) => {
+    if (document.body.querySelector('div')) {
+        if (event.code == 'KeyE' && event.ctrlKey) event.preventDefault(), edit();
+    }
+    if (document.body.querySelector('textarea')) {
+        if (event.code == 'NumpadAdd' && event.ctrlKey) event.preventDefault(), save();
+    }
+});
+// ! --------------------< Завдання 2 >------------------
+const players = [
+    {
+        firstName: 'Tomi',
+        lastName: 'Kennedy',
+        age: 18,
+        points: 98
+    },
+    {
+        firstName: 'Megan',
+        lastName: 'Stacey',
+        age: 21,
+        points: 75
+    },
+    {
+        firstName: 'Spencer',
+        lastName: 'Cotton',
+        age: 19,
+        points: 68
+    },
+    {
+        firstName: 'Arabella',
+        lastName: 'Berg',
+        age: 25,
+        points: 95
+    },
+    {
+        firstName: 'Phoenix',
+        lastName: 'Calvert',
+        age: 17,
+        points: 71
+    },
+    {
+        firstName: 'Daisie',
+        lastName: 'Day',
+        age: 22,
+        points: 97
+    },
+    {
+        firstName: 'Libbi',
+        lastName: 'Haas',
+        age: 18,
+        points: 84
+    },
+    {
+        firstName: 'Aleah',
+        lastName: 'Sutherland',
+        age: 22,
+        points: 45
+    },
+    {
+        firstName: 'Eryn',
+        lastName: 'Harvey',
+        age: 26,
+        points: 100
+    },
+    {
+        firstName: 'Bullock',
+        lastName: 'Bullock',
+        age: 25,
+        points: 89
+    }
 ];
 
-const task1 = document.querySelector('.task-1');
+function createTable(arr) {
 
-let ul = document.createElement('ol');
+    const table = document.createElement('table');
+    let res = [];
 
-playList.forEach(element => {
-  const li = document.createElement('li');
-  li.innerHTML = `${element.author} - ${element.song}`;
-  ul.append(li);
+    const trTitle = document.createElement('tr');
+    for (key in arr[0]) {
+        const th = document.createElement('th');
+        th.innerText = key;
+        th.addEventListener('click', sortingToTitle);
+        trTitle.append(th);
+    }
+
+    res.push(trTitle);
+    arr.forEach(element => {
+        const tr = document.createElement('tr');
+        for (key in element) {
+            const td = document.createElement('td');
+            td.innerText = element[key];
+            tr.append(td);
+        }
+        res.push(tr);
+    });
+
+    table.append(...res);
+
+    function sortingToTitle() {
+        console.log(this.innerHTML);
+        let x = this.innerHTML;
+        arr.sort(function (a, b) {
+            if (a[x].typeof == "number") return a[x] - b[x];
+            else {
+                if (a[x] < b[x]) return -1;
+                if (a[x] > b[x]) return 1;
+                return 0;
+            };
+        });
+        renderTable(taskBlock[1]);
+    };
+    return table
+};
+
+function renderTable(elem) {
+    elem.lastChild.remove();
+    elem.append(createTable(players));
+};
+
+renderTable(taskBlock[1]);
+
+// ! --------------------< Завдання 3 >------------------
+
+const divResize = document.createElement('div');
+divResize.className = 'resize';
+divResize.style.width = '300px';
+divResize.style.height = '150px'
+
+divResize.innerText = 'Даний блок змінннює розмір';
+
+
+const counter = document.createElement('p');
+
+
+let oX = 0;
+let oY = 0;
+counter.innerText = `Вісь X - ${oX}`
+const test = () => oX;
+let renderXandY = () => counter.innerText = `Вісь X - ${oX} Вісь Y - ${oY}`;
+
+
+
+let resX = 0;
+let resY = 0;
+
+document.addEventListener('mousedown', (event) => {
+    resX = oX;
+    resY = oY;
+    resW = divResize.style.width.slice(0, 3);
+    resQ = divResize.style.height.slice(0, 3);
 });
 
-task1.append(ul);
+document.addEventListener('mousemove', (event1) => {
+    oX = event.clientX;
+    oY = event.clientY;
+    if (event1.buttons === 1) {
+        divResize.style.width = `${+(resW) + (oX - resX)}px`;
+        divResize.style.height = `${+(resQ) + (oY - resY)}px`;
+        console.log(`ширина блоку${divResize.style.width} зміна на ${oX - resX}`);
+    };
 
-//! попАп
-
-const popUp = document.createElement('div');
-popUp.className = 'pop-up';
-
-const popUpContnet = document.createElement('p');
-popUpContnet.innerHTML = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur voluptate consequuntur quo reprehenderit porro esse deserunt, maiores impedit vero illum rem recusandae cupiditate quas accusantium dolore quisquam placeat, ratione repudiandae eos? Eveniet reprehenderit aperiam debitis possimus ullam quae in, ex veniam. Ratione totam, alias, esse nostrum animi quam sed enim repellat earum sapiente, sint nam. Corrupti commodi assumenda excepturi quod dolor incidunt? Sequi consequatur est voluptatibus aut nam, esse itaque aspernatur excepturi harum, enim atque? Inventore quis vel, laborum dolor ad ipsa magni quam ut? Cumque cupiditate sint voluptatibus culpa voluptas in repellendus possimus laudantium vero harum quae modi itaque quos maiores, rerum sapiente sunt aspernatur, delectus magnam repellat id repudiandae? Cum veritatis facere consequuntur adipisci nesciunt provident rerum fuga porro minus quibusdam quam incidunt, earum accusantium magni atque quod consequatur repellendus, est, excepturi laboriosam natus omnis. Nisi, harum architecto atque libero possimus qui id aliquam odio, alias, error dolor.';
-
-const closeBtn = document.createElement('p');
-closeBtn.className = 'close';
-closeBtn.innerHTML = 'Закрити';
-
-const popUpConteiner = document.createElement('div');
-popUpConteiner.className = 'pop-up__conteiner';
-popUpConteiner.append(popUpContnet, closeBtn);
-
-popUp.append(popUpConteiner);
-
-const openBtn = document.createElement('p');
-openBtn.className = 'open';
-openBtn.innerHTML = 'ВІДКРИТИ';
-
-document.querySelector('.task-2').append(popUp, openBtn);
-
-openBtn.onclick = () => {
-  popUp.classList.add('active');
-};
-closeBtn.onclick = () => {
-  popUp.classList.remove('active');
-};
-
-//! Світлофор
-
-const trafficLight = document.createElement('div');
-trafficLight.className = 'traffic-light';
-
-// Кількість ламп світлофору залежить від к-оті елементів масиву із кольорами, але то вже не зовсім світлофор))
-const itemColor = ['green', 'orange', 'red'];
-
-let k = 0;
-itemColor.forEach(element => {
-  const trafficLlightItem = document.createElement('div');
-  trafficLlightItem.className = 'traffic-light__item';
-  trafficLlightItem.style.backgroundColor = element;
-  trafficLight.append(trafficLlightItem);
+    renderXandY();
 });
 
-const trafficLightToogle = document.createElement('button');
-trafficLightToogle.className = 'traffic-light-toogle';
-trafficLightToogle.innerHTML = 'Переключатель';
 
-document.querySelector('.task-3').append(trafficLight, trafficLightToogle);
 
-let i = 0;
 
-trafficLightToogle.onclick = () => {
-  i++;
-  if (i > trafficLight.children.length) { i = 1 };
-  for (let j = 0; j < trafficLight.children.length; j++) {
-    trafficLight.children[j].classList.remove('active');
-  }
-  trafficLight.children[i - 1].classList.add('active');
-};
+
+
+
+
+
+
+// document.addEventListener('mouseup', (event) => {
+//     res1 = oX - resX;
+//     res2 = oY - resY;
+//     console.log(res1);
+//     divResize.style.width = `${+(divResize.style.width.slice(0, 3)) + (res1)}px`;
+//     divResize.style.height = `${+(divResize.style.height.slice(0, 3)) + (res2)}px`;
+//     console.log(divResize.style.width, divResize.style.height);
+// });
+
+taskBlock[2].append(divResize, counter);
