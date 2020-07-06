@@ -142,64 +142,39 @@ function renderTable(elem) {
 renderTable(taskBlock[1]);
 
 // ! --------------------< Завдання 3 >------------------
-
+//? 
 const divResize = document.createElement('div');
 divResize.className = 'resize';
 divResize.style.width = '300px';
 divResize.style.height = '150px'
 
-divResize.innerText = 'Даний блок змінннює розмір';
+const resizeBeacon = document.createElement('div');
+resizeBeacon.classList = 'resize__beacon icon-resize-arrow-inside-a-square-interface-symbol';
+divResize.append(resizeBeacon);
 
 
-const counter = document.createElement('p');
+//? Стартові значення для початку відліку, та розмір об"єкту до моменту збільшення
+let startAxisX = 0;
+let startAxisY = 0;
 
+let currentWidth = 0;
+let currentHeight = 0;
 
-let oX = 0;
-let oY = 0;
-counter.innerText = `Вісь X - ${oX}`
-const test = () => oX;
-let renderXandY = () => counter.innerText = `Вісь X - ${oX} Вісь Y - ${oY}`;
-
-
-
-let resX = 0;
-let resY = 0;
-
-document.addEventListener('mousedown', (event) => {
-    resX = oX;
-    resY = oY;
-    resW = divResize.style.width.slice(0, 3);
-    resQ = divResize.style.height.slice(0, 3);
+//? Фіксуєм дані під часу натискання кнопки
+resizeBeacon.addEventListener('mousedown', (event) => {
+    event.preventDefault();
+    startAxisX = event.clientX;
+    startAxisY = event.clientY;
+    currentWidth = +divResize.style.width.slice(0, [divResize.style.width.length - 2]);
+    currentHeight = +divResize.style.height.slice(0, [divResize.style.height.length - 2]); 
 });
 
-document.addEventListener('mousemove', (event1) => {
-    oX = event.clientX;
-    oY = event.clientY;
-    if (event1.buttons === 1) {
-        divResize.style.width = `${+(resW) + (oX - resX)}px`;
-        divResize.style.height = `${+(resQ) + (oY - resY)}px`;
-        console.log(`ширина блоку${divResize.style.width} зміна на ${oX - resX}`);
+//? Змінюєм кординати та змінюєм розмір блоку
+resizeBeacon.addEventListener('mousemove', (event) => {
+    if (event.buttons === 1) {
+        divResize.style.width = `${(currentWidth) + (event.clientX - startAxisX)}px`;
+        divResize.style.height = `${(currentHeight) + (event.clientY - startAxisY)}px`;
     };
-
-    renderXandY();
 });
 
-
-
-
-
-
-
-
-
-
-// document.addEventListener('mouseup', (event) => {
-//     res1 = oX - resX;
-//     res2 = oY - resY;
-//     console.log(res1);
-//     divResize.style.width = `${+(divResize.style.width.slice(0, 3)) + (res1)}px`;
-//     divResize.style.height = `${+(divResize.style.height.slice(0, 3)) + (res2)}px`;
-//     console.log(divResize.style.width, divResize.style.height);
-// });
-
-taskBlock[2].append(divResize, counter);
+taskBlock[2].append(divResize);
