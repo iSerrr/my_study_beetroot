@@ -97,6 +97,7 @@ body {
 }
 .icon-chevron-right,
 .icon-chevron-left {
+    width: 32px;
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 100;
@@ -104,7 +105,12 @@ body {
     top: 50%;
     right: 10px;
     color: #fff;
-    font-size: 45px;                                                                                                                              
+    font-size: 45px;  
+    opacity: .35;
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+        opacity: unset;
+    }                                                                                                                           
 }
 .icon-chevron-left {
     left: 10px;

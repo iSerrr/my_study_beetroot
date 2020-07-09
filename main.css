@@ -96,6 +96,7 @@
 
 .icon-chevron-right,
 .icon-chevron-left {
+  width: 32px;
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 100;
@@ -104,6 +105,12 @@
   right: 10px;
   color: #fff;
   font-size: 45px;
+  opacity: 0.35;
+  transition: opacity 0.2s ease-in-out;
+}
+.icon-chevron-right:hover,
+.icon-chevron-left:hover {
+  opacity: unset;
 }
 
 .icon-chevron-left {
