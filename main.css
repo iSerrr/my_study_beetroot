@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -7,236 +6,122 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: Lato-Bold;
-  src: url("./assets/fonts/Lato-Bold.ttf");
-}
-@font-face {
-  font-family: Lato-Regular;
-  src: url("./assets/fonts/Lato-Regular.ttf");
-}
-@font-face {
-  font-family: "icomoon";
-  src: url("./assets/fonts/icomoon.eot?jmwnbv");
-  src: url("./assets/fonts/icomoon.eot?jmwnbv#iefix") format("embedded-opentype"), url("./assets/fonts/icomoon.ttf?jmwnbv") format("truetype"), url("./assets/fonts/icomoon.woff?jmwnbv") format("woff"), url("./assets/fonts/icomoon.svg?jmwnbv#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-[class^=icon-], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-star-full:before {
-  content: "";
-}
-
-.icon-002:before {
-  content: "";
-}
-
-.icon-003:before {
-  content: "";
-}
-
-.icon-001:before {
-  content: "";
-}
-
-body {
-  font-family: Lato-Regular, sans-serif;
-  color: #fff;
-}
-
-a {
-  color: #fff;
-}
-
-.game-sale {
+.intro {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background: #292d3e url(./assets/img/bg.png) no-repeat 50%/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
 }
-.game-sale__wrapper {
-  width: 600px;
-  height: 541px;
-  box-shadow: 0 23px 57px rgba(0, 0, 0, 0.4);
-  background-color: #212534;
-}
-.game-sale__nav-bar {
-  width: 600px;
-  height: 115px;
-  background-color: #2b3040;
+.intro__content {
+  height: calc(100vh);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 0 59px;
 }
-.game-sale__content-conteiner {
+.intro__content--black {
+  background-color: #000;
+}
+.intro__content--yellow {
+  background-color: #c4a600;
+}
+.intro__content--red {
+  background-color: red;
+}
+.intro__title {
+  text-align: center;
+  color: #fff;
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  width: 1118px;
+  margin-bottom: 20px;
+}
+.intro__sub-title {
+  color: #fff;
+  width: 757px;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 48px;
+  letter-spacing: 0.15px;
+  text-align: center;
+}
+.intro .nav-bar {
+  z-index: 101;
+  position: fixed;
   width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-.game-sale__content {
-  position: absolute;
-  padding: 59px 47px;
-  transform: translateX(-100%);
-  transition: transform 0.4s ease-in-out;
-}
-.game-sale__content-active {
-  transition-delay: 0.4s;
-  transform: translateX(0);
-}
-.game-sale__nav-item {
-  height: 100%;
-}
-.game-sale__nav-link {
-  padding: 0 10px;
-  height: 100%;
+  height: 75px;
+  color: #fff;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  color: #fbfbfb;
-  font-size: 16px;
-  text-transform: uppercase;
-  opacity: 0.6;
-  border-bottom: 2px solid transparent;
+  padding: 0 32px;
 }
-.game-sale__nav-link-active {
-  opacity: unset;
-  border-color: #fff;
+.intro .nav-bar__logo {
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 0.18px;
 }
-.game-sale__nav-icon {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.information {
-  display: flex;
-}
-.information__imgBx {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.information__rating {
-  margin: 25px 0 0 0;
-}
-.information__description {
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 0 42px;
-}
-.information__row {
-  width: 313px;
+.intro .nav-bar__menu-list {
   display: flex;
   justify-content: space-between;
 }
-.information__title {
-  font-size: 32px;
-  margin: 0 0 10px 0;
-}
-.information__sub-title {
-  color: #fdfdfd;
-  font-size: 14px;
-  margin: 0 0 42px 0;
-}
-.information__sale {
-  color: #fedc3f;
-  font-size: 12px;
-  font-family: Lato-Bold, sans-serif;
-  text-transform: uppercase;
-  margin: 0 0 5px 0;
-}
-.information__description-text {
-  color: #b7bacd;
-  font-size: 14px;
-  line-height: 22px;
-  margin: 37px 0 60px 0;
-}
-.information__price {
+.intro .nav-bar__link {
+  margin: 0 15px;
   color: #ffffff;
-  font-size: 32px;
-  line-height: 20px;
-}
-.information__buy {
-  cursor: pointer;
-  width: 164px;
-  height: 55px;
-  border-radius: 2px;
-  background-color: #13e28d;
-  color: #ffffff;
-  font-size: 16px;
-  font-family: Lato-Bold, sans-serif;
-  line-height: 20px;
-  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.07px;
 }
 
-.ratting {
-  display: flex;
-  flex-direction: row-reverse;
-  font-size: 20px;
-}
-.ratting__star {
-  color: #4b536b;
-  margin: 0 3px;
+.base-btn {
+  border: none;
+  outline: none;
   cursor: pointer;
-  transition: all 0.15s ease-in-out;
+  width: 184px;
+  height: 57px;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 36px;
+  text-transform: uppercase;
+  letter-spacing: 0.09px;
 }
-.ratting__star:hover ~ li, .ratting__star:hover {
-  transform: scale(1.1);
-  color: #ffe884;
-}
-.ratting__star-active {
-  color: #fedc3f;
+.base-btn--yellow {
+  background-color: #eecd31;
 }
 
-.progres-bar {
+.icon-chevron-right,
+.icon-chevron-left {
+  transform: translateY(-50%);
   cursor: pointer;
-  position: relative;
-  width: 74px;
-  height: 75px;
-}
-.progres-bar__svg {
-  transform-origin: center;
-  transform: rotate(-90deg);
-  fill: transparent;
-  stroke-dasharray: 220;
-  stroke-dashoffset: calc(220 - 220 / 120 * 78);
-}
-.progres-bar__text {
+  z-index: 100;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #aaadbb;
-  font-size: 20px;
+  right: 10px;
+  color: #fff;
+  font-size: 45px;
 }
-.progres-bar::before {
-  content: "";
-  display: block;
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
+
+.icon-chevron-left {
+  left: 10px;
+}
+
+.slick-dots li button:before {
+  font-size: 15px;
+  opacity: 0.25;
+  color: white;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: white;
+}
+
+.slick-dots {
   position: absolute;
-  border-radius: 50%;
-  border: 2px solid #787c9b;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 25px;
 }

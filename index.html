@@ -3,129 +3,94 @@
 
 <head>
   <!-- Підключення основних стилів -->
-  <link rel="stylesheet" href="main.css" />
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Homework 31</title>
+  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/69f1c4d0d8/farcry4/style.css">
+
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
+  <link rel="stylesheet" href="main.css" />
+  
+  <title>Homework 31-work</title>
 </head>
 
 <body>
 
-</body>
-<section class="game-sale">
+<section class="intro">
+  <div class="nav-bar">
+    <div class="nav-bar__logo">
+      Intro
+    </div>
 
-  <div class="game-sale__wrapper">
-
-    <ul class="game-sale__nav-bar">
-
-      <li class="game-sale__nav-item">
-        <a  class="game-sale__nav-link game-sale__nav-link-active" href="information">
-          <i class="icon-001 game-sale__nav-icon"></i>
-          INFORMATION
-        </a>
-      </li>
-
-      <li class="game-sale__nav-item">
-        <a  class="game-sale__nav-link" href="rating">
-          <i class="icon-002 game-sale__nav-icon"></i>
-          RATINGS INFO
-        </a>
-      </li>
-
-      <li class="game-sale__nav-item">
-        <a  class="game-sale__nav-link" href="where">
-          <i class="icon-003 game-sale__nav-icon"></i>
-          WHERE TO BUY
-        </a>
-      </li>
-
+    <ul class="nav-bar__menu-list">
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link">Home</a></li>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link">About</a></li>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link">Sevices</a></li>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link">Works</a></li>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link">Events</a></li>
+      <li class="nav-bar__item"><a href="#" class="nav-bar__link">Contact</a></li>
     </ul>
+  </div>
 
-    <div class="game-sale__content-conteiner">
-
-      <div class="game-sale__content information game-sale__content-active">
-
-        <div class="information__imgBx">
-          <img src="./assets/img/item.jpg" alt="img01">
-
-          <ul class="information__rating ratting">
-            <li class="ratting__star"><i class="icon-star-full"></i></li>
-            <li class="ratting__star"><i class="icon-star-full"></i></li>
-            <li class="ratting__star"><i class="icon-star-full"></i></li>
-            <li class="ratting__star"><i class="icon-star-full"></i></li>
-            <li class="ratting__star"><i class="icon-star-full"></i></li>
-          </ul>
-
-        </div>
-
-        <div class="information__description">
-
-          <div class="information__row">
-            <div><h1 class="information__title">
-              FarCry 4
-            </h1>
-            <span class="information__sub-title">
-              First Released Nov 17, 2014
-            </span></div>
-            
-
-            <div class="progres-bar">
-
-              <svg class="progres-bar__svg" height="75" width="74">
-                <linearGradient id="linearColors">
-                  <stop offset="0%" stop-color="#00d4be"></stop>
-                  <stop offset="100%" stop-color="#1ae77f"></stop>
-                </linearGradient>
-                <circle cx="37" cy="37" r="35" stroke="url(#linearColors)" stroke-width="4"/>
-              </svg>
-              
-              <p class="progres-bar__text">
-                7.8
-              </p>
-
-            </div>
-          </div>
-
-          <p class="information__description-text">
-            In Far Cry 4, players find themselves in Kyrat, a breathtaking, perilous and wild region of the Hima
-            layas struggling under the regime of a despotic self-appointed king.
-          </p>
-
-          <div class="information__row">
-
-            <p class="information__price">
-              <span class="information__sale">
-                20% OFF!
-              </span>
-              $59.96
-            </p>
-            <button class="information__buy">
-              BUY IT NOW
-            </button>
-
-          </div>
-
-        </div>
-
+  <div class="intro__slide-wrapper">
+    <div class="intro__slide-page">
+      <div class="intro__content intro__content--black">
+        <h1 class="intro__title">We craft meaningful digital experiences </h1>
+        <h3 class="intro__sub-title">Creating products and services that transform organizations for the digital economy</h3>
+        <button class="intro__btn base-btn base-btn--yellow">SEE OUR WORK</button>
       </div>
-      <div class="game-sale__content rating">
-        <h1>RATINGS INFO</h1>
-        <h2>This page under construction image dark</h2>
+    </div>
 
+    <div class="intro__slide-page">
+      <div class="intro__content intro__content--yellow">
+        <h1 class="intro__title">We craft meaningful digital experiences </h1>
+        <h3 class="intro__sub-title">Creating products and services that transform organizations for the digital economy</h3>
+        <button class="intro__btn base-btn base-btn--yellow">SEE OUR WORK</button>
       </div>
-      <div class="game-sale__content where">
-        <h1>WHERE TO BUY</h1>
-        <h2>This page under construction image dark</h2>
+    </div>
 
+    <div class="intro__slide-page">
+      <div class="intro__content intro__content--red">
+
+        <h1 class="intro__title">We craft meaningful digital experiences </h1>
+        
+        <h3 class="intro__sub-title">Creating products and services that transform organizations for the digital economy</h3>
+        
+        <button class="intro__btn base-btn base-btn--yellow">SEE OUR WORK</button>
       </div>
-
     </div>
 
   </div>
 
-</section>
+ </section>
 
-<script src="./js/jquery.js"></script>
-<script src="./js/main.js" defer></script>
+ <script src="js/main.js" defer></script>
+ <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+ <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+ <script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('.intro__slide-wrapper').slick({
+        accessibility: false,
+        dots: true,
+        infinite: false,
+        speed: 300,
+        prevArrow: '<i class="icon-chevron-left"></i>',
+        nextArrow: '<i class="icon-chevron-right"></i>',
+        dotsClass: 'slick-dots'
+      });
+  });
+</script>
+
+
+
+</body>
+
+
+
+
+
 
 </html>

@@ -1,188 +1,126 @@
-@import "reset.scss";
-@import "fonts.scss";
-
+@import 'reset.scss';
 body {
-    font-family: Lato-Regular, sans-serif;
-    color: #fff;
 }
-a {
-    color: #fff;
-}
-.game-sale {
+.intro {
+    position: relative;
     width: 100%;
     height: 100vh;
-    background: #292d3e url(./assets/img/bg.png) no-repeat 50% / cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
-    &__wrapper {
-        width: 600px;
-        height: 541px;
-        box-shadow: 0 23px 57px rgba(0, 0, 0, 0.4);
-        background-color: #212534;    
-    }
-    &__nav-bar {
-        width: 600px;
-        height: 115px;
-        background-color: #2b3040;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 59px;
-    }
-    &__content-conteiner {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
+    &__content-wrapper {
     }
     &__content {
-        position: absolute;
-        padding: 59px 47px;
-        transform: translateX(-100%);
-        transition: transform 0.4s ease-in-out;
-        ;
-        &-active {
-            transition-delay: 0.4s;
-            transform: translateX(0);
-        }
-    }
-    &__nav-item {
-        height: 100%;
-    }
-    &__nav-link {
-        padding: 0 10px;
-        height: 100%;
+        height: calc(100vh);
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        color: #fbfbfb;
-        font-size: 16px;
-        text-transform: uppercase;
-        opacity: .6;
-        border-bottom: 2px solid transparent;
-        &-active {
-        opacity: unset;
-        border-color: #fff;
-        }
-    }
-    &__nav-icon {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-}
-.information {
-    display: flex;
-       &__imgBx {
-        display: flex;
-        flex-direction: column;
         align-items: center;
-            }
-    &__rating {
-        margin: 25px 0 0 0;
-    }
-    &__description {
-        display: flex;
-        flex-direction: column;
-        margin: 0 0 0 42px;
-    }
-    &__row {
-        width: 313px;
-        display: flex;
-        justify-content: space-between;
+        &--black {
+            background-color: #000;
+        }
+        &--yellow {
+            background-color: rgb(196, 166, 0);
+        }
+        &--red {
+            background-color: red;
+        }
     }
     &__title {
-        font-size: 32px;
-        margin: 0 0 10px 0;
+        text-align: center;
+        color: #fff;
+        font-size: 80px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+        width: 1118px;
+        margin-bottom: 20px;
     }
     &__sub-title {
-        color: #fdfdfd;
-        font-size: 14px;
-        margin: 0 0 42px 0;
+        color: #fff;
+        width: 757px;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 48px;
+        letter-spacing: 0.15px;
+        text-align: center;
+    &__btn {
     }
-    &__sale {
-        color: #fedc3f;
-        font-size: 12px;
-        font-family: Lato-Bold, sans-serif;
-        text-transform: uppercase;
-        margin: 0 0 5px 0;
-    }
-    &__description-text {
-        color: #b7bacd;
-        font-size: 14px;
-        line-height: 22px;
-        margin: 37px 0 60px 0;
-    }
-    &__price {
-        color: #ffffff;
-        font-size: 32px;
-        line-height: 20px;
+}
+.nav-bar {
+    z-index: 101;
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    color: #fff;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    &__logo {
+        font-family: sans-serif;
+        font-size: 36px;
+        font-weight: 400;
+        letter-spacing: 0.18px;
     }
 
-    &__buy {
-        cursor: pointer;
-        width: 164px;
-        height: 55px;
-        border-radius: 2px;
-        background-color: #13e28d;
+    &__menu-list {
+        display: flex; 
+        justify-content: space-between;
+    }
+
+    &__item {
+    }
+    &__link {
+        margin: 0 15px;
         color: #ffffff;
-        font-size: 16px;
-        font-family: Lato-Bold, sans-serif;
-        line-height: 20px;
-        text-transform: uppercase;
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.07px;
     }
 }
-.ratting {
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 20px;
-    &__star {
-        color: #4b536b;
-        margin: 0 3px;
-        cursor: pointer;
-        transition: all 0.15s ease-in-out;
-        &:hover ~ li,
-        &:hover {
-            transform: scale(1.1);
-            color: #ffe884;    
-        }
-        &-active {
-            color: #fedc3f;  
-        }
-    }
 }
-.progres-bar {
+.base-btn {
+    border: none;
+    outline: none;
     cursor: pointer;
-    position: relative;
-    width: 74px;
-    height: 75px;
-    &__svg {
-        transform-origin: center;
-        transform:rotate(-90deg);
-        fill: transparent; 
-        stroke-dasharray: 220;  
-        stroke-dashoffset: calc(220 - 220 / 120 * 78);
+    width: 184px;
+    height: 57px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+    text-transform: uppercase;
+    letter-spacing: 0.09px;
+    &--yellow {
+        background-color: #eecd31;
     }
-    &__text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #aaadbb;
-        font-size: 20px;
-    }
-    &::before {
-        content: '';
-        display: block;
-        width: calc(100% - 10px);
-        height: calc(100% - 10px);
-        position: absolute;
-        border-radius: 50%;
-        border: 2px solid #787c9b;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+}
+.icon-chevron-right,
+.icon-chevron-left {
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    color: #fff;
+    font-size: 45px;                                                                                                                              
+}
+.icon-chevron-left {
+    left: 10px;
+}
+
+.slick-dots li button:before {
+    font-size: 15px;
+    opacity: .25;
+    color: rgb(255, 255, 255);
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: white;
+}
+.slick-dots {
+    position: absolute;
+    bottom: 25px;
 }
