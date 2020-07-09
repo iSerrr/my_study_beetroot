@@ -21,11 +21,12 @@ const save = () => {
 };
 
 document.addEventListener('keydown', (event) => {
+    console.log(event.key);
     if (document.body.querySelector('div')) {
         if (event.code == 'KeyE' && event.ctrlKey) event.preventDefault(), edit();
     }
     if (document.body.querySelector('textarea')) {
-        if (event.code == 'NumpadAdd' && event.ctrlKey) event.preventDefault(), save();
+        if (event.key == '+' && event.ctrlKey) event.preventDefault(), save();
     }
 });
 // ! --------------------< Завдання 2 >------------------
