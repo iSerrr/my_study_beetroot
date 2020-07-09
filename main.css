@@ -168,7 +168,7 @@ a {
   color: #b7bacd;
   font-size: 14px;
   line-height: 22px;
-  margin: 0 0 60px 0;
+  margin: 37px 0 60px 0;
 }
 .information__price {
   color: #ffffff;
@@ -218,7 +218,7 @@ a {
   transform: rotate(-90deg);
   fill: transparent;
   stroke-dasharray: 220;
-  stroke-dashoffset: 0;
+  stroke-dashoffset: calc(220 - 220 / 120 * 78);
 }
 .progres-bar__text {
   position: absolute;
