@@ -122,6 +122,9 @@ a {
   opacity: unset;
   border-color: #fff;
 }
+.game-sale__nav-link:hover {
+  opacity: unset;
+}
 .game-sale__nav-icon {
   font-size: 20px;
   margin-bottom: 10px;

@@ -14,25 +14,18 @@ $('.ratting__star').click( function(){
     $(this).addClass('ratting__star-active').nextAll().addClass('ratting__star-active');
 });
 
-let i = 0;
-function start() {
-    
-    let b = 220 - (220 / 120 * i);
-    i++;
-
-    $('.progres-bar__svg').css("stroke-dashoffset" , b);
-    $('.progres-bar__text').text(i / 10);
-
-    if (i === 20) clearTimeout(timer);
-};
-
-function progresBar() {
-    i = 0;
+function progres() {
+    let i = 0;
     let timer;
-    start();
-    
-};
+    function start() {
+        i++;
+        let b = 220 - (220 / 120 * i);
+        $('.progres-bar__svg').css("stroke-dashoffset" , b);
+        $('.progres-bar__text').text(i / 10);
+        if (i >= 78) clearTimeout(timer);
+    };
+    timer = setInterval(start, 50);
+}
 
-$('.progres-bar').click(function () {
-    timer = setInterval(progresBar, 50);
-});
+$('document').ready(progres);
+$('.progres-bar').click(progres);
