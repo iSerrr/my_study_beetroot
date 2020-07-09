@@ -152,7 +152,6 @@ const resizeBeacon = document.createElement('div');
 resizeBeacon.classList = 'resize__beacon icon-resize-arrow-inside-a-square-interface-symbol';
 divResize.append(resizeBeacon);
 
-
 //? Стартові значення для початку відліку, та розмір об"єкту до моменту збільшення
 let startAxisX = 0;
 let startAxisY = 0;
@@ -160,21 +159,23 @@ let startAxisY = 0;
 let currentWidth = 0;
 let currentHeight = 0;
 
+function mouseMoveResize() {
+    divResize.style.width = `${(currentWidth) + (event.clientX - startAxisX)}px`;
+    divResize.style.height = `${(currentHeight) + (event.clientY - startAxisY)}px`;
+};
+
 //? Фіксуєм дані під часу натискання кнопки
 resizeBeacon.addEventListener('mousedown', (event) => {
     event.preventDefault();
     startAxisX = event.clientX;
     startAxisY = event.clientY;
     currentWidth = +divResize.style.width.slice(0, [divResize.style.width.length - 2]);
-    currentHeight = +divResize.style.height.slice(0, [divResize.style.height.length - 2]); 
+    currentHeight = +divResize.style.height.slice(0, [divResize.style.height.length - 2]);
+    document.addEventListener('mousemove', mouseMoveResize);
 });
 
-//? Змінюєм кординати та змінюєм розмір блоку
-resizeBeacon.addEventListener('mousemove', (event) => {
-    if (event.buttons === 1) {
-        divResize.style.width = `${(currentWidth) + (event.clientX - startAxisX)}px`;
-        divResize.style.height = `${(currentHeight) + (event.clientY - startAxisY)}px`;
-    };
+document.addEventListener('mouseup', () => {
+    document.removeEventListener('mousemove', mouseMoveResize);
 });
 
 taskBlock[2].append(divResize);
