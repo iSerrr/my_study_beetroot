@@ -243,3 +243,88 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.calc {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 15px;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.calc__numConteiner {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+}
+.calc__opConteiner {
+  flex-direction: column;
+  display: flex;
+}
+.calc__display {
+  width: 100%;
+  height: 55px;
+  border-radius: 20px;
+  background-color: #17181a;
+  margin: 0 5px;
+  text-align: right;
+  padding: 12px 25px;
+  font-size: 25px;
+}
+.calc__btn {
+  cursor: pointer;
+  margin: 5px;
+  width: 55px;
+  height: 55px;
+  border-radius: 20px;
+  background-color: azure;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+  transition: all 0.15s ease-in-out;
+}
+.calc__btn:hover {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);
+}
+.calc__btn--cancelBtn {
+  color: #ee424c;
+  background-color: #2d191e;
+  width: 185px;
+}
+.calc__btn--cancelBtn:hover {
+  background-color: #462a31;
+}
+.calc__btn--operationBtn {
+  background-color: #ff9500;
+}
+.calc__btn--operationBtn:hover {
+  background-color: #ffb54e;
+}
+.calc__btn--resultBtn {
+  background-color: #2ec973;
+}
+.calc__btn--resultBtn:hover {
+  background-color: #59f39f;
+}
+.calc__btn--number {
+  background-color: #222427;
+}
+.calc__btn--number:hover {
+  background-color: #44484c;
+}
+.calc__btn--zero {
+  width: 185px;
+}
+
+.calc-page {
+  padding: 0;
+  position: relative;
+}
