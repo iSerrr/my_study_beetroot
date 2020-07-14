@@ -1,5 +1,7 @@
 @import 'reset.scss';
 
+
+
 .services {
     width: 100%;
     height: 100vh;
@@ -7,37 +9,41 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    justify-content: center;
+    overflow: hidden;
     &__sub-title {
         width: 253px;
         color: #303030;
         font-size: 18px;
         font-weight: 400;
         text-transform: uppercase;
+        padding: 0 0 31px 0;
     }
-
     &__title {
         font-family: sans-serif;
-        width: 1040px;
+        width: 1100px;
         color: #000000;
         font-size: 86px;
-        font-weight: 400;
+        font-weight: 600;
         text-transform: uppercase;
+        padding: 0 0 105px 0;
     }
-
     &__slide-conteiner {
-        width: 900px;
+        width: 100%;
+        margin-left: 180px;
         display: flex;
-        justify-content: space-between;
     }
-
     &__slide-item {
-
-        width: 220px;
-        height: 200px;
+        cursor: pointer;
+        margin: 0 22px;
+        height: 300px;
+        &:hover {
+            opacity: 0.5;
+            background-color: aqua;
+                }
     & > img {
         height: 100%;
-    }
+        }
     }
 }
 .slick-slide {
@@ -47,5 +53,35 @@
 .slick-current {
     opacity: unset;
 }
-
-
+.circle {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -80px;
+    width: 75px;
+    height: 75px;
+    z-index: 100;
+    border-radius: 50%;
+    border: 2px solid #000;
+    &--right {
+        left: 90%;
+        transform: translateY(-50%) rotate(180deg);
+    }
+    &::before, 
+    &::after {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 2px;
+        display: block;
+        background-color: #000;
+        top: 50%;
+        left: 50%;
+        transform-origin: left;
+        transform: translateX(-50%) rotate(45deg);
+    }
+    &::after {
+        transform: translateX(-50%) rotate(-45deg);
+    }
+}
