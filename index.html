@@ -17,11 +17,13 @@
     <div class="map-select">
       
       <div class="input-conteiner">
-        <input class="input start" type="text" name="start" placeholder="Start">
-        <input class="input finish" type="text" name="finish" placeholder="Finish">
+        <select name="select" id="select" class="select">
+         
+        </select>
+        
+        
       </div>
-      <button class="createRoute" onclick="onChangeHandler()">Create the route</button>
-
+      
     </div>
     <div class="map-body" id="map">
 
@@ -32,11 +34,9 @@
    
 <script src="./js/jquery.js"></script>
 
-<script async defer src="https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=AIzaSyAFjnW2AOAJMAr7QPmpBIp_r_xP1H4gulg"
-type="text/javascript"></script>
-
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFjnW2AOAJMAr7QPmpBIp_r_xP1H4gulg&callback=initMap"
 type="text/javascript"></script>
+
 <script src="js/main.js" defer></script>
 </body>
 
