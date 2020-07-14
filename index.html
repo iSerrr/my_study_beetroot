@@ -3,60 +3,42 @@
 
 <head>
   <!-- Підключення основних стилів -->
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/69f1c4d0d8/farcry4/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
   <link rel="stylesheet" href="main.css" />
   
-  <title>Homework 32</title>
+  <title>Homework 34</title>
 </head>
 
 <body>
 
-<section class="services">
-  
+  <section class="map-conteiner">
+    <div class="map-select">
+      
+      <div class="input-conteiner">
+        <input class="input start" type="text" name="start" placeholder="Start">
+        <input class="input finish" type="text" name="finish" placeholder="Finish">
+      </div>
+      <button class="createRoute" onclick="onChangeHandler()">Create the route</button>
 
-  </div> 
-  <p class="services__sub-title">our featured work</p>
-  <h1 class="services__title">
-    We create engaging
-    experiences through
-    creativity & craft
-  </h1>
-  <ul class="services__slide-conteiner">
-    <li class="services__slide-item">
-      <img src="./assets/img/001.jpg" alt="">
+    </div>
+    <div class="map-body" id="map">
 
-    </li>
-    <li class="services__slide-item">
-      <img src="./assets/img/002.jpg" alt="">
-    </li>
-    <li class="services__slide-item">
-      <img src="./assets/img/003.jpg" alt="">
-    </li>
-    <li class="services__slide-item">
-      <img src="./assets/img/004.jpg" alt="">
-    </li>
+    </div>
 
-  </ul>
+  </section>
 
- </section>
+   
+<script src="./js/jquery.js"></script>
 
- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
- <script type="text/javascript" src="slick/slick.min.js"></script>
- <script src="js/main.js" defer></script>
+<script async defer src="https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=AIzaSyAFjnW2AOAJMAr7QPmpBIp_r_xP1H4gulg"
+type="text/javascript"></script>
 
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFjnW2AOAJMAr7QPmpBIp_r_xP1H4gulg&callback=initMap"
+type="text/javascript"></script>
+<script src="js/main.js" defer></script>
 </body>
-
-
-
-
 
 
 </html>
