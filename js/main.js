@@ -1,5 +1,7 @@
 $(document).ready(function(){
     $('.services__slide-conteiner').slick({
+        centerMode: true,
+        focusOnSelect: true,
         dots: true,
         slidesToShow: 3,
         slidesToScroll: 1,
