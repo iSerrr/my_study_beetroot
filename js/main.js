@@ -12,16 +12,15 @@ function initMap() {
   function onChangeHandler() {
     calculateAndDisplayRoute(directionsService, directionsDisplay);
   };
-  $('.createRoute').click(function() {
-    console.log(directionsService);
+  document.querySelector('.createRoute').addEventListener('click', function() {
     onChangeHandler();
   });  
 }
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   directionsService.route({
-    origin: $('.start').val(),
-    destination: $('.finish').val(),
+    origin: document.querySelector('.start').value,
+    destination: document.querySelector('.finish').value,
     travelMode: 'DRIVING'
   }, function(response, status) {
     if (status === 'OK') {
@@ -30,5 +29,4 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
       window.alert('Ввдено не вірні дані, спробуйте ще раз');
     }
   });
-  console.table(directionsService);
 }  
