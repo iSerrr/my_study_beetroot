@@ -96,3 +96,24 @@ const search = document.querySelector('.search__Btn');
 search.addEventListener('click', ()=> {
   searchMovie(true);
 })
+
+myStorage = window.localStorage;
+
+myStorage.clear();
+console.log(myStorage);
+
+const arrfilm = [
+  "Batman", 'Spider-Man', 'Superman'
+]
+let k = 0;
+
+// arrfilm.forEach(element=> {
+//   myStorage.setItem(k, element);
+//   k++;
+// });
+
+
+for (key in Object.keys(myStorage)) {
+  console.log(myStorage.getItem(key));
+}
+
