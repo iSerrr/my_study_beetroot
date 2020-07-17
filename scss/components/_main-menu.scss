@@ -1,0 +1,51 @@
+.mainMenu {
+	@include flex_row_end_center;
+	&__item {
+		cursor: pointer;
+		margin: 0 34px;
+	}
+	&__link {
+		position: relative;
+		color: $white-001;
+		font-family: $GothamBook;
+		font-size: 14px;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: all 0.15s ease-in-out;
+		&::before {
+			top: 50%;
+			transform: translateY(-50%);
+			left: -24px;
+			position: absolute;
+			content: '';
+			display: block;
+			width: 9px;
+			height: 9px;
+			border: 1px solid $white-001;
+			border-radius: 50%;
+			transition: all 0.15s ease-in-out;
+		}
+		&::after {
+			visibility: hidden;
+			opacity: 0;
+			top: 2px;
+			content: '';
+			display: block;
+			width: 1px;
+			height: 100px;
+			background-color: $white-001;
+			position: absolute;
+			left: -19px;
+			transform-origin: top;
+			transform: rotate(180deg);
+			transition: all 0.15s ease-in-out;
+		}
+		&.active::before {
+			background-color: $white-001;
+		}
+		&:hover::after {
+			visibility: visible;
+			opacity: unset;
+		}
+	}
+}

@@ -1,62 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--! Import to base css -->
+		<link rel="stylesheet" href="./main.css" />
+		<title>H34</title>
+	</head>
+	<body>
+		<!--! Start Header  -->
+		<header class="header">
+			<div class="header__navBar">
+				<div class="header__logo">
+					<img src="./assets/img/header/logo.png" alt="Logo" class="logoImg" />
+				</div>
 
-<head>
-  <!-- Підключення основних стилів -->
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<!--! Start mainMenu  -->
+				<div class="header__menuConteiner">
+					<ul class="mainMenu">
+						<li class="mainMenu__item">
+							<a href="#" class="mainMenu__link active">About Us</a>
+						</li>
+						<li class="mainMenu__item">
+							<a href="#" class="mainMenu__link">projects</a>
+						</li>
+						<li class="mainMenu__item">
+							<a href="#" class="mainMenu__link">news</a>
+						</li>
+						<li class="mainMenu__item">
+							<a href="#" class="mainMenu__link">contact</a>
+						</li>
+					</ul>
+				</div>
+				<!--! End mainMenu -->
 
-  <link rel="stylesheet" href="main.css" />
-  
-  <title>Homework 35</title>
-</head>
-
-<body>
-  <div class="search__form" >
-    <input type="search" name="seacr" id="searcIn" class="search__in">
-    <button class="search__Btn">Search</button>
-  </div>
-
-  <div class="films__conteiner">
-      
-    
-
-  
-   
-
-  </div>
- 
-
-  <div class="movie__conteiner">
-    <div class="movie__imgBx">
-      <img src="" class="movie__img">
-    </div>
-    <div class="movie__text"> 
-      <div class="movie__title">
-       
-      </div>
-      <div class="movie__sub-title">
-       
-      </div>
-      <ul class="movie__info-list">
-        <li class="movie__info-item years">
-          <span class="movie__info-title">Year:</span>
-          <span></span>
-        </li>
-        <li class="movie__info-item producer">
-          <span class="movie__info-title">Genre:</span>
-          <span></span>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  
-
-<script src="./js/jquery.js"></script>
-<script src="./js/main.js" defer></script>
-
-</body>
-
+				<!--! Start Social -->
+				<div class="header__social">
+					<ul class="social">
+						<li class="social__item">
+							<a class="social__link" target="_blank" href="https://www.facebook.com">
+								<i class="icon-facebook"></i>
+							</a>
+						</li>
+						<li class="social__item">
+							<a class="social__link" target="_blank" href="https://twitter.com/explore">
+								<i class="icon-twitter"></i>
+							</a>
+						</li>
+						<li class="social__item">
+							<a class="social__link" target="_blank" href="https://www.instagram.com">
+								<i class="icon-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!--! End Social  -->
+			</div>
+			<!--! Start Slider -->
+			<div class="header__sliderConteiner">
+				<ul class="slider">
+					<li class="slider__page active">
+						<img
+							src="./assets/img/header/slider/slide01.png"
+							alt="backgound"
+							class="slider__bgImg"
+						/>
+						<div class="slider__content">
+							<h1 class="slider__title">Simple & mordern</h1>
+							<h4 class="slider__subTitle">We make the world's beautiful every day</h4>
+						</div>
+					</li>
+					<li class="slider__page">
+						<img
+							src="./assets/img/header/slider/slide02.png"
+							alt="backgound"
+							class="slider__bgImg"
+						/>
+						<div class="slider__content">
+							<h1 class="slider__title">Simple & mordern</h1>
+							<h4 class="slider__subTitle">We make the world's beautiful every day</h4>
+						</div>
+					</li>
+					<li class="slider__page">
+						<img
+							src="./assets/img/header/slider/slide03.png"
+							alt="backgound"
+							class="slider__bgImg"
+						/>
+						<div class="slider__content">
+							<h1 class="slider__title">Simple & mordern</h1>
+							<h4 class="slider__subTitle">We make the world's beautiful every day</h4>
+						</div>
+					</li>
+					<li class="slider__page">
+						<img
+							src="./assets/img/header/slider/slide04.png"
+							alt="backgound"
+							class="slider__bgImg"
+						/>
+						<div class="slider__content">
+							<h1 class="slider__title">Simple & mordern</h1>
+							<h4 class="slider__subTitle">We make the world's beautiful every day</h4>
+						</div>
+					</li>
+					<li class="slider__page">
+						<img
+							src="./assets/img/header/slider/slide05.png"
+							alt="backgound"
+							class="slider__bgImg"
+						/>
+						<div class="slider__content">
+							<h1 class="slider__title">Simple & mordern</h1>
+							<h4 class="slider__subTitle">We make the world's beautiful every day</h4>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--! End Slider  -->
+			<div class="moveDown"></div>
+		</header>
+	</body>
 </html>

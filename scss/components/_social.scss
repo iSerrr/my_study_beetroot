@@ -1,0 +1,23 @@
+.social {
+	@include flex_row_end_center;
+
+	&__item {
+		cursor: pointer;
+		margin: 0 10px;
+		position: relative;
+		width: 40px;
+		height: 40px;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		border-radius: 50%;
+		transition: all 0.1s ease-in-out;
+		&:hover {
+			border-color: $white-001;
+		}
+	}
+	&__link {
+		text-decoration: none;
+		@include pos_50_50;
+		color: $white-001;
+		font-size: 18px;
+	}
+}
