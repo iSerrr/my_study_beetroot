@@ -1,51 +1,53 @@
 {
-	"name": "c",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/iSerrr/my_study_beetroot.git"
-	},
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/iSerrr/my_study_beetroot/issues"
-	},
-	"homepage": "https://github.com/iSerrr/my_study_beetroot#readme",
-	"devDependencies": {
-		"@babel/core": "^7.10.5",
-		"@babel/preset-env": "^7.10.4",
-		"autoprefixer": "^9.8.5",
-		"browser-sync": "^2.26.10",
-		"cross-env": "^7.0.2",
-		"gulp": "^4.0.2",
-		"gulp-autoprefixer": "^7.0.1",
-		"gulp-babel": "^8.0.0",
-		"gulp-file-include": "^2.2.2",
-		"gulp-image": "^6.2.1",
-		"gulp-inject": "^5.0.5",
-		"gulp-jsmin": "^0.1.5",
-		"gulp-sass": "^4.1.0",
-		"gulp-ttf2woff": "^1.1.1",
-		"gulp-ttf2woff2": "^3.0.0",
-		"gulp-watch": "^5.0.1",
-		"gulp-webp": "^4.0.1"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version",
-			"last 1 ie version"
-		]
-	}
+  "name": "c",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iSerrr/my_study_beetroot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iSerrr/my_study_beetroot/issues"
+  },
+  "homepage": "https://github.com/iSerrr/my_study_beetroot#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "autoprefixer": "^9.8.5",
+    "browser-sync": "^2.26.10",
+    "cross-env": "^7.0.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-file-include": "^2.2.2",
+    "gulp-image": "^6.2.1",
+    "gulp-inject": "^5.0.5",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-sass": "^4.1.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^3.0.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-webp": "^4.0.1",
+    "node-sass": "^4.14.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "last 1 ie version"
+    ]
+  },
+  "dependencies": {},
+  "description": ""
 }

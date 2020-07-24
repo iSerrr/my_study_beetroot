@@ -15,6 +15,10 @@ const fs = require('fs');
 const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
 
+gulp.task('hello',  () => {
+	console.log('Hello')
+})
+
 //! Declare Custom constants 
 const sourceFolder = './assets/development/'
 const destFolder = './assets/'
