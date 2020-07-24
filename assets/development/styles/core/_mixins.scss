@@ -1,0 +1,62 @@
+// ! Display Flex row center center
+@mixin flex_row_center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+// ! Display Flex row start center
+@mixin flex_row_start_center {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+// ! Display Flex row end center
+@mixin flex_row_end_center {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+//! Display Flex row beetwen
+@mixin flex_row_beetween {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+// ! Display Flex column center center
+@mixin flex_column_center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+// ! Display Flex column start center
+@mixin flex_column_start {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+}
+//  ! Position centering (-%50,-50%)
+@mixin pos_50_50 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+} //  ! Position only X centering (-%50,-50%)
+@mixin posX_50 {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+//  ! Auto build font-face file
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url('./assets/fonts/#{$file_name}.woff') format('woff'), url('./assets/fonts/#{$file_name}.woff2') format('woff2');
+	}
+}

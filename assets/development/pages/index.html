@@ -7,21 +7,10 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<header class="header">
-	<h1>Header</h1>
-</header>
- 
-		<section class="main">
-	<h1>It's main file</h1>
-</section>
- 
-		<footer class="footer">
-	<h1>Footer</h1>
-</footer>
-
+		@@include('./header.html') 
+		@@include('./main.html') 
+		@@include('./footer.html')
 		<!-- inject:js -->
-		<script src="/assets/scripts/gallery.min.js"></script>
-		<script src="/assets/scripts/main.min.js"></script>
 		<!-- endinject -->
 	</body>
 </html>
