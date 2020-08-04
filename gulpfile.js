@@ -151,3 +151,5 @@ const serve = () => {
 }
 
 gulp.task('serve', gulp.series(serve))
+
+gulp.task('img', gulp.series(images))

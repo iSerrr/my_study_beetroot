@@ -129,3 +129,178 @@ table {
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("./assets/fonts/icomoon/icomoon.eot?vl3e5h");
+  src: url("./assets/fonts/icomoon/icomoon.eot?vl3e5h#iefix") format("embedded-opentype"), url("./assets/fonts/icomoon/icomoon.ttf?vl3e5h") format("truetype"), url("./assets/fonts/icomoon/icomoon.woff?vl3e5h") format("woff"), url("./assets/fonts/icomoon/icomoon.svg?vl3e5h#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-heart:before {
+  content: "\e90b"; }
+
+.icon-diamonds:before {
+  content: "\e907"; }
+
+.icon-cards:before {
+  content: "\e907"; }
+
+.icon-poker:before {
+  content: "\e907"; }
+
+.icon-clubs:before {
+  content: "\e908"; }
+
+.icon-cards1:before {
+  content: "\e908"; }
+
+.icon-poker1:before {
+  content: "\e908"; }
+
+.icon-spades:before {
+  content: "\e909"; }
+
+.icon-cards2:before {
+  content: "\e909"; }
+
+.icon-poker2:before {
+  content: "\e909"; }
+
+.conteiner {
+  width: 880px;
+  margin: 20px auto;
+  border: 2px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-perspective: 500px;
+  perspective: 500px;
+  padding: 15px 15px 0px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 15px; }
+
+.cardConteiner {
+  position: relative;
+  width: 85px;
+  height: 140px;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  cursor: pointer; }
+
+.cardConteiner:hover, .active {
+  -webkit-animation: cardRotate 1s ease-in-out forwards;
+  animation: cardRotate 1s ease-in-out forwards; }
+
+.side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+
+.front {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+.back {
+  background-color: blueviolet;
+  background-image: url("./assets/images/s04-cardback_thumb.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.frontSideUp {
+  width: 85px;
+  height: 70px;
+  cursor: pointer;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  background-color: #eeeeee;
+  padding: 7px 7px; }
+
+.frontSideDown {
+  width: 85px;
+  height: 70px;
+  cursor: pointer;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  background-color: #eeeeee;
+  padding: 7px 7px;
+  -webkit-transform: rotateZ(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotateZ(180deg); }
+
+@-webkit-keyframes cardRotate {
+  0% {
+    -webkit-transform: rotateY(0deg) translateZ(0px);
+    transform: rotateY(0deg) translateZ(0px); }
+  20% {
+    -webkit-transform: rotateY(0deg) translateZ(10px);
+    transform: rotateY(0deg) translateZ(10px); }
+  80% {
+    -webkit-transform: rotateY(180deg) translateZ(-10px);
+    transform: rotateY(180deg) translateZ(-10px); }
+  100% {
+    -webkit-transform: rotateY(180deg) translateZ(0px);
+    transform: rotateY(180deg) translateZ(0px); } }
+
+@keyframes cardRotate {
+  0% {
+    -webkit-transform: rotateY(0deg) translateZ(0px);
+    transform: rotateY(0deg) translateZ(0px); }
+  20% {
+    -webkit-transform: rotateY(0deg) translateZ(10px);
+    transform: rotateY(0deg) translateZ(10px); }
+  80% {
+    -webkit-transform: rotateY(180deg) translateZ(-10px);
+    transform: rotateY(180deg) translateZ(-10px); }
+  100% {
+    -webkit-transform: rotateY(180deg) translateZ(0px);
+    transform: rotateY(180deg) translateZ(0px); } }
