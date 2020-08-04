@@ -1,7 +1,7 @@
 const cardData = [6,7,8,9,10,'J','Q','K','A'];
 const cardsSuit = ["icon-heart", 'icon-clubs', 'icon-cards', 'icon-spades']; 
 
-const sectionMain = document.querySelector('.main');
+const sectionCards = document.querySelector('.cards');
 const conteiner = document.createElement('div');
 conteiner.className = "conteiner";
 
@@ -13,7 +13,8 @@ for (let j = 0; j < 4; j++) {
     cardData.forEach(el => {
 
         const cardConteiner = document.createElement('div');
-        cardConteiner.className = 'cardConteiner';
+        cardConteiner.className = 'cardConteiner cardConteiner-back';
+        
         cardConteiner.style.color = color;
 
         const backSide = document.createElement('div');
@@ -32,19 +33,31 @@ for (let j = 0; j < 4; j++) {
         frontSide.append(frontSideUp, frontSideDown);
 
         cardConteiner.append(backSide, frontSide);
+
+        cardConteiner.addEventListener("mouseover", ()=> {
+            console.log(event.target.perent);
+            // event.target.classList.add();
+            // event.target.classList.remove();
+
+        })
+
+        // mouseover/mouseout
+
+
         row.append(cardConteiner);
 
     });
     conteiner.append(row);
 };
 const btn = document.createElement('button');
-btn.className = 'btn';
-btn.innerText = 'Показати всі';
+btn.className = 'basicBtn';
+btn.innerHTML = '<span>Показати всі</span>';
 btn.addEventListener('click', ()=> {
     document.querySelectorAll('.cardConteiner').forEach(el => {
-        el.classList.toggle('active');
+        el.classList.toggle('cardConteiner-move');
+        el.classList.toggle('cardConteiner-back');
     });
 });
 
 conteiner.append(btn);
-sectionMain.append(conteiner);
+sectionCards.append(conteiner);

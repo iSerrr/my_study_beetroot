@@ -16,6 +16,15 @@
 
 //! Section
 @import 'section/header.scss'; //! Header
-@import 'section/main.scss'; //! Main
+@import 'section/cards.scss'; //! Cards
+@import 'section/section-grid-1.scss'; //! Grid task 1
+@import 'section/section-grid-2.scss'; //! Grid task 2
 @import 'section/footer.scss'; //! Footer
 //? ...more section
+
+.cards {
+    // display: none;
+}
+.grid-1 {
+    // display: none;
+}

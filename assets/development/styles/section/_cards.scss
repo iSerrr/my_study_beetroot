@@ -1,7 +1,6 @@
 .conteiner {
     width: 880px;
     margin: 20px auto;
-    border: 2px solid #000;
     display: flex;
     justify-content: space-between;
     perspective: 500px;
@@ -24,8 +23,14 @@
     transform-style: preserve-3d;
     cursor: pointer;
 }
-.cardConteiner:hover, .active {
+// .cardConteiner:hover, .active {
+//     animation: cardRotate 1s ease-in-out forwards;
+// }
+.cardConteiner-move {
     animation: cardRotate 1s ease-in-out forwards;
+}
+.cardConteiner-back {
+    animation: cardRotateBack 1s ease-in-out both;
 }
 .side {
     position: absolute;
@@ -78,5 +83,23 @@
     }
     100% {
         transform: rotateY(180deg) translateZ(0px);
+    }
+}
+
+@keyframes cardRotateBack {
+    0% {
+        transform: rotateY(180deg) translateZ(0px);
+    }
+    20% {
+        transform: rotateY(180deg) translateZ(-10px);
+
+    }
+    80% {
+        
+        transform: rotateY(0deg) translateZ(10px);
+    }
+    100% {
+        transform: rotateY(0deg) translateZ(0px);
+
     }
 }
