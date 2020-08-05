@@ -1,53 +1,36 @@
 {
-  "name": "c",
+  "name": "my_study_beetroot",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
+    "build": "webpack --config ./build/webpack.build.conf.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "css-loader": "^4.2.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iSerrr/my_study_beetroot.git"
   },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/iSerrr/my_study_beetroot/issues"
-  },
-  "homepage": "https://github.com/iSerrr/my_study_beetroot#readme",
-  "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
-    "autoprefixer": "^9.8.5",
-    "browser-sync": "^2.26.10",
-    "cross-env": "^7.0.2",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-babel": "^8.0.0",
-    "gulp-file-include": "^2.2.2",
-    "gulp-image": "^6.2.1",
-    "gulp-inject": "^5.0.5",
-    "gulp-jsmin": "^0.1.5",
-    "gulp-sass": "^4.1.0",
-    "gulp-ttf2woff": "^1.1.1",
-    "gulp-ttf2woff2": "^3.0.0",
-    "gulp-watch": "^5.0.1",
-    "gulp-webp": "^4.0.1",
-    "node-sass": "^4.14.1"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version",
-      "last 1 ie version"
-    ]
-  },
-  "dependencies": {},
-  "description": ""
+  "license": "ISC"
 }
