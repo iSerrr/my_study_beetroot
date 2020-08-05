@@ -267,9 +267,6 @@ table {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1); }
-  @media (max-width: 480px) {
-    .basicBtn {
-      width: 100%; } }
 
 .conteiner {
   width: 880px;
@@ -576,9 +573,3 @@ table {
 .big__img {
   position: absolute;
   z-index: 0; }
-
-.grid-1 {
-  display: none; }
-
-.grid-2 {
-  display: none; }
