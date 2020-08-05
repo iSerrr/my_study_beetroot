@@ -137,12 +137,11 @@ const images = () => {
 		.pipe(gulp.dest(path.dest.img))
 }
 
-//! GULP
+//! GULP Live Server
 const serve = () => {
 	browserSync.init({
 		server: rootFolder,
 	})
-	gulp.watch(path.src.fonts, gulp.series(converTTF2woff, converTTF2woff2, typographyBuild))
 	gulp.watch(path.watch.scss, gulp.series(scss))
 	gulp.watch(path.watch.html, gulp.series(htmlBild))
 	gulp.watch(path.watch.img, gulp.series(images))
@@ -150,6 +149,6 @@ const serve = () => {
 	gulp.watch('./index.html').on('change', browserSync.reload)
 }
 
-gulp.task('serve', gulp.series(serve))
-
-gulp.task('img', gulp.series(images))
+//! Gulp Tasks (з шрифтами бувають нюанси, не всы шрифти конвертуються, а так як імпорт разовий, вирішив винести в окрему таску)
+gulp.task('live', gulp.series(serve))
+gulp.task('fonts', gulp.series(converTTF2woff, converTTF2woff2))

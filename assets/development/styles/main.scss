@@ -1,30 +1,30 @@
 //! Core
 @import 'core/variables.scss'; //! Sass Variables
 @import 'core/mixins.scss'; //! Sass Mixins
-@import 'core/responsive.scss'; //! Sass Responsive
 
 //! Base
 @import 'base/reset.scss'; //! Reset/normalize
-@import 'base/body.scss'; //! Style only for body
-@import 'base/basic.scss'; //! Стилі для загальних блоків
 @import 'base/typography.scss'; //! Base font and typography
 @import 'base/icomoon.scss'; //! Import Icomoon
 
 //! Components
 @import 'components/buttons.scss'; //! Buttons
-@import 'components/main-menu.scss'; //! Main-Menu
 
 //! Section
-@import 'section/header.scss'; //! Header
 @import 'section/cards.scss'; //! Cards
 @import 'section/section-grid-1.scss'; //! Grid task 1
 @import 'section/section-grid-2.scss'; //! Grid task 2
-@import 'section/footer.scss'; //! Footer
 //? ...more section
+
+
+
 
 .cards {
     // display: none;
 }
 .grid-1 {
+    // display: none;
+}
+.grid-2 {
     // display: none;
 }

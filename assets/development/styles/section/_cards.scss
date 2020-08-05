@@ -23,9 +23,6 @@
     transform-style: preserve-3d;
     cursor: pointer;
 }
-// .cardConteiner:hover, .active {
-//     animation: cardRotate 1s ease-in-out forwards;
-// }
 .cardConteiner-move {
     animation: cardRotate 1s ease-in-out forwards;
 }
@@ -46,7 +43,7 @@
 }
 .back {
     background-color: blueviolet;
-    background-image: url('./assets/images/s04-cardback_thumb.webp');
+    background-image: url('./assets/images/cards/s04-cardback_thumb.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -69,6 +66,9 @@
     background-color: rgb(238, 238, 238);
     padding: 7px 7px;
     transform: rotateZ(180deg);
+}
+.cardBtn {
+    margin-top: 20px;
 }
 @keyframes cardRotate {
     0% {
