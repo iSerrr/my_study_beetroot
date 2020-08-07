@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <StartPage/>
+    <Gallery/>
   </div>
  
 </template>
 
 <script>
-import StartPage from './components/StartPage.vue'
+import Gallery from './components/Gallery.vue'
 
 export default {
   name: 'App',
   components: {
-    StartPage,
+    Gallery,
   }
 }
 </script>
@@ -23,9 +23,10 @@ body {
   width: 100%;
   height: 100vh;
 }
-</style>
-
-<style lang="scss">
+* {
+  margin: 0;
+	padding: 0;
+}
 #app {
   width: 100%;
   height: 100%;
