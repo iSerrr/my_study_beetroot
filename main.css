@@ -249,6 +249,7 @@ body.shadows::before {
 }
 .search__Btn {
   background: linear-gradient(270deg, #2ed6b5 0%, #2dad94 100%);
+  background: linear-gradient(17deg, #d0c407 0%, #cb00ab 100%);
   font-size: 18px;
   font-weight: 600;
   color: #e7e7e7;

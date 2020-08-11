@@ -93,11 +93,13 @@ fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=a1d47e1b&s=${encodeURI(movie)}
 
       favoriteStar.addEventListener('click', (ev) => {
         if (memoryCheck(dataFilms, ev.target.dataset.id)) {
+          ev.stopPropagation();
           favoriteStar.classList.remove('fovarite');
           filmsCount.classList.remove('fovarite');
           myStorage.setItem(filmsList.name, JSON.stringify(removeItem(ev.target.dataset.id, dataFilms)));
           renderFavoriteList();
         } else {
+          ev.stopPropagation();
           favoriteStar.classList.add('fovarite');
           filmsCount.classList.add('fovarite');
           myStorage.setItem(filmsList.name, JSON.stringify(addItem(ev.target.dataset.id, dataFilms)));
@@ -179,6 +181,7 @@ JSON.parse(myStorage.getItem(filmsList.name)).forEach(element => {
   favoriteListStar.dataset.id = element;
   favoriteListStar.innerHTML = '&#9733';
   favoriteListStar.addEventListener("click", (ev) => {
+    ev.stopPropagation();
     myStorage.setItem(filmsList.name, JSON.stringify(removeItem(ev.target.dataset.id, dataFilms)));
     renderFavoriteList(true);
     cons(ev.target.dataset.id, '.films__count');
