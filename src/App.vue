@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <Gallery/>
+    <appMain/>
   </div>
  
 </template>
 
 <script>
-import Gallery from './components/Gallery.vue'
+import appMain from './components/appMain.vue'
 
 export default {
 
 
   name: 'App',
   components: {
-    Gallery,
+    appMain,
   }
 }
 </script>
@@ -28,6 +28,7 @@ body {
 * {
   margin: 0;
 	padding: 0;
+  box-sizing: border-box;
 }
 #app {
   width: 100%;
