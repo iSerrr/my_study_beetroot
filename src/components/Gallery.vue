@@ -1,103 +1,113 @@
 <template>
-	<section class="gallery">
-		<ul class="gallery__list">
-			<li 
-      v-for="post in posts"
-      v-bind:class="'post ' + post.style"  
-      :key="post.id">
-				<GalleryItem v-bind:post="post" />
-			</li>
-		</ul>
-	</section>
+	<ul class="form__conteiner">
+		<div class="editBx">
+			<input v-model.number="count" class="edit edit-number" type="number" name="count" />
+			<input v-model="selected" class="edit edit-text" type="text" name="count" />
+			<button v-on:click="editt">Edit</button>
+		</div>
+
+		<li
+			v-for="(fruit, index) in fruits"
+			:key="index"
+			v-bind:class="'form__item ' + [count === index + 1 ? 'active' : 'base']"
+		>
+			<p class="form__count">{{ index + 1 }}</p>
+			<p class="form__text">{{ fruit.name }}</p>
+		</li>
+	</ul>
 </template>
 
 <script>
-import GalleryItem from './GalleryItem.vue'
-
 export default {
-	name: 'Gallery',
-	components: {
-		GalleryItem,
-	},
-	data() {
+	data: function() {
 		return {
-			posts: [
+			count: null,
+			selected: null,
+			fruits: [
 				{
-					id: 1,
-					date: 'November 28, 2015',
-					title: 'Fantastic Designs Of 2015 Concept Cars',
-					authorImg: '1.webp',
-          postImg: '4.webp',
-          style: 'big',
+					name: 'Apple',
 				},
 				{
-					id: 2,
-					date: 'November 24, 2015',
-					title: 'How To Find Design Inspiration In The Simple Things Around You',
-					authorImg: '1.webp',
-          postImg: '1.webp',
-          style: 'basic'
+					name: 'Bannana',
 				},
 				{
-					id: 3,
-					date: 'November 18, 2015',
-					title: 'The Only Guide To Choosing Website Photos You’ll Ever Need',
-					authorImg: '1.webp',
-          postImg: '2.webp',
-          style: 'basic'
+					name: 'Orange',
 				},
 				{
-					id: 4,
-					date: 'November 31, 2015',
-					title: 'Growth Hack Your Way to a Successful Freelance Career',
-					authorImg: '1.webp',
-          postImg: '3.webp',
-          style: 'basic'
-				},
-				{
-					id: 5,
-					date: 'November 08, 2015',
-					title: 'Get 80% Off DSLR Photography Course Bundle',
-					authorImg: '1.webp',
-          postImg: '5.webp',
-          style: 'basic'
+					name: 'Cherry',
 				},
 			],
 		}
+	},
+	watch: {
+		count: function(val) {
+			if (!this.fruits[val - 1].name) return (this.selected = null)
+			this.selected = this.fruits[val - 1].name
+		},
+	},
+	methods: {
+		editt() {
+			this.fruits[this.count - 1].name = this.selected
+		},
 	},
 }
 </script>
 
 <style lang="scss">
-.gallery {
-	width: 100%;
-	background-color: #e2e7ec;
-  padding: 0;
-  margin: 0;
-	&__list {
-		max-width: 1200px;
-		margin: 0 auto;
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-		grid-gap: 20px;
+.form {
+	&__conteiner {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&__item {
+		font-family: sans-serif;
+		display: flex;
+		font-size: 22px;
+		border: 1px solid transparent;
+		list-style-type: none;
+		width: 150px;
+		transform: translateX(0);
+		transition: transform 200ms ease-in-out;
+		margin: 2px 0;
+	}
+	&__count {
+		position: relative;
+		z-index: 2;
+		width: 30px;
+		height: 30px;
+		background-color: rgb(160, 160, 160);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		border: 2px solid #fff;
+	}
+	&__text {
+		display: flex;
+		align-items: center;
+		position: relative;
+		z-index: 1;
+		width: 150px;
+		height: 34px;
+		background-color: rgb(18, 165, 175);
+		padding-left: 20px;
+		margin-left: -12px;
+		border-radius: 0 20px 20px 0;
 	}
 }
-.post {
-    position: relative;
-		list-style-type: none;
-    &.big {
-      grid-column: 1 / 3;
-      grid-row: 1 / 2;
-      &::after {
-			width: 100%;
-			height: 100%;
-      top: 0;
-      left: 0;
-			content: '';
-      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);			
-      position: absolute;
-		}
-  }
+.editBx {
+	margin-bottom: 20px;
+}
+.edit-text {
+}
+.edit-number {
+	width: 50px;
+}
+.active {
+	transform: translateX(10px);
 }
 </style>
