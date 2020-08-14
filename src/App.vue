@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <Gallery/>
+    <appMain/>
   </div>
  
 </template>
 
 <script>
-import Gallery from './components/Gallery.vue'
+import appMain from './components/app-main.vue'
 
 export default {
   name: 'App',
   components: {
-    Gallery,
+    appMain,
   }
 }
 </script>
