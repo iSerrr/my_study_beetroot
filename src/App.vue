@@ -18,14 +18,22 @@ export default {
 
 <style lang="scss">
 body {
-  margin: 0;
-  padding: 0;
   width: 100%;
   height: 100vh;
 }
 * {
   margin: 0;
 	padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
 }
 #app {
   width: 100%;
