@@ -4,23 +4,35 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "json-db": "json-server --watch db.json",
+    "to": "cd /"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "vuex": "^3.4.0"
+    "core-js": "3.6.5",
+    "firebase": "^7.19.0",
+    "vue": "2.6.11",
+    "vuex": "3.4.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.4.0",
-    "@vue/cli-plugin-vuex": "~4.4.0",
-    "@vue/cli-service": "~4.4.0",
+    "@vue/cli-plugin-babel": "4.4.0",
+    "@vue/cli-plugin-vuex": "4.4.0",
+    "@vue/cli-service": "4.4.0",
+    "axios": "^0.19.2",
+    "image-webpack-loader": "^6.0.0",
+    "localhost": "^0.3.0",
     "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "sass": "^1.26.10",
+    "sass-loader": "10.0.1",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^3.0.2",
+    "vue-router": "^3.4.3",
+    "vue-template-compiler": "^2.6.11",
+    "webp-loader": "^0.6.0",
+    "webpack": "^4.44.1"
   },
   "browserslist": [
     "> 0.5%",
-    "last 3 versions"    
+    "last 3 versions"
   ]
 }
