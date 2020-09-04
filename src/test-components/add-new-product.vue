@@ -55,7 +55,7 @@
 
 			<ul class="chexBox-color__list">
 				<li
-					v-for="(color, index) in colorsList"
+					v-for="(color, index) in OPTIONS.color"
 					:key="index"
 					class="chexBox-color__item"
 				>
@@ -190,7 +190,6 @@ export default {
 			sizes: ["Please entry category"],
 			colorsList: ["brown", "black", "red", "silver", "orange", "yellow", "green", "lime", "white", "blue", "purple", "LightPink"],
 			checkedColors: [],
-
 			selectedCategory: null,
 			selectedStyle: null,
 			selectedBrand: null,
@@ -204,7 +203,7 @@ export default {
 		};
 	},
 	computed: {
-		...mapGetters(["CATEGORIES"]),
+		...mapGetters(["CATEGORIES","OPTIONS"]),
 	},
 	methods: {
 		onSubmit() {

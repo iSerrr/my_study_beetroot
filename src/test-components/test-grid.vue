@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import productReviews from "../v-components/v-product-reviews.vue";
+import productReviews from "../components/product-reviews.vue";
 import { mapGetters } from "vuex";
 export default {
 	data() {

@@ -1,7 +1,19 @@
 import Vue from 'vue'
 import App from './App.vue'
-import store from './v-store/index.js'
-import router from './v-route/index'
+import store from './store/index.js'
+import router from './route/index'
+import * as VueGoogleMaps from 'vue2-google-maps'
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyAFjnW2AOAJMAr7QPmpBIp_r_xP1H4gulg',
+    libraries: 'places', // This is required if you use the Autocomplete plugin
+}})
+
+
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+Vue.use(VueAwesomeSwiper)
+
 Vue.config.productionTip = false
 
 import firebase from 'firebase/app'
@@ -21,7 +33,10 @@ firebase.initializeApp({
 });
 
 new Vue({
+  VueAwesomeSwiper,
   store,
   router,
   render: h => h(App)
 }).$mount('#app')
+
+

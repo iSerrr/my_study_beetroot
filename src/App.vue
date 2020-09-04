@@ -3,24 +3,25 @@
 		<testPanel
 		v-bind:products="PRODUCTS"
 		/>
-		<Header />
+		<Header
+		v-bind:slider="isHome"
+		 />
 		<sectionMain/>
 		<sectionSubscribe/>
 		<sectionFooter/>
-
 	</div>
 </template>
 
 <script>
-import Header from "./v-components/v-section-header.vue";
-import sectionMain from "./v-components/v-section-main"
-import sectionSubscribe from "./v-components/v-section-subscribe"
+import Header from "./components/header.vue";
+import sectionMain from "./components/main"
+import sectionSubscribe from "./components/subscribe"
 import testPanel from "./test-components/v-test-menu"
-import sectionFooter from './v-components/v-section-footer'
+import sectionFooter from './components/footer'
 
 import { mapGetters } from "vuex";
 import { mapActions } from "vuex";
-import router from "./v-route/index";
+import router from "./route/index";
 
 export default {
 	components: {
@@ -35,29 +36,32 @@ export default {
 			classClose: false,
 			prod: null,
 			testMenuActive: false,
+			
 		};
 	},
 	methods: {
 		...mapActions(["fetchFromDB", "addProduct"]),
-		
 	},
 	computed: {
-		...mapGetters(["PRODUCTS", "SHOWCOUNT"]),
+		...mapGetters(["PRODUCTS"]),
+		isHome: function () {
+			if (this.$route.path == '/') return true;
+			return false
+		}
 	},
 	name: "App",
 	async mounted() {
-		this.fetchFromDB();
-	},
+		await this.fetchFromDB();
+},
 };
 </script>
 
 <style lang="scss">
-@import "scss/main.scss";
+@import "assets/scss/main.scss";
 
 body {
 	width: 100%;
 	height: 100vh;
-	color: orange;
 }
 #app {
 	width: 100%;

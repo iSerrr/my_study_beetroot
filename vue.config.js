@@ -12,7 +12,9 @@ module.exports = {
 	css: {
 		loaderOptions: {
 			sass: {
-				additionalData: `@import "@/scss/core/_variables.scss";`,
+				additionalData: `@import "@/assets/scss/core/_variables.scss";
+								@import "@/assets/scss/core/_mixins.scss";
+								@import "@/assets/scss/components/_swiper.scss";`,
 			},
 		},
 	},
