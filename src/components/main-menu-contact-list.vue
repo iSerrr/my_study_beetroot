@@ -35,6 +35,9 @@ export default {};
 			transform: translateX(calc(-100% - 30px));
 			font-size: 35px;
 			color: #fff;
+			@media (max-width: 950px) {
+			  display: none;
+		  }
 		}
 		&:nth-child(1)::before {
 			content: "\e90e";
@@ -45,6 +48,7 @@ export default {};
 		&:nth-child(3)::before {
 			content: "\e90f";
 		}
+		  
 	}
 	&__title {
 		color: #ffffff;

@@ -1,5 +1,5 @@
 <template>
-	<div v-if="(product.style !== undefined)" class="middle-card">
+	<div v-if="(product.style)" class="middle-card">
 		<span class="middle-card__label">new</span>
 		<p class="middle-card__style">{{ product.style }}</p>
 		<p class="middle-card__brend">{{ product.brend }}</p>
@@ -9,22 +9,14 @@
 		/>
 		<img
 			class="middle-card__img"
-			v-bind:src="
-				require('../assets/images/products/' +
-					product.id +
-					'/' +
-					product.options.colors[0] +
-					'/' +
-					'new' +
-					'.webp')
-			"
+			v-bind:src="require(`@/assets/images/products/${product.id}/${product.options.colors[0]}/new.webp`)"
 		/>
 	</div>
 </template>
 
 <script>
-import baseButtonSecond from './base-button-second'
-import router from "../route/index";
+import baseButtonSecond from '@/components/base-button-second'
+import router from "@/route/index";
 
 export default {
 	components: {
@@ -44,10 +36,13 @@ export default {
 <style lang="scss" scoped>
 .middle-card {
 	position: relative;
-	padding: 60px;
+	padding: calc(60 / 750 * 100%);
 	height: 100%;
 	width: 100%;
 	background: linear-gradient(135deg, #4079e0, 60%, #60afe7);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	&:hover {
 		.middle-card__img {
 			transform: translate(-50px,-50%) scale(1.2);
@@ -55,6 +50,8 @@ export default {
 
 	}
 	&__label {
+		text-align: center;
+		width: 35px;
 		display: inline-block;
 		padding: 3px 6px;
 		border-radius: 5px;
@@ -63,7 +60,6 @@ export default {
 		font-family: $poppinsRegular;
 		font-size: 11px;
 		font-weight: 500;
-		margin-bottom: 50px;
 	}
 	&__style {
 		color: #ffffff;
@@ -71,20 +67,18 @@ export default {
 		font-size: 12px;
 		text-transform: uppercase;
 		letter-spacing: 1.8px;
-		margin-bottom: 20px;
 	}
 	&__brend {
 		color: #ffffff;
 		font-family: $oswaldRegular;
 		font-size: 25px;
 		line-height: 30px;
-		margin-bottom: 3px;
 	}
 	&__img {
 		top: 50%;
-		right: 10%;
+		left: 45%;
 		position: absolute;
-		height:50%;
+		width:50%;
 		transform: translate(0,-50%) scale(1);
 		transition: all 250ms ease-in-out;
 	}
@@ -93,8 +87,8 @@ export default {
 	color: #ffffff;
 	font-family: $oswaldRegular;
 	font-size: 25px;
-	line-height: 30px;
-	margin-bottom: 45px;
+	margin-bottom: 20px;
+	
 }
 </style>
 

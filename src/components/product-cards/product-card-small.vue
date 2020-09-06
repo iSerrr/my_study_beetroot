@@ -1,18 +1,16 @@
 <template>
-	<div 
-	@click="goTo(product.id)"
-	class="small-card">
+	<div @click="goTo(product.id)" class="small-card">
 		<div class="small-card__imgBx">
 			<img
 				v-bind:src="
-					require(`../assets/images/products/${product.id}/${product.options.colors[0]}/1.webp`)"
+					require(`@/assets/images/products/${product.id}/${product.options.colors[0]}/1.webp`)"
 				alt="photo"
 				class="small-card__img"
 			/>
 		</div>
 		<div class="small-card__style">{{ product.style }}</div>
 		<div class="small-card__buy">
-			<ButtonMain
+			<buttonMain
 				v-on:addToCart="onAddToCart"
 				v-bind:className="'reverse'"
 				v-bind:value="'Buy'"
@@ -31,31 +29,31 @@
 </template>
 
 <script>
-import ButtonMain from "./base-button.vue";
-import router from "../route/index";
-import { mapMutations } from 'vuex'
+import buttonMain from "@/components/base-button.vue";
+import router from "@/route/index";
+import { mapMutations } from "vuex";
 
 export default {
 	components: {
-		ButtonMain,
+		buttonMain,
 	},
 	props: {
 		product: Object,
 	},
-	methods:{
-		...mapMutations(['addToCart']),
+	methods: {
+		...mapMutations(["addToCart"]),
 		goTo(id) {
-			router.push({ path: '/page/' + id})
+			router.push({ path: "/page/" + id });
 		},
 		onAddToCart() {
-		this.addToCart({
+			this.addToCart({
 				productId: this.product.id,
 				color: this.product.options.colors[0],
 				size: this.product.options.sizes[0],
 				quantity: 1,
-			})
-		}
-	}
+			});
+		},
+	},
 };
 </script>
 

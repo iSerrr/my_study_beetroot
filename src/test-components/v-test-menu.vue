@@ -32,6 +32,12 @@
 		<router-link
 			@click.stop="testMenuToggle"
 			class="test__link"
+			to="/test-respons"
+			>- Test - respons</router-link
+		>
+		<router-link
+			@click.stop="testMenuToggle"
+			class="test__link"
 			to="/test-upload"
 			>- Upload file</router-link
 		>

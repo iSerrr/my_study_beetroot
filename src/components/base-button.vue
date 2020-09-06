@@ -2,7 +2,7 @@
 	<button 
 	v-bind:class="className" 
 	class="mainBtn addToCart"
-	v-on:click.stop="onAddToCart"
+	v-on:click.stop.prevent="onAddToCart"
 	>
 		<i v-if="icon.state" v-bind:class="icon.className" class="icon-add"></i>
 		{{ value }}

@@ -24,7 +24,8 @@ export default {
 	margin: 0 auto;
 	min-height: 500px;
     box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.4);
-    margin-top: -75px;
+	//? needs fixing
+    // margin-top: -75px;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.25);
     background-color: #ffffff;
 }

@@ -34,9 +34,7 @@
 		<div class="sales__img">
 			<img
 				class="sales__img"
-				v-bind:src="
-					require('../assets/images/products/p55f91e1/silver/sale.webp')
-				"
+				v-bind:src="require(`../../assets/images/products/p55f91e1/silver/sale.webp`)"
 			/>
 		</div>
 	</div>
@@ -48,7 +46,7 @@ export default {
 		return {
 			price: 1800,
 			sale: 25,
-			timer: null,
+			timer: '00000000',
 		};
 	},
 		computed: {
@@ -56,7 +54,7 @@ export default {
 			return new Date(2020, 8, 10, 15, 59);
 		},
 	},
-	mounted() {
+	beforeCreate() {
 			const timer = (end) => {
 				let curent = new Date();
 				let diferent = end - curent;
@@ -88,7 +86,11 @@ export default {
 
 <style lang="scss" scoped>
 .sales {
+	position: relative;
 	display: flex;
+	@include tablets {
+		height: 100%;
+	}
 	& > div {
 		width: 50%;
 	}
@@ -98,6 +100,17 @@ export default {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		@include tablets {
+			height: calc(50vw);
+			overflow: hidden;
+			margin-top: 25px;
+			justify-content: flex-start;
+		}
+		@include laptops {
+			overflow: hidden;
+			margin-top: 25px;
+			justify-content: flex-start;
+		}
 	}
 	&__notice {
 		color: #bbbbbb;
@@ -112,6 +125,13 @@ export default {
 		font-family: $oswaldRegular;
 		font-size: 36px;
 		margin-bottom: 25px;
+		@include tablets {
+			font-size: 25px;
+		}
+		@include laptops {
+			font-size: 30px;
+			margin-bottom: 10px;
+		}
 	}
 	&__desc {
 		text-align: center;
@@ -121,12 +141,31 @@ export default {
 		font-size: 18px;
 		line-height: 30px;
 		margin-bottom: 50px;
+		@include tablets {
+			width: 100%;
+			font-size: 15px;
+			margin-bottom: 20px;
+		}
+		@include laptops {
+			width: 100%;
+			overflow: hidden;
+			margin-top: 25px;
+			justify-content: flex-start;
+		}
 	}
 	&__price {
 		color: #3a54d6;
 		font-family: $poppinsSemiBold;
 		font-size: 48px;
 		margin-bottom: 70px;
+		@include tablets {
+			position: absolute;
+			bottom: 30%;
+			left: 50%;
+			transform: translateX(-50%,);
+			font-size: 35px;
+			margin-bottom: 20px;
+		}
 	}
 	&__old-price {
 		color: #111111;
@@ -134,6 +173,9 @@ export default {
 		font-size: 30px;
 		text-decoration: line-through;
 		margin-left: 45px;
+		@include tablets {
+			font-size: 25px;
+		}
 	}
 	&__img {
 		width: 100%;
@@ -147,6 +189,19 @@ export default {
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 	border-radius: 15px;
 	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.65);
+	@include tablets {
+			position: absolute;
+			bottom: 15%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		@include laptops {
+				position: absolute;
+			top: 50%;
+			left: 75%;
+			transform: translateX(-50%);
+		}
 	&__item {
 		height: 100%;
 		width: 25%;

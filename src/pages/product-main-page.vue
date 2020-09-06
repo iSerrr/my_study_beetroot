@@ -22,10 +22,10 @@
 <script>
 import { mapGetters } from "vuex";
 
-import productCardFull from "../components/product-card-full.vue";
-import productNavBar from "../components/product-nav-bar.vue";
-import productReviews from "../components/product-reviews.vue";
-import productPopular from "../components/product-popular.vue";
+import productCardFull from "@/components/product-cards/product-card-full";
+import productNavBar from "@/components/product-cards/product-nav-bar";
+import productReviews from "@/components/product-cards/product-reviews";
+import productPopular from "@/components/product-cards/product-popular";
 
 export default {
 	components: {

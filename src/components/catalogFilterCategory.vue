@@ -1,5 +1,7 @@
 <template>
-	<div class="filter">
+	<div
+	v-if="seletedCategory"
+	 class="filter">
 		<h2 class="filter__title" @click="show">
 			<i
 				:class="{ rotate: categories }"
@@ -14,7 +16,7 @@
 		<transition name="fade">
 			<ul v-show="categories" :class="title" class="filter__list">
 				<li
-					v-for="(item, index) of (seletedCategory[0].styles)? seletedCategory[0].styles: []"
+					v-for="(item, index) of (seletedCategory[0].styles)"
 					:key="index"
 					:class="{ active: item == active }"
 					class="filter__item"
@@ -61,26 +63,6 @@ export default {
 			this.$emit("filterCategories", 'all');
 		}
 	},
-	created() {
-		console.log("created");
-		console.log(this.seletedCategory[0].styles);
-		console.log("__________________________");
-	},
-	beforeMount() {
-		console.log("beforeMount");
-		console.log(this.seletedCategory[0].styles);
-		console.log("__________________________");
-	},
-	mounted() {
-		console.log("mounted");
-		console.log(this.seletedCategory[0].styles);
-		console.log("__________________________");
-	},
-	// beforeUpdate() {
-	// 	console.log("beforeUpdate");
-	// 	console.log(this.seletedCategory[0].styles);
-	// 	console.log("__________________________");
-	// }
 };
 </script>
 

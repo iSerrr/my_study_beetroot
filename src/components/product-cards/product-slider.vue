@@ -8,7 +8,7 @@
 				<img
 					v-for="i in product.quanImg"
 					:key="i"
-					v-bind:src="require('../assets/images/products/'+ product.id + '/' + variant + '/' + i +'.webp')"
+					v-bind:src="require(`@/assets/images/products/${product.id}/${variant}/${i}.webp`)"
 					alt="photo"
 					class="slider__img"
 				/>
@@ -26,7 +26,7 @@
 			>
 				<img
 					class="slider__gallery-img"
-					v-bind:src="require('../assets/images/products/'+ product.id + '/' + variant + '/' + i +'.webp')"
+					v-bind:src="require(`@/assets/images/products/${product.id}/${variant}/${i}.webp`)"
 					alt="other"
 					v-on:click="currentSlide(i)"
 				/>

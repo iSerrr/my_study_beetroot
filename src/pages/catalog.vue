@@ -63,9 +63,9 @@
 </template>
 
 <script>
-import productCardMiddle from "../components/product-card-middle";
-import productCardSmall from "../components/product-card-small";
-import productCardSale from "../components/product-card-sale";
+import productCardMiddle from "@/components/product-cards/product-card-middle";
+import productCardSmall from "@/components/product-cards/product-card-small";
+import productCardSale from "@/components/product-cards/product-card-sale";
 import catalogFilterCategory from "../components/catalogFilterCategory";
 import catalogFilterBrand from "../components/catalogFilterBrand";
 import catalogFilterColor from "../components/catalogFilterColor";

@@ -90,9 +90,9 @@
 
 <script>
 import { mapGetters, mapMutations } from "vuex";
-import productSlider from "./product-slider.vue";
-import buttonMain from "./base-button.vue";
-import ratingBar from "./base-rating-bar.vue";
+import productSlider from "@/components/product-cards/product-slider.vue";
+import buttonMain from "@/components/base-button.vue";
+import ratingBar from "@/components/base-rating-bar.vue";
 
 export default {
 	components: {

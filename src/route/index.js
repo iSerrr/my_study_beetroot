@@ -15,6 +15,7 @@ import test from '../test-components/test-grid'
 import addReviews from '../test-components/add-reviews'
 import testAddProduct from '../test-components/add-new-product'
 import testSlider from '../test-components/test-slider'
+import testRespons from '../test-components/test-responsible'
 
 const routes = [
 	{ path: '/page/:id', name: 'page', component: productPage },
@@ -29,6 +30,7 @@ const routes = [
 	{ path: '/test-upload', name: 'upload', component: testUploadPage },
 	{ path: '/test-add-product', name: 'testAddProduct', component:testAddProduct },
 	{ path: '/test-slider', name: 'testSlider', component:testSlider },
+	{ path: '/test-respons', name: 'testRespons', component:testRespons },
 ]
 
 const router = new VueRouter({

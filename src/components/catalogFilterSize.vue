@@ -12,6 +12,7 @@
 			></i>
 		</h2>
 		<transition name="fade">
+			<template v-if="OPTIONS.size.shoes">
 			<ul v-show="categories" :class="title" class="filter__list">
 				<li
 					v-for="(item, index) of OPTIONS.size.shoes"
@@ -30,6 +31,7 @@
 					</label>
 				</li>
 			</ul>
+			</template>
 		</transition>
 	</div>
 </template>

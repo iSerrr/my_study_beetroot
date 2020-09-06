@@ -18,7 +18,6 @@ export default {
 			state.products.forEach((element) => {
 				if (!state.brands.includes(element.brand, 0)) state.brands.push(element.brand)
 			})
-			console.log(state.brands)
 		},
 	},
 	actions: {

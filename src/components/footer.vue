@@ -57,10 +57,12 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .footer {
 	background-color: #222222;
-
+	@include mobile {
+		width: 100%;
+	}
 	&__list {
 		margin: 0 auto;
 		display: flex;
@@ -68,7 +70,6 @@ export default {
 		padding: 90px 15px;
 		justify-content: space-between;
 	}
-
 	&__ {
 		&_column {
 		}

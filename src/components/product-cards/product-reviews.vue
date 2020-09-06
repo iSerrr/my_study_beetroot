@@ -17,7 +17,7 @@
 				<li class="post__collumn post__collumn--user-photo">
 					<img
 						class="post__avatar"
-						v-bind:src="require('../assets/images/users/user1.png')"
+						v-bind:src="require('@/assets/images/users/user1.png')"
 						alt="user"
 					/>
 				</li>
@@ -56,7 +56,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import ratingBar from "./base-rating-bar";
+import ratingBar from "@/components/base-rating-bar";
 
 export default {
 	components: {

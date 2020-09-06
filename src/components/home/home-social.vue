@@ -9,6 +9,10 @@
 
 <script>
 export default {
+	data() {
+		return {
+		}
+	},
 	props: {
 		content: String,
 	},
@@ -16,6 +20,12 @@ export default {
 		posts: function () {
 			return 7000 + Math.ceil(Math.random() * 3000);
 		},
+		breakpointsMobile: function () {
+			return window.addEventListener("resize", () => {
+				return window.innerWidth;
+			})
+			
+		}
 	},
 };
 </script>

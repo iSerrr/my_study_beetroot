@@ -15,7 +15,6 @@ export default {
 				state.cart[res].quantity += product.quantity
 			} else {
 				state.cart.push(product)
-				console.log(state.cart)
 			}
 		},
 	},

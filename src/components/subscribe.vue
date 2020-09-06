@@ -6,13 +6,14 @@
 			aliquam non id ante. Nullam tempus sollicitudin elit, at consectetur
 			arcu lobortis ac. Duis at mattis ex.
 		</p>
-		<form class="subscribe-to-our__form" method="post">
-			<input 
-            class="subscribe-to-our__input"
-            type="email"
-            placeholder="Enter your email"
-            />
-			<button v-on:click.prevent class="subscribe-to-our__button">
+		<form v-on:submit.prevent class="subscribe-to-our__form" method="post">
+			<input
+				class="subscribe-to-our__input"
+				type="email"
+				placeholder="Enter your email"
+				required
+			/>
+			<button class="subscribe-to-our__button">
 				<i class="icon-envelope"></i>
 			</button>
 		</form>
@@ -24,9 +25,8 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-
-
 .subscribe-to-our {
+	
 	z-index: 1;
 	position: relative;
 	margin-top: -75px;
@@ -37,6 +37,16 @@ export default {};
 	justify-content: center;
 	width: 100%;
 	background-image: url("~@/assets/images/section-subscribe/bg.webp");
+	display: none;
+
+	@include mobile {
+		margin-top: 0;
+		padding: 30px 15px;
+	}
+	@include tablets {
+		margin-top: 0;
+		padding: 30px 15px;
+	}
 	&__title {
 		color: #111111;
 		font-family: $oswaldRegular;
@@ -45,41 +55,69 @@ export default {};
 		letter-spacing: 2.4px;
 		text-transform: uppercase;
 		margin-bottom: 25px;
+		@include mobile {
+			text-align: center;
+			font-size: 22px;
+		}
+		@include tablets {
+			text-align: center;
+			font-size: 22px;
+		}
 	}
 	&__desc {
 		color: #888888;
 		font-family: $poppinsLight;
 		font-size: 12px;
-		font-weight: 300;
 		max-width: 700px;
-        text-align: center;
-        margin-bottom: 55px;
+		text-align: center;
+		margin-bottom: 55px;
+		@include mobile {
+			width: 100%;
+			text-align: center;
+			font-size: 13px;
+		}
+		@include tablets {
+			width: 100%;
+			text-align: center;
+			font-size: 13px;
+		}
 	}
 	&__form {
-        position: relative;
-        width: calc(500 / 1800 * 100%);
+		position: relative;
+		width: calc(500 / 1800 * 100%);
+		max-width: 500px;
+		min-width: 450px;
+		@include mobile {
+			width: 100%;
+			min-width: initial;
+		}
+		@include tablets {
+			max-width: 450px;
+			width: 100%;
+			min-width: initial;
+		}
 	}
 	&__input {
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        height: 60px;
-        border-radius: 35px;
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-        padding-left: 32px;
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		height: 60px;
+		border-radius: 35px;
+		box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+		padding-left: 32px;
 	}
 	&__button {
-        background-color: red;
-        font-size: 25px;
-        padding: 10px;
-        padding-top: 15px;
-        color: #3a54d6;
-        top: 50%;
-        right: 15px;
-        transform: translateY(-50%);
-        position: absolute;
-        z-index: 2;
-        background-color: transparent;
+		background-color: red;
+		font-size: 25px;
+		padding: 10px;
+		padding-top: 15px;
+		color: #3a54d6;
+		top: 50%;
+		right: 15px;
+		transform: translateY(-50%);
+		position: absolute;
+		z-index: 2;
+		background-color: transparent;
 	}
 }
 </style>

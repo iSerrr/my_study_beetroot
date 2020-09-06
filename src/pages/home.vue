@@ -1,5 +1,6 @@
 <template>
 	<div class="home__conteiner">
+			<tempate v-if="false">
 		<ul ref="home" class="home__list">
 			<li
 				v-bind:style="`height:${gridItemHeight}px;`"
@@ -16,8 +17,50 @@
 				<sales />
 			</li>
 		</ul>
-		<productPopular />
-		<ul ref="home" class="home__list home__list--2st">
+	</tempate>
+			<productPopular />
+		<tempate v-if="false">
+		<ul
+			v-show="windowWitdh < 768"
+			ref="home"
+			class="home__list home__list--2st"
+		>
+			<li v-bind:style="`height:${gridItemHeight}px;`" class="home__item">
+				<social v-bind:content="'facebook'" />
+			</li>
+			<li v-bind:style="`height:${gridItemHeight}px;`" class="home__item">
+				<img
+					class="home__img-big"
+					v-bind:src="require(`@/assets/images/gallery/big/1.webp`)"
+				/>
+			</li>
+			<li v-bind:style="`height:${gridItemHeight}px;`" class="home__item">
+				<img
+					class="home__img-big"
+					v-bind:src="require(`@/assets/images/gallery/big/3.webp`)"
+				/>
+			</li>
+
+			<li v-bind:style="`height:${gridItemHeight}px;`" class="home__item">
+				<social v-bind:content="'twitter'" />
+			</li>
+
+			<li v-bind:style="`height:${gridItemHeight}px;`" class="home__item">
+				<social v-bind:content="'instagram'" />
+			</li>
+			<li v-bind:style="`height:${gridItemHeight}px;`" class="home__item">
+				<img
+					class="home__img-big"
+					v-bind:src="require(`@/assets/images/gallery/big/4.webp`)"
+				/>
+			</li>
+		</ul>
+
+		<ul
+			v-show="windowWitdh > 768"
+			ref="home"
+			class="home__list home__list--2st"
+		>
 			<li v-bind:style="`height:${gridItemHeight}px;`" class="home__item">
 				<social v-bind:content="'twitter'" />
 			</li>
@@ -42,12 +85,13 @@
 					v-if="n !== 2"
 					class="home__img-big"
 					v-bind:src="
-						require('../assets/images/gallery/big/' + n + '.webp')
+						require(`../assets/images/gallery/big/${n}.webp`)
 					"
 				/>
 			</li>
 		</ul>
-		<ul class="small-img">
+		</tempate>
+		<ul v-if="windowWitdh > 768" class="small-img">
 			<li v-for="n in 6" :key="n" class="small-img__item">
 				<img
 					class="small-img__img"
@@ -61,10 +105,10 @@
 </template>
 
 <script>
-import ourPreference from "../components/home-preference";
-import sales from "../components/home-sales";
-import productPopular from "../components/product-popular";
-import social from "../components/home-social";
+import ourPreference from "@/components/home/home-preference";
+import sales from "@/components/home/home-sales";
+import productPopular from "@/components/product-cards/product-popular";
+import social from "@/components/home/home-social";
 
 export default {
 	components: {
@@ -106,13 +150,42 @@ export default {
 				},
 			],
 			gridItemHeight: null,
+			windowWitdh: null,
 		};
 	},
 	computed: {},
 	mounted() {
-		this.gridItemHeight = this.$refs.home.clientWidth / 4;
+		this.windowWitdh = window.innerWidth;
+		if (window.innerWidth < 769) {
+			this.gridItemHeight = window.innerWidth;
+		} else {
+			this.gridItemHeight =
+				this.$refs.home.clientWidth /
+				(this.$refs.home.clientWidth < 481
+					? 1
+					: this.$refs.home.clientWidth < 769
+					? 2
+					: 4);
+		}
 		window.addEventListener("resize", () => {
-			this.gridItemHeight = this.$refs.home.clientWidth / 4;
+			this.windowWitdh = window.innerWidth;
+			if (window.innerWidth < 769) {
+				this.gridItemHeight =
+					window.innerWidth /
+					(window.innerWidth < 481
+						? 1
+						: window.innerWidth < 769
+						? 2
+						: 4);
+			} else {
+				this.gridItemHeight =
+					this.$refs.home.clientWidth /
+					(this.$refs.home.clientWidth < 481
+						? 1
+						: this.$refs.home.clientWidth < 769
+						? 2
+						: 4);
+			}
 		});
 	},
 };
@@ -121,9 +194,14 @@ export default {
 <style lang="scss" scoped>
 .home {
 	&__list {
-		
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
+		@include mobile {
+			grid-template-columns: 1fr;
+		}
+		@include tablets {
+			grid-template-columns: repeat(2, 1fr);
+		}
 		&--2st {
 			& > li {
 				border: none;
@@ -132,11 +210,17 @@ export default {
 	}
 	&__item {
 		border: 1px solid #e6e6e6;
-		
+
 		&--x2 {
+			@include mobile {
+				display: none;
+			}
 			grid-column: span 2;
 		}
 		&--full {
+			@include mobile {
+				display: none;
+			}
 			grid-column: 1 / -1;
 		}
 	}

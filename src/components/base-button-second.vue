@@ -24,7 +24,10 @@ export default {
 	color: #fff;
 	font-family: $poppinsMedium;
     font-size: 14px;
-    transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+	@include mobile {
+		width: 100%;
+	}
     &:hover {
         color: #000;
         background-color: rgba(255, 255, 255, 1);

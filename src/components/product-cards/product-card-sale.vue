@@ -4,27 +4,19 @@
 		<p class="middle-card__style">{{ product.style }}</p>
 		<p class="middle-card__brend">{{ product.brend }}</p>
 		<p class="middle-title">{{ product.title }}</p>
-		<baseButtonSecond
-		v-on:onClickFromButton="goTo(product.id)"
-		/>
+		<baseButtonSecond v-on:onClickFromButton="goTo(product.id)" />
 		<img
 			class="middle-card__img"
 			v-bind:src="
-				require('../assets/images/products/' +
-					product.id +
-					'/' +
-					product.options.colors[0] +
-					'/' +
-					'new' +
-					'.webp')
+				require(`@/assets/images/products/${product.id}/${product.options.colors[0]}/new.webp`)
 			"
 		/>
 	</div>
 </template>
 
 <script>
-import baseButtonSecond from './base-button-second'
-import router from "../route/index";
+import baseButtonSecond from "@/components/base-button-second";
+import router from "@/route/index";
 
 export default {
 	components: {
@@ -35,8 +27,8 @@ export default {
 	},
 	methods: {
 		goTo(id) {
-			router.push({ path: '/page/' + id})
-		}
+			router.push({ path: "/page/" + id });
+		},
 	},
 };
 </script>
@@ -47,11 +39,12 @@ export default {
 	padding: 60px;
 	height: 100%;
 	width: 100%;
-    background: linear-gradient(135deg, #7564e2, 60%, #a394ef);
-    &:hover {
-        & .middle-card__img {
-        transform:translateY(-50%) scale(1.2);}
-    }
+	background: linear-gradient(135deg, #7564e2, 60%, #a394ef);
+	&:hover {
+		& .middle-card__img {
+			transform: translateY(-50%) scale(1.2);
+		}
+	}
 	&__label {
 		display: inline-block;
 		padding: 3px 6px;
@@ -82,13 +75,13 @@ export default {
 		top: 50%;
 		right: 0;
 		position: absolute;
-		height:70%;
-        transform:translateY(-50%) scale(1);
-        transition: all 250ms ease-in-out;
+		height: 70%;
+		transform: translateY(-50%) scale(1);
+		transition: all 250ms ease-in-out;
 	}
 }
 .middle-title {
-    width: 150px;
+	width: 150px;
 	color: #ffffff;
 	font-family: $oswaldRegular;
 	font-size: 25px;

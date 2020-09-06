@@ -1,23 +1,27 @@
 <template>
 	<div id="app">
-		<testPanel
-		v-bind:products="PRODUCTS"
-		/>
-		<Header
-		v-bind:slider="isHome"
-		 />
-		<sectionMain/>
-		<sectionSubscribe/>
-		<sectionFooter/>
+		<template v-if="PRODUCTS.length > 0">
+			<template v-if="false">
+				<testPanel v-bind:products="PRODUCTS" />
+				<sectionHeader v-bind:slider="isHome" />
+			</template>
+			<template v-if="false">
+				<sectionMain />
+			</template>
+			<template v-if="true">
+			<sectionSubscribe />
+			<sectionFooter />
+			</template>
+		</template>
 	</div>
 </template>
 
 <script>
-import Header from "./components/header.vue";
-import sectionMain from "./components/main"
-import sectionSubscribe from "./components/subscribe"
-import testPanel from "./test-components/v-test-menu"
-import sectionFooter from './components/footer'
+import sectionHeader from "@/components/header/header.vue";
+import sectionMain from "@/components/main";
+import sectionSubscribe from "@/components/subscribe";
+import testPanel from "@/test-components/v-test-menu";
+import sectionFooter from "@/components/footer";
 
 import { mapGetters } from "vuex";
 import { mapActions } from "vuex";
@@ -26,7 +30,7 @@ import router from "./route/index";
 export default {
 	components: {
 		testPanel,
-		Header,
+		sectionHeader,
 		sectionMain,
 		sectionSubscribe,
 		sectionFooter,
@@ -36,7 +40,6 @@ export default {
 			classClose: false,
 			prod: null,
 			testMenuActive: false,
-			
 		};
 	},
 	methods: {
@@ -45,14 +48,14 @@ export default {
 	computed: {
 		...mapGetters(["PRODUCTS"]),
 		isHome: function () {
-			if (this.$route.path == '/') return true;
-			return false
-		}
+			if (this.$route.path == "/") return true;
+			return false;
+		},
 	},
 	name: "App",
 	async mounted() {
 		await this.fetchFromDB();
-},
+	},
 };
 </script>
 

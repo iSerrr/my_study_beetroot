@@ -9,17 +9,19 @@
 					v-on:click="onMenu()"
 					class="main-nav-bar__item main-nav-bar__menu"
 				>
-					<span>Select</span>
-					Category
+					<humburgerBtn v-bind:menuIsActive="menuIsActive" />
+					<p class="main-nav-bar__menu-tittle">
+						<span>Select</span><br />Category
+					</p>
 				</li>
 				<li class="main-nav-bar__item main-nav-bar__logo">
 					<h2 class="logo">AGORA</h2>
 				</li>
 				<li class="main-nav-bar__item main-nav-bar__cart-and-wish-list">
-					<buttonHeader 
-					v-bind:iconClassName="'icon-heart-o'" 
-					v-bind:path="'/'"
-					v-bind:quantity="0"
+					<buttonHeader
+						v-bind:iconClassName="'icon-heart-o'"
+						v-bind:path="'/'"
+						v-bind:quantity="0"
 					/>
 				</li>
 				<li class="main-nav-bar__item main-nav-bar__cart-and-wish-list">
@@ -30,23 +32,24 @@
 					/>
 				</li>
 			</ul>
-			<menuMain 
-			v-on:onMenuToogle="onMenu()"
-			v-bind:menuIsActive="menuIsActive" />
+			<menuMain
+				v-on:onMenuToogle="onMenu()"
+				v-bind:menuIsActive="menuIsActive"
+			/>
 		</div>
 		<template v-if="slider">
 			<headerSlider
-			
 			/>
 		</template>
 	</header>
 </template>
 
 <script>
-import buttonHeader from "./header-button";
-import menuMain from "./menu-main";
-import headerSlider from "./header-slider";
-import { mapGetters } from 'vuex'
+import buttonHeader from "@/components/header/header-button";
+import menuMain from "@/components/menu-main";
+import headerSlider from "@/components/header/header-slider";
+import humburgerBtn from "@/components/header/header-humburger";
+import { mapGetters } from "vuex";
 
 export default {
 	data() {
@@ -61,9 +64,10 @@ export default {
 		buttonHeader,
 		menuMain,
 		headerSlider,
+		humburgerBtn,
 	},
 	computed: {
-		...mapGetters(['CART']),
+		...mapGetters(["CART"]),
 	},
 	methods: {
 		onMenu() {
@@ -74,8 +78,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
 .header {
 	width: 100%;
 	height: 310px;
@@ -88,7 +90,11 @@ export default {
 		url("~@/assets/images/header/bg.webp") no-repeat 100% / cover;
 	transition: all 350ms ease-in-out;
 	&.long {
-		height: 100%;
+		height: 80%;
+		@include mobile {
+			max-height: 850px;
+			height: 100%;
+		}
 	}
 }
 
@@ -100,7 +106,6 @@ export default {
 		color: $whiteDefault;
 		font-family: $poppinsRegular;
 		display: flex;
-		height: 75px;
 		box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
 		background: $defaultThemeColor1st;
 		border-bottom: 1px solid $silverDefault;
@@ -109,23 +114,52 @@ export default {
 		cursor: pointer;
 		font-size: 19px;
 		flex-shrink: 0;
-		height: 100%;
+		height: 75px;
 		width: 75px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		border-right: 1px solid $silverDefault;
+		@include mobile {
+			height: 50px;
+			width: 50px;
+		}
+		@include tablets {
+			height: 50px;
+			width: 50px;
+		}
 	}
 	&__search {
+		@include mobile {
+			display: none;
+		}
+		@include tablets {
+			display: none;
+		}
 	}
 	&__menu {
 		width: 190px;
 		color: $whiteDefault;
 		font-size: 14px;
 		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		padding-left: 28px;
+		padding-left: 15px;
+		justify-content: flex-start;
+		@include mobile {
+			width: auto;
+			padding-left: 0;
+		}
+		@include tablets {
+			width: auto;
+			padding-left: 0;
+		}
+		& p {
+			@include mobile {
+				display: none;
+			}
+			@include tablets {
+				display: none;
+			}
+		}
 		& span {
 			font-size: 11px;
 			font-family: $poppinsMedium;
@@ -135,8 +169,15 @@ export default {
 	&__logo {
 		cursor: context-menu;
 		flex-grow: 1;
-		padding-right: 115px;
 		padding-right: (115 / 1500 * 100%);
+		@include mobile {
+			justify-content: flex-start;
+			padding-left: 25px;
+		}
+		@include tablets {
+			justify-content: flex-start;
+			padding-left: 25px;
+		}
 	}
 }
 </style>
