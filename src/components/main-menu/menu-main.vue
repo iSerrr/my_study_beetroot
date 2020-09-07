@@ -19,9 +19,9 @@
 <script>
 import { mapGetters } from "vuex";
 
-import productList from "./main-menu-product-list";
-import basicNavigationList from "./main-menu-base-navigation-list";
-import contactList from "./main-menu-contact-list";
+import productList from "@/components/main-menu/main-menu-product-list";
+import basicNavigationList from "@/components/main-menu/main-menu-base-navigation-list";
+import contactList from "@/components/main-menu/main-menu-contact-list";
 
 export default {
 	props: {
@@ -55,7 +55,7 @@ export default {
 	left: 75px;
 	width: calc(1650 / 1800 * 100%);
 	max-width: 1500px;
-	background: $defaultThemeColor1st;
+	background: $default-theme-color;
 	padding: 0;
 	display: flex;
 	flex-direction: row;
@@ -104,7 +104,7 @@ export default {
 		}
 	}
 	&::before {
-		background-color: $defaultThemeColor1st;
+		background-color: $default-theme-color;
 		content: "";
 		z-index: 2;
 		width: 100%;

@@ -36,7 +36,7 @@ export default {
 	align-items: center;
 	justify-content: center;
 	&__icon {
-		color: $blueDefault;
+		color: $blue-primary;
 		font-size: 3.5em;
 		margin-bottom: 30px;
 		@include mobile {
@@ -47,8 +47,8 @@ export default {
 		}
 	}
 	&__title {
-		color: #111111;
-		font-family: $oswaldRegular;
+		color: $black-secondary;
+		font-family: $oswald-regular;
 		font-size: 1.285em;
 		text-transform: uppercase;
 		margin-bottom: 20px;
@@ -63,18 +63,18 @@ export default {
 	}
 	&__desc {
 		width: calc(232 / 375 * 100%);
-		color: #888888;
-		font-family: $poppinsRegular;
+		color: $grey-primary;
+		font-family: $poppins-regular;
 		font-size: 0.928em;
 		line-height: 25px;
 		text-align: center;
 		width: 100%;
 		padding: 0 15px;
 		@include mobile {
-			font-size: 18px;
+			font-size: $title-primary;
 		}
 		@include tablets {
-			font-size: 18px;
+			font-size: $title-primary;
 		}
 	}
 }

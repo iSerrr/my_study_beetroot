@@ -40,9 +40,9 @@ export default {
 .product-list {
 	&__title {
 		text-transform: uppercase;
-		color: #ffffff;
-		font-family: $oswaldRegular;
-		font-size: 18px;
+		color: $white-primary;
+		font-family: $oswald-regular;
+		font-size: $title-primary;
 		letter-spacing: 1.8px;
 		margin-bottom: 30px;
 	}
@@ -55,14 +55,14 @@ export default {
 			transform: translateX(-10px);
 			transition-delay: 0ms;
 			& .product-list__link {
-				color: #ffffff;
+				color: $white-primary;
 			}
 		}
 	}
 	&__link {
 		color: rgba(255, 255, 255, 0.65);
-		font-family: $poppinsLight;
-		font-size: 12px;
+		font-family: $poppins-light;
+		font-size: $text-primary;
 		text-transform: capitalize;
 	}
 }

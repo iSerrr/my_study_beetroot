@@ -25,9 +25,9 @@ export default {
 
 .footer {
 	&__nav-title {
-		color: #ffffff;
-		font-family: $oswaldRegular;
-		font-size: 18px;
+		color: $white-primary;
+		font-family: $oswald-regular;
+		font-size: $title-primary;
 		font-weight: 400;
 		margin-bottom: 30px;
 	}
@@ -35,12 +35,12 @@ export default {
 		margin-bottom: 18px;
 	}
 	&__nav-link{
-		color: #888888;
-		font-family: $poppinsLight;
-		font-size: 12px;
+		color: $grey-primary;
+		font-family: $poppins-light;
+		font-size: $text-primary;
 		transition: color 150ms ease-in-out;
 		&:hover {
-			color: #ffffff;
+			color: $white-primary;
 		}
 	}
 }

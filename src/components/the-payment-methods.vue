@@ -21,21 +21,40 @@ export default {};
 	&__list {
 		display: flex;
         flex-wrap: wrap;
-        justify-content: flex-end;
+		justify-content: flex-end;
+		@include mobile {
+			justify-content: center;
+			margin-bottom: 40px;
+		}
+		@include tablets {
+			justify-content: center;
+			margin-bottom: 40px;
+		}
 	}
 
 	&__title {
         text-align: right;
 		flex-basis: 100%;
 		color: #555555;
-		font-family: $poppinsLight;
-        font-size: 12px;
-        margin-bottom: 17px;
+		font-family: $poppins-light;
+        font-size: $text-primary;
+		margin-bottom: 17px;
+		@include mobile {
+			text-align: center;
+		}
+		@include tablets {
+			text-align: center;
+		}
 	}
-
 	&__item {
-        color: #fff;
-        margin-left: 20px;
+        color: $white-primary;
+		margin-left: 20px;
+		@include mobile {
+			margin: 0 20px;
+		}
+		@include tablets {
+			margin: 0 20px;
+		}
 	}
 }
 </style>

@@ -45,6 +45,14 @@ export default {
 		display: flex;
 		justify-content: flex-end;
 		margin-bottom: 90px;
+		@include mobile {
+			justify-content: center;
+			margin-bottom: 25px;
+		}
+		@include tablets {
+			justify-content: center;
+			margin-bottom: 25px;
+		}
 	}
 	&__item {
 		position: relative;
@@ -60,7 +68,7 @@ export default {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%) scale(1);
-		color: #fff;
+		color: $white-primary;
 		transition: transform 100ms ease-in-out;
 		&:hover {
 			transform: translate(-50%, -50%) scale(1.2);

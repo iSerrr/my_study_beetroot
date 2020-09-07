@@ -46,7 +46,7 @@
 
 <script>
 import buttonHeader from "@/components/header/header-button";
-import menuMain from "@/components/menu-main";
+import menuMain from "@/components/main-menu/menu-main";
 import headerSlider from "@/components/header/header-slider";
 import humburgerBtn from "@/components/header/header-humburger";
 import { mapGetters } from "vuex";
@@ -81,7 +81,7 @@ export default {
 .header {
 	width: 100%;
 	height: 310px;
-	background-color: $defaultThemeColor1st;
+	background-color: $default-theme-color;
 	background: radial-gradient(
 			circle,
 			rgba(33, 36, 45, 0.6082808123249299) 0%,
@@ -103,14 +103,15 @@ export default {
 		z-index: 10;
 		width: 100%;
 		position: fixed;
-		color: $whiteDefault;
-		font-family: $poppinsRegular;
+		color: $white-primary;
+		font-family: $poppins-regular;
 		display: flex;
 		box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
-		background: $defaultThemeColor1st;
-		border-bottom: 1px solid $silverDefault;
+		background: $default-theme-color;
+		border-bottom: 1px solid $silver-primary;
 	}
 	&__item {
+		position: relative;
 		cursor: pointer;
 		font-size: 19px;
 		flex-shrink: 0;
@@ -119,7 +120,7 @@ export default {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-right: 1px solid $silverDefault;
+		border-right: 1px solid $silver-primary;
 		@include mobile {
 			height: 50px;
 			width: 50px;
@@ -139,8 +140,8 @@ export default {
 	}
 	&__menu {
 		width: 190px;
-		color: $whiteDefault;
-		font-size: 14px;
+		color: $white-primary;
+		font-size: $text-secondary;
 		display: flex;
 		padding-left: 15px;
 		justify-content: flex-start;
@@ -161,8 +162,8 @@ export default {
 			}
 		}
 		& span {
-			font-size: 11px;
-			font-family: $poppinsMedium;
+			font-size: $text-primary;;
+			font-family: $poppins-medium;
 			margin-bottom: 4px;
 		}
 	}

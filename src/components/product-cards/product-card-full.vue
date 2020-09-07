@@ -129,6 +129,7 @@ export default {
 				color: this.variant,
 				size: this.sizeSelect,
 				quantity: this.count,
+				price: this.product.price,
 			})
 		},
 	},
@@ -171,7 +172,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .product-card {
 	&__wrapper {
@@ -183,6 +184,14 @@ export default {
 		overflow: hidden;
 		align-items: center;
 		justify-content: center;
+		@include mobile {
+			max-height: initial;
+			flex-direction: column-reverse;
+		}
+		@include tablets {
+			max-height: initial;
+			flex-direction: column-reverse;
+		}
 	}
 	&__column {
 		&--desc {
@@ -196,6 +205,16 @@ export default {
 				animation: closeDesc 750ms both ease-in-out;
 				animation-delay: 500ms;
 			}
+			@include mobile {
+				min-width: initial;
+				width: 100%;
+				padding-right: 0;
+			}
+			@include tablets {
+				min-width: initial;
+				width: 100%;
+				padding-right: 0;
+			}
 		}
 		&--gallery {
 			width: calc(625 / 1190 * 100%);
@@ -203,6 +222,12 @@ export default {
 			transform: translateY(-115%);
 			animation: imgTransform 750ms both ease-in-out;
 			animation-delay: 600ms;
+			@include mobile {
+				margin-bottom: 40px;
+			}
+			@include tablets {
+				margin-bottom: 40px;
+			}
 			&.close {
 				animation: closeSlider 750ms both ease-in-out;
 				animation-delay: 500ms;
@@ -215,9 +240,9 @@ export default {
 		margin-bottom: 10px;
 	}
 	&__sub-title {
-		color: #3a54d6;
-		font-family: $poppinsMedium;
-		font-size: 12px;
+		color: $blue-primary;
+		font-family: $poppins-medium;
+		font-size: $text-primary;
 		font-weight: 500;
 		line-height: 30px;
 		text-transform: uppercase;
@@ -230,26 +255,26 @@ export default {
 		margin-bottom: 20px;
 	}
 	&__title {
-		color: #111111;
-		font-family: $oswaldRegular;
+		color: $black-secondary;
+		font-family: $oswald-regular;
 		font-size: 30px;
 	}
 
 	&__ratting {
 		display: flex;
 		align-items: center;
-		color: rgb(194, 194, 194);
+		color: $grey-secondary;
 		margin-bottom: 25px;
 		& .active {
 			color: rgb(255, 208, 0);
 		}
 	}
 	&__ratting-reviews {
-		color: #bbbbbb;
-		font-family: $poppinsRegular;
-		font-size: 12px;
+		color: $grey-secondary;
+		font-family: $poppins-regular;
+		font-size: $text-primary;
 		margin-left: 45px;
-		border-bottom: 1px dotted #bbbbbb;
+		border-bottom: 1px dotted $grey-secondary;
 	}
 	&__stars {
 		margin-right: 5px;
@@ -263,17 +288,28 @@ export default {
 		display: flex;
 		align-items: center;
 		margin-top: 40px;
+		flex-wrap: wrap;
+		@include mobile {
+			padding:  0 20px;
+			width: 100%;
+			justify-content: space-between;
+			align-items: baseline;
+		}
+		@include tablets {
+			width: 100%;
+			justify-content: flex-start;
+			align-items: baseline;
+		}
 	}
-
 	&__imgBx {
 		width: 100%;
 	}
 }
 .options {
 	&__title {
-		color: #111111;
-		font-family: $poppinsSemiBold;
-		font-size: 12px;
+		color: $black-secondary;
+		font-family: $poppins-semi-bold;
+		font-size: $text-primary;
 		line-height: 18px;
 		text-transform: uppercase;
 		letter-spacing: 1.2px;
@@ -295,8 +331,8 @@ export default {
 		&::before {
 			content: "\e901";
 			position: absolute;
-			color: #fff;
-			font-size: 14px;
+			color: $white-primary;
+			font-size: $text-secondary;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
@@ -311,22 +347,24 @@ export default {
 .size {
 	&__item {
 		margin-right: 20px;
-		color: rgb(139, 139, 139);
-		color: #888888;
-		font-family: $poppinsRegular;
-		font-size: 14px;
+		color: $grey-secondary;
+		color: $grey-primary;
+		font-family: $poppins-regular;
+		font-size: $text-secondary;
 		&.active {
-			color: #888888;
-			color: #3a54d6;
-			font-family: $poppinsSemiBold;
+			color: $grey-primary;
+			color: $blue-primary;
+			font-family: $poppins-semi-bold;
 		}
 	}
 }
 .price {
 	width: 115px;
-	color: #111111;
-	font-family: $poppinsSemiBold;
+	color: $black-secondary;
+	font-family: $poppins-semi-bold;
 	font-size: 24px;
+	@include mobile {
+		}
 }
 .count {
 	margin: 0 38px;
@@ -335,15 +373,23 @@ export default {
 		text-align: center;
 		width: 75px;
 		padding: 8px 10px;
-		font-size: 18px;
+		font-size: $title-primary;
 		border-radius: 20px;
 		border: 1px solid rgb(139, 139, 139);
+	}
+	@include mobile {
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	@include tablets {
+		margin: 0 38px;
+		margin-bottom: 20px;
 	}
 }
 .likes {
 	display: flex;
-	color: rgb(180, 180, 180);
-	font-size: 12px;
+	color: $grey-secondary;
+	font-size: $text-primary;
 	margin-top: 25px;
 }
 .compare {

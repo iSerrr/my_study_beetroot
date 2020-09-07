@@ -33,7 +33,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 
 .mainBtn {
@@ -43,26 +43,33 @@ export default {
 	height: 50px;
 	border: 1px solid transparent;
 	box-shadow: 0 5px 20px rgba(58, 84, 214, 0.4);
-	background-color: rgba(58, 84, 214, 1);
+	background-color: $blue-primary;
 	background-size: 400%;
-	color: #ffffff;
-	font-family: $poppinsMedium;
-	font-size: 14px;
+	color: $white-primary;
+	font-family: $poppins-medium;
+	font-size: $text-secondary;
 	font-weight: 500;
 	border-radius: 25px;
 	padding: 0 39px;
 	transition: all 100ms ease-in-out;
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	@include mobile {
+		min-width: initial;
+		width: 100%;
+		max-width: 300px;
+		margin: 0 auto;
+	}
 	&.reverse {
-		background-color: rgb(255, 255, 255);
+		background-color: $white-primary;
 		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-		color: rgb(0, 0, 0);
+		color: $black-primary;
 		border: 1px solid transparent;
 		&:hover {
-			border-color: rgb(58, 84, 214);
+			border-color: $blue-primary;
 			& span {
-				background-color: rgb(58, 84, 214);
+				background-color: $blue-primary;
 			}
 		}
 	}
@@ -71,17 +78,17 @@ export default {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		background-color: #fff;
+		background-color: $white-primary;
 		transform: translate(-50%, -50%);
 		pointer-events: none;
 		border-radius: 50%;
 		animation: custopm 375ms ease-in-out infinite;
 	}
 	&:hover {
-		border-color: #fff;
+		border-color: $white-primary;
 	}
 	& .icon-add {
-		font-size: 18px;
+		font-size: $title-primary;
 		margin-right: 5px;
 	}
 }

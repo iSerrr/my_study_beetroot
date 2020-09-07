@@ -75,7 +75,7 @@ export default {
 };
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 .slider {
 	&__wrapper {
 		position: relative;
@@ -86,6 +86,14 @@ export default {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@include mobile {
+			min-width: initial;
+			flex-direction: column;
+		}
+		@include tablets {
+			min-width: initial;
+			flex-direction: column;
+		}
 	}
 	&__conteiner {
 		width: 100%;
@@ -110,6 +118,16 @@ export default {
 		flex-shrink: 0;
 		margin-left: (65 / 625 * 100%);
 		overflow: hidden;
+		@include mobile {
+			margin-left: 0;
+			display: flex;
+			width: 50%;
+		}
+		@include tablets {
+			margin-left: 0;
+			display: flex;
+			width: 50%;
+		}
 	}
 	&__gallery-item {
 		transform: translateX();
@@ -118,11 +136,17 @@ export default {
 		border-bottom: 2px solid rgb(201, 201, 201);
 		width: 100%;
 		transition: all 200ms;
-		background-color: #fff;
+		background-color: $white-primary;
 		animation: galleryList 500ms both;
 		animation-delay: 1500ms;
 		position: relative;
 		opacity: 0.85;
+		@include mobile {
+			animation: none;
+		}
+		@include tablets {
+			animation: none;
+		}
 		&:nth-child(2) {
 			animation-delay: 1700ms;
 		}

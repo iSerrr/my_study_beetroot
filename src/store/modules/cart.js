@@ -10,6 +10,7 @@ export default {
 			state.cart.splice(index, 1)
 		},
 		addToCart(state, product) {
+			console.log(product);
 			let res = state.cart.findIndex((el) => el.productId == product.productId)
 			if (res !== -1) {
 				state.cart[res].quantity += product.quantity

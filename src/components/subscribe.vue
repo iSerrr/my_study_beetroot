@@ -26,7 +26,6 @@ export default {};
 
 <style lang="scss" scoped>
 .subscribe-to-our {
-	
 	z-index: 1;
 	position: relative;
 	margin-top: -75px;
@@ -37,8 +36,6 @@ export default {};
 	justify-content: center;
 	width: 100%;
 	background-image: url("~@/assets/images/section-subscribe/bg.webp");
-	display: none;
-
 	@include mobile {
 		margin-top: 0;
 		padding: 30px 15px;
@@ -48,8 +45,8 @@ export default {};
 		padding: 30px 15px;
 	}
 	&__title {
-		color: #111111;
-		font-family: $oswaldRegular;
+		color: $black-secondary;
+		font-family: $oswald-regular;
 		font-size: 24px;
 		font-weight: 400;
 		letter-spacing: 2.4px;
@@ -65,9 +62,9 @@ export default {};
 		}
 	}
 	&__desc {
-		color: #888888;
-		font-family: $poppinsLight;
-		font-size: 12px;
+		color: $grey-primary;
+		font-family: $poppins-light;
+		font-size: $text-primary;
 		max-width: 700px;
 		text-align: center;
 		margin-bottom: 55px;
@@ -111,7 +108,7 @@ export default {};
 		font-size: 25px;
 		padding: 10px;
 		padding-top: 15px;
-		color: #3a54d6;
+		color: $blue-primary;
 		top: 50%;
 		right: 15px;
 		transform: translateY(-50%);

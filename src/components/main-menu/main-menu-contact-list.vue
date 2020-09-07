@@ -25,7 +25,7 @@ export default {};
 <style lang="scss" scoped>
 .contact-list {
 	&__item {
-        font-size: 12px;
+        font-size: $text-primary;
 		position: relative;
 		margin-bottom: 45px;
 		&::before {
@@ -34,7 +34,7 @@ export default {};
 			left: 0;
 			transform: translateX(calc(-100% - 30px));
 			font-size: 35px;
-			color: #fff;
+			color: $white-primary;
 			@media (max-width: 950px) {
 			  display: none;
 		  }
@@ -51,15 +51,15 @@ export default {};
 		  
 	}
 	&__title {
-		color: #ffffff;
-		font-family: $poppinsSemiBold;
+		color: $white-primary;
+		font-family: $poppins-semi-bold;
 		letter-spacing: 1.2px;
 		text-transform: uppercase;
 		margin-bottom: 20px;
 	}
 	&__desc {
 		color: #bdc7fc;
-		font-family: $poppinsLight;
+		font-family: $poppins-light;
 		margin-bottom: 10px;
 	}
 }

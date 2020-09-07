@@ -1,24 +1,32 @@
-//! -------- Fonts --------
-$poppinsRegular: 'Poppins-regular', sans-serif;
-$poppinsLight: 'Poppins-light', sans-serif;
-$poppinsMedium: 'Poppins-medium', sans-serif;
-$poppinsSemiBold: 'Poppins-semi-bold', sans-serif;
-$oswaldRegular: 'Oswald-regular', sans-serif;
-$monteserratBold: 'Monteserrat-bold', sans-serif;
+//! -------- Font-famaly --------
+$poppins-regular: 'Poppins-regular', sans-serif;
+$poppins-light: 'Poppins-light', sans-serif;
+$poppins-medium: 'Poppins-medium', sans-serif;
+$poppins-semi-bold: 'Poppins-semi-bold', sans-serif;
+$oswald-regular: 'Oswald-regular', sans-serif;
+$monteserrat-bold: 'Monteserrat-bold', sans-serif;
+
+//! -------- Font-size --------
+$title-primary: 17px;
+$title-secondary: 20px;
+
+$text-primary: 12px;
+$text-secondary: 14px;
 
 //! -------- Colors --------
-$defaultThemeColor1st: linear-gradient(180deg,rgba(33, 36, 45, 0.95) 0%,rgba(33, 36, 45, 0.95) 100%);  
-$defaultButtonColor:#3a54d6;
-$defoultCardHover:#3a54d6;
+$default-theme-color: linear-gradient(180deg,rgba(33, 36, 45, 0.95) 0%,rgba(33, 36, 45, 0.95) 100%);
 
-$whiteDefault: #ffffff;
-$blackDefault: #000000;
+$white-primary: #ffffff;
 
-$blueDefault: #3a54d6;
+$black-primary: #000000;
+$black-secondary: #111111;
+
+$grey-primary: #888888;
+$grey-secondary: #bbbbbb;
+
+$silver-primary: rgba(223, 223, 223, 0.5);
+
+$blue-primary: #3a54d6;
 $blueSecondary: #27a6ff;
 
-$buttonsDefoult:#3a54d6;
-
-$greyDefoult: #464955;
-
-$silverDefault: rgba(223, 223, 223, 0.5);
+//! -------- Padding --------

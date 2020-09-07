@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import testEl from '../components/menu-main'
+import testEl from '@/components/main-menu/menu-main'
 
 export default {
     components: {

@@ -51,13 +51,14 @@ export default {
 				color: this.product.options.colors[0],
 				size: this.product.options.sizes[0],
 				quantity: 1,
+				price: this.product.price
 			});
 		},
 	},
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .small-card {
 	width: 100%;
 	height: 100%;
@@ -77,7 +78,7 @@ export default {
 	}
 	&::before {
 		opacity: 0;
-		background-color: #2344e8;
+		background-color: $blue-primary;
 		content: "";
 		width: 100%;
 		height: 100%;
@@ -93,23 +94,23 @@ export default {
 		width: 100%;
 	}
 	&__title {
-		color: #111111;
-		font-family: $oswaldRegular;
-		font-size: 17px;
+		color: $black-secondary;
+		font-family: $oswald-regular;
+		font-size: $title-primary;
 		margin-bottom: 10px;
 	}
 	&__price {
 		color: #2344e8;
-		font-family: $poppinsMedium;
-		font-size: 14px;
+		font-family: $poppins-medium;
+		font-size: $text-secondary;
 	}
 	&__style {
 		position: absolute;
 		top: 50px;
 		left: 50px;
-		color: #fff;
-		font-family: $poppinsMedium;
-		font-size: 12px;
+		color: $white-primary;
+		font-family: $poppins-medium;
+		font-size: $text-primary;
 		text-transform: uppercase;
 		letter-spacing: 1.8px;
 		opacity: 0;
@@ -134,8 +135,8 @@ export default {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		color: #fff;
-		font-size: 18px;
+		color: $white-primary;
+		font-size: $title-primary;
 		margin-left: calc(35 / 375 * 100%);
 		flex-shrink: 0;
 		border-radius: 50%;
@@ -145,7 +146,7 @@ export default {
 		background-color: #4d68ec;
 		transition: all 150ms ease-in-out;
 		&:hover {
-			border-color: #ffffff;
+			border-color: $white-primary;
 		}
 	}
 	&:hover {
@@ -155,7 +156,7 @@ export default {
 			}
 			&__title,
 			&__price {
-				color: #fff;
+				color: $white-primary;
 			}
 			&__buy {
 				visibility: visible;

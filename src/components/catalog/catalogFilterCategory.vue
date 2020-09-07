@@ -74,14 +74,14 @@ export default {
 		justify-content: space-between;
 		cursor: pointer;
 		position: relative;
-		color: #111111;
-		font-family: $poppinsSemiBold;
-		font-size: 12px;
+		color: $black-secondary;
+		font-family: $poppins-semi-bold;
+		font-size: $text-primary;
 		text-transform: uppercase;
 		letter-spacing: 1.2px;
 	}
 	&__icon {
-		font-size: 18px;
+		font-size: $title-primary;
 		position: absolute;
 		top: 50%;
 		left: -20px;
@@ -93,7 +93,7 @@ export default {
 	}
 	.icon-reset {
 		font-size: 10px;
-		color: #bbbbbb;
+		color: $grey-secondary;
 	}
 	&__list {
 		overflow: hidden;
@@ -101,15 +101,15 @@ export default {
 	}
 	&__item {
 		cursor: pointer;
-		color: #111111;
-		font-family: $poppinsRegular;
-		font-size: 12px;
+		color: $black-secondary;
+		font-family: $poppins-regular;
+		font-size: $text-primary;
 		margin-top: 25px;
 		&::first-letter {
 			text-transform: uppercase;
 		}
 		&.active {
-			color: #3a54d6;
+			color: $blue-primary;
 		}
 		& .quan {
 		}

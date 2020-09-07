@@ -21,16 +21,16 @@ export default {
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 	background-color: rgba(255, 255, 255, 0.15);
 	border-radius: 30px;
-	color: #fff;
-	font-family: $poppinsMedium;
-    font-size: 14px;
+	color: $white-primary;
+	font-family: $poppins-medium;
+    font-size: $text-secondary;
 	transition: all 150ms ease-in-out;
 	@include mobile {
 		width: 100%;
 	}
     &:hover {
-        color: #000;
-        background-color: rgba(255, 255, 255, 1);
+        color: $black-primary;
+        background-color: $white-primary;
     }
 }
 </style>

@@ -96,14 +96,21 @@ export default {};
 		justify-content: center;
 		align-items: center;
 		width: 50%;
+		@include mobile {
+			padding: 0 15px;
+			width: 100%;
+		}
 		&:first-child {
 			border-right: 2px solid #dddddd;
+			@include mobile {
+			display: none;
+		}
 		}
 	}
 	&__title {
-		color: #111111;
-		font-family: $oswaldRegular;
-		font-size: 20px;
+		color: $black-secondary;
+		font-family: $oswald-regular;
+		font-size: $title-secondary;
 		margin-bottom: 40px;
 	}
 	&__input {
@@ -111,33 +118,40 @@ export default {};
 		height: 60px;
 		border-bottom: 1px solid #dddddd;
 		&:placeholder-shown {
-			color: #888888;
-			font-family: $poppinsLight;
-			font-size: 12px;
+			color: $grey-primary;
+			font-family: $poppins-light;
+			font-size: $text-primary;
 		}
 	}
 	&__form-sign {
 		width: 250px;
+		max-width: 250px;
 		display: flex;
 		flex-direction: column;
 		border: 1px solid #dddddd;
 		border-radius: 15px;
 		overflow: hidden;
 		margin-bottom: 25px;
+		@include tablets {
+			width: 90%;
+		}
+		@include laptops {
+			width: 90%;
+		}
 	}
 	&__sign-in-btn {
 		height: 60px;
 		box-shadow: 0 5px 20px rgba(58, 84, 214, 0.4);
-		background-color: #3a54d6;
-		color: #ffffff;
-		font-family: $poppinsMedium;
-		font-size: 14px;
+		background-color: $blue-primary;
+		color: $white-primary;
+		font-family: $poppins-medium;
+		font-size: $text-secondary;
 	}
 	&__forget {
 		cursor: pointer;
-		color: #3a54d6;
-		font-family: $poppinsRegular;
-		font-size: 12px;
+		color: $blue-primary;
+		font-family: $poppins-regular;
+		font-size: $text-primary;
 	}
 	&__form-info {
 		display: flex;
@@ -147,6 +161,12 @@ export default {};
 		border: 1px solid #dddddd;
 		border-radius: 15px;
 		overflow: hidden;
+		@include tablets {
+			width: 90%;
+		}
+		@include laptops {
+			width: 90%;
+		}
 	}
 	&__input-address {
 		flex-grow: 1;
@@ -154,9 +174,9 @@ export default {};
 		border-bottom: 1px solid #dddddd;
 		padding: 0 25px;
 		&:placeholder-shown {
-			color: #888888;
-			font-family: $poppinsLight;
-			font-size: 12px;
+			color: $grey-primary;
+			font-family: $poppins-light;
+			font-size: $text-primary;
 		}
 		&:nth-child(2n) {
 			border-left: 1px solid #dddddd;
@@ -173,14 +193,23 @@ export default {};
 		width: 50px;
 		height: 50px;
 		border: 1px solid #e6e6e6;
-		background-color: #ffffff;
+		background-color: $white-primary;
 		border-radius: 50%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		color: #bbbbbb;
-		font-family: $poppinsMedium;
-		font-size: 14px;
+		color: $grey-secondary;
+		font-family: $poppins-medium;
+		font-size: $text-secondary;
+		@include mobile {
+			display: none;
+		}
+		@include tablets {
+			display: none;
+		}
+		@include laptops {
+			display: none;
+		}
 	}
 }
 </style>

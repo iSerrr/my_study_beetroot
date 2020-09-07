@@ -67,8 +67,6 @@
 </template>
 
 <script>
-import googleMapLoader from "../components/google-map-loader";
-
 export default {
 	components: {
 		googleMapLoader,
@@ -97,9 +95,9 @@ export default {
 		}
 	}
 	&__title {
-		color: #111111;
-		font-family: $oswaldRegular;
-		font-size: 20px;
+		color: $black-secondary;
+		font-family: $oswald-regular;
+		font-size: $title-secondary;
 		margin-bottom: 45px;
 	}
 	&__list {
@@ -113,7 +111,7 @@ export default {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		font-size: 12px;
+		font-size: $text-primary;
 		&:nth-child(2n) {
 			border-left: 1px dotted #dddddd;
 		}
@@ -128,13 +126,13 @@ export default {
 		}
 	}
 	&__icon {
-		color: $blueDefault;
+		color: $blue-primary;
 		font-size: 30px;
 		margin-bottom: 30px;
 	}
 	&__subtitle {
 		color: #222222;
-		font-family: $poppinsSemiBold;
+		font-family: $poppins-semi-bold;
 		letter-spacing: 1.2px;
 		text-transform: uppercase;
 		margin-bottom: 15px;
@@ -142,8 +140,8 @@ export default {
 	&__desc {
 		width: 50%;
 		text-align: center;
-		font-family: $poppinsLight;
-		color: #888888;
+		font-family: $poppins-light;
+		color: $grey-primary;
 		line-height: 18px;
 	}
 	&__write-to-us {
@@ -153,9 +151,9 @@ export default {
 		border-radius: 15px;
 		overflow: hidden;
 		& > *:placeholder-shown {
-			color: #888888;
-			font-family: $poppinsLight;
-			font-size: 12px;
+			color: $grey-primary;
+			font-family: $poppins-light;
+			font-size: $text-primary;
 		}
 	}
 	&__input {
@@ -179,10 +177,10 @@ export default {
 		width: 100%;
 		height: 75px;
 		box-shadow: 0 5px 20px rgba(58, 84, 214, 0.4);
-		background-color: #3a54d6;
-		color: #ffffff;
-		font-family: $poppinsMedium;
-		font-size: 14px;
+		background-color: $blue-primary;
+		color: $white-primary;
+		font-family: $poppins-medium;
+		font-size: $text-secondary;
 	}
 }
 </style>

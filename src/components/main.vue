@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import menuMain from './menu-main.vue'
+import menuMain from '@/components/main-menu/menu-main.vue'
 
 export default {
 	components: {
@@ -27,6 +27,6 @@ export default {
 	//? needs fixing
     // margin-top: -75px;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.25);
-    background-color: #ffffff;
+    background-color: $white-primary;
 }
 </style>

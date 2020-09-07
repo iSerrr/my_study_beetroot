@@ -17,7 +17,7 @@
 export default {};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 
 .nav-bar {
@@ -32,18 +32,18 @@ export default {};
 	}
 	&__link {
 		text-decoration: none;
-		font-family: $poppinsSemiBold;
-		font-size: 12px;
+		font-family: $poppins-semi-bold;
+		font-size: $text-primary;
         text-transform: uppercase;
         height: 100%;
 		display: flex;
         align-items: center;
         margin-right: 80px;
-        color: #888888;
+        color: $grey-primary;
         border-bottom: 2px solid transparent;
         &.active {
-            color: #3a54d6;
-            border-color: #3a54d6;
+            color: $blue-primary;
+            border-color: $blue-primary;
 		}
 	}
 }

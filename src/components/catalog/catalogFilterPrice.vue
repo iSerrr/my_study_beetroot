@@ -128,15 +128,15 @@ export default {
 		justify-content: space-between;
 		cursor: pointer;
 		position: relative;
-		color: #111111;
-		font-family: $poppinsSemiBold;
-		font-size: 12px;
+		color: $black-secondary;
+		font-family: $poppins-semi-bold;
+		font-size: $text-primary;
 		text-transform: uppercase;
 		letter-spacing: 1.2px;
 		margin-bottom: 20px;
 	}
 	&__icon {
-		font-size: 18px;
+		font-size: $title-primary;
 		position: absolute;
 		top: 50%;
 		left: -20px;
@@ -148,7 +148,7 @@ export default {
 	}
 	.icon-reset {
 		font-size: 10px;
-		color: #bbbbbb;
+		color: $grey-secondary;
 	}
 	&__range {
 		width: 100%;
@@ -168,12 +168,12 @@ export default {
 		width: 120px;
 		height: 40px;
 		border: 1px solid #d8d8d8;
-		background-color: #ffffff;
+		background-color: $white-primary;
 		border-radius: 25px;
 		padding: 0 15px;
-		color: #888888;
-		font-family: $poppinsRegular;
-		font-size: 12px;
+		color: $grey-primary;
+		font-family: $poppins-regular;
+		font-size: $text-primary;
 		margin-bottom: 30px;
 	}
 }
@@ -200,14 +200,14 @@ export default {
 		bottom: 0;
 		left: 25%;
 		right: 25%;
-		background-color: #3a54d6;
+		background-color: $blue-primary;
 	}
 	&__thumb {
 		cursor: pointer;
 		width: 20px;
 		height: 20px;
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-		background-color: #ffffff;
+		background-color: $white-primary;
 		position: absolute;
 		border-radius: 50%;
 		z-index: 3;

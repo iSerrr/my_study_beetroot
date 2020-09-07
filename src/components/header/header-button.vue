@@ -30,24 +30,27 @@ export default {
 
 .Btn {
 	background-color: transparent;
-	color: $whiteDefault;
+	color: $white-primary;
 	font-size: 22px;
-	position: relative;
 	&__counter {
 		padding-top: 2px;
-		font-family: $poppinsMedium;
+		font-family: $poppins-medium;
 		position: absolute;
-		top: -50%;
-		left: 90%;
+		top: 10px;
+		right: 10px;
 		display: block;
 		width: 15px;
 		height: 15px;
 		background-color: #27a6ff;
 		border-radius: 50%;
-		font-size: 11px;
+		font-size: $text-primary;;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		@include mobile {
+			top: 0;
+			right: 0;
+		}
 	}
 }
 </style>

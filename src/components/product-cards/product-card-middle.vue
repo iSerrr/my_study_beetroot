@@ -55,22 +55,22 @@ export default {
 		display: inline-block;
 		padding: 3px 6px;
 		border-radius: 5px;
-		background-color: #111111;
-		color: #ffffff;
-		font-family: $poppinsRegular;
-		font-size: 11px;
+		background-color: $black-secondary;
+		color: $white-primary;
+		font-family: $poppins-regular;
+		font-size: $text-primary;;
 		font-weight: 500;
 	}
 	&__style {
-		color: #ffffff;
-		font-family: $poppinsMedium;
-		font-size: 12px;
+		color: $white-primary;
+		font-family: $poppins-medium;
+		font-size: $text-primary;
 		text-transform: uppercase;
 		letter-spacing: 1.8px;
 	}
 	&__brend {
-		color: #ffffff;
-		font-family: $oswaldRegular;
+		color: $white-primary;
+		font-family: $oswald-regular;
 		font-size: 25px;
 		line-height: 30px;
 	}
@@ -84,8 +84,8 @@ export default {
 	}
 }
 .middle-title {
-	color: #ffffff;
-	font-family: $oswaldRegular;
+	color: $white-primary;
+	font-family: $oswald-regular;
 	font-size: 25px;
 	margin-bottom: 20px;
 	

@@ -1,6 +1,6 @@
 <template>
 	<div class="home__conteiner">
-			<tempate v-if="false">
+			<tempate v-if="true">
 		<ul ref="home" class="home__list">
 			<li
 				v-bind:style="`height:${gridItemHeight}px;`"
@@ -235,7 +235,7 @@ export default {
 	&__item {
 		width: 100%;
 		font-size: 0;
-		background-color: #000;
+		background-color: $black-primary;
 	}
 	&__img {
 		width: 100%;

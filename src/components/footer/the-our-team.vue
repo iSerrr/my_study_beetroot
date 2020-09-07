@@ -19,10 +19,19 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-
 .our-team {
-	font-family: $poppinsLight;
-	font-size: 12px;
+	font-family: $poppins-light;
+	font-size: $text-primary;
+	@include mobile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	@include tablets {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 	&__logo {
 		margin-bottom: 30px;
 	}
@@ -31,6 +40,12 @@ export default {};
 		color: #555555;
 		line-height: 25px;
 		margin-bottom: 30px;
+		@include mobile {
+			text-align: center;
+		}
+		@include tablets {
+			text-align: center;
+		}
 	}
 	&__list {
 		display: flex;
@@ -38,13 +53,13 @@ export default {};
 		margin-bottom: 20px;
 	}
 	&__item {
-		color: #888888;
+		color: $grey-primary;
 		margin-right: 25px;
 	}
 	&__old {
 		color: #444444;
 
-		font-size: 14px;
+		font-size: $text-secondary;
 	}
 }
 </style>

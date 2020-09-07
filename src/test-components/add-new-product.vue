@@ -253,15 +253,15 @@ export default {
 		align-items: center;
 	}
 	&__label {
-		font-family: $poppinsSemiBold;
+		font-family: $poppins-semi-bold;
 		width: 100%;
-		color: #000;
+		color: $black-primary;
 		margin-bottom: 3px;
-		font-size: 18px;
+		font-size: $title-primary;
 		text-align: left;
 	}
 	&__item {
-		font-size: 18px;
+		font-size: $title-primary;
 		width: 100%;
 		border: 1px solid rgb(206, 206, 206);
 		margin-bottom: 15px;
@@ -304,14 +304,14 @@ export default {
 			font-family: "icomoon" !important;
 			content: "\e901";
 			position: absolute;
-			color: #fff;
-			font-size: 14px;
+			color: $white-primary;
+			font-size: $text-secondary;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			opacity: 0;
 			transition: all 100ms ease-in-out;
-			text-shadow: 0 0 2px #000;
+			text-shadow: 0 0 2px $black-primary;
 		}
 	}
 }
@@ -327,14 +327,14 @@ export default {
 	&__input {
 		display: none;
 		&:checked + label {
-			color: rgb(79, 102, 233);
+			color: #4f66e9;
 		}
 	}
 	&__label {
 		cursor: pointer;
-		font-size: 20px;
-		font-family: $poppinsMedium;
-		color: #000;
+		font-size: $title-secondary;
+		font-family: $poppins-medium;
+		color: $black-primary;
 	}
 }
 .new-product {
@@ -345,14 +345,14 @@ export default {
 		position: relative;
 		width: 50%;
 		padding: 50px 50px;
-		color: #000;
-		font-family: $poppinsLight;
+		color: $black-primary;
+		font-family: $poppins-light;
 	}
 	&__title {
 		font-size: 35px;
 	}
 	&__category {
-		font-size: 20px;
+		font-size: $title-secondary;
 		margin: 10px 0;
 	}
 	&__style {
@@ -362,9 +362,9 @@ export default {
 		width: 250px;
 		height: 40px;
 		border-radius: 25px;
-		color: #fff;
-		background-color: rgb(0, 68, 216);
-		font-size: 20px;
+		color: $white-primary;
+		background-color: #0044d8;
+		font-size: $title-secondary;
 	}
 }
 .options {

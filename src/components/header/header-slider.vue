@@ -77,8 +77,8 @@ export default {
 	&__title {
 		width: 100%;
 		text-align: center;
-		color: #ffffff;
-		font-family: $poppinsSemiBold;
+		color: $white-primary;
+		font-family: $poppins-semi-bold;
 		text-transform: uppercase;
 		letter-spacing: -18px;
 		@include pos_50_50;
@@ -113,8 +113,8 @@ export default {
 		top: 20%;
 		left: 15%;
 		width: 150px;
-		color: #ffffff;
-		font-family: $poppinsSemiBold;
+		color: $white-primary;
+		font-family: $poppins-semi-bold;
 		text-transform: uppercase;
 		font-size: 24px;
 		@include mobile {
@@ -122,8 +122,8 @@ export default {
 		}
 		& span {
 			display: block;
-			font-size: 12px;
-			font-family: $poppinsMedium;
+			font-size: $text-primary;
+			font-family: $poppins-medium;
 			margin-bottom: 10px;
 		}
 	}
@@ -146,12 +146,12 @@ export default {
 		top: 20%;
 		left: 80%;
 		display: block;
-		background-color: #000;
+		background-color: $black-primary;
 		border-radius: 5px;
-		color: #fff;
+		color: $white-primary;
 		padding: 3px 6px;
-		font-family: $poppinsRegular;
-		font-size: 11px;
+		font-family: $poppins-regular;
+		font-size: $text-primary;;
 	}
 }
 .fade-in.slider__item {

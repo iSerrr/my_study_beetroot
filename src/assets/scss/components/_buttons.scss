@@ -4,7 +4,7 @@
 	cursor: pointer;
 	padding: 12px 43px;
 	color: #000;
-	font-size: 14px;
+	font-size: $text-secondary;
 	line-height: 22px;
 	text-transform: uppercase;
 	background-color: transparent;
@@ -30,7 +30,7 @@
 		display: block;
 		width: calc(100% + 4px);
 		height: 55%;
-		background-color:#fff;
+		background-color:$white-primary;
 		transition: inherit;
 		transition-delay: 0.3s;
 	}
@@ -44,7 +44,7 @@
 		display: block;
 		width: 75%;
 		height: calc(100% + 4px);
-		background-color: #fff;
+		background-color: $white-primary;
 		transition: inherit;
 	}
 	&:hover::before {

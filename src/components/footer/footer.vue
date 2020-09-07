@@ -19,10 +19,10 @@
 </template>
 
 <script>
-import footerNavList from "./footer-nav-list";
-import socialList from "./base-social-list";
-import paymentMethods from "./the-payment-methods";
-import ourTeam from "./the-our-team";
+import footerNavList from "@/components/footer/footer-nav-list";
+import socialList from "@/components/base-social-list";
+import paymentMethods from "@/components/the-payment-methods";
+import ourTeam from "@/components/footer/the-our-team";
 
 export default {
 	components: {
@@ -41,8 +41,8 @@ export default {
 					"Payment Options",
 					"Contact Us",
 				],
-		},
-		contentAboutUs: {
+			},
+			contentAboutUs: {
 				title: "About Us",
 				items: [
 					"Careers",
@@ -63,31 +63,53 @@ export default {
 	@include mobile {
 		width: 100%;
 	}
+	@include tablets {
+		width: 100%;
+	}
 	&__list {
 		margin: 0 auto;
 		display: flex;
 		max-width: 1280px;
 		padding: 90px 15px;
 		justify-content: space-between;
+		@include mobile {
+			flex-direction: column-reverse;
+		}
+		@include tablets {
+			flex-direction: column-reverse;
+		}
 	}
 	&__ {
 		&_column {
+			padding: 0 15px;
+			@include mobile {
+				padding: 0;
+				width: 100%;
+				&:nth-child(2),
+				&:nth-child(3) {
+					display: none;
+				}
+			}
+			@include tablets {
+				padding: 0;
+				width: 100%;
+				&:nth-child(2),
+				&:nth-child(3) {
+					display: none;
+				}
+			}
 		}
 	}
 }
 .our-team {
 	&__logo {
 	}
-
 	&__desc {
 	}
-
 	&__list {
 	}
-
 	&__item {
 	}
-
 	&__old {
 	}
 }

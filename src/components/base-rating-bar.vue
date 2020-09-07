@@ -17,12 +17,12 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .ratting-bar {
 	display: flex;
 	align-items: center;
 	&__stars {
-		color: rgb(194, 194, 194);
+		color: $grey-secondary;
 		margin-right: 5px;
 		&.active {
 			color: rgb(255, 208, 0);

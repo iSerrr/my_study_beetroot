@@ -38,8 +38,8 @@ export default {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: #fff;
-	font-family: $poppinsRegular;
+	color: $white-primary;
+	font-family: $poppins-regular;
 	&--twitter {
 		background-color: #49b8f1;
 	}
@@ -49,30 +49,30 @@ export default {
 	&--instagram {
 		background-color: #222222;
 		.social__icon {
-			color: #3a54d6;
+			color: $blue-primary;
 		}
 		.name__icon {
 			color: #666666;
 		}
 	}
 	&__icon {
-		font-size: 18px;
+		font-size: $title-primary;
 		margin-bottom: 40px;
 	}
 	&__name {
-		font-size: 12px;
+		font-size: $text-primary;
 		text-transform: uppercase;
 		letter-spacing: 1.2px;
 		margin-bottom: 15px;
 	}
 	&__posts {
-		font-family: $oswaldRegular;
+		font-family: $oswald-regular;
 		font-size: 48px;
 		text-transform: uppercase;
 		margin-bottom: 80px;
 	}
 	&__tag {
-		font-size: 14px;
+		font-size: $text-secondary;
 		font-weight: 500;
 		line-height: 30px;
 	}

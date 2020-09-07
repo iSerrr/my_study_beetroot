@@ -119,29 +119,29 @@ export default {
 button {
 	width: 200px;
 	height: 40px;
-	background-color: rgb(151, 151, 151);
-	color: #fff;
+	background-color: #979797;
+	color: $white-primary;
 	font-size: 19px;
 	border-radius: 20px;
 }
 
 form {
-	color: #000;
-	font-size: 18px;
+	color: $black-primary;
+	font-size: $title-primary;
 	margin-left: 15px;
 	width: 300px;
 	display: flex;
 	flex-direction: column;
 }
 form > input {
-	font-size: 18px;
+	font-size: $title-primary;
 	padding: 5px 15px;
-	border: 1px solid #000;
+	border: 1px solid $black-primary;
 }
 form > * {
 	margin: 5px 0;
 }
 form > label {
-	font-family: $poppinsSemiBold;
+	font-family: $poppins-semi-bold;
 }
 </style>

@@ -66,7 +66,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .grid {
 	&__conteiner {
 		display: grid;
@@ -116,7 +116,7 @@ export default {
 	align-items: center;
 	&__icon {
 		font-size: 50px;
-		color: $blueDefault;
+		color: $blue-primary;
 		margin-bottom: 40px;
 		@include mobile {
 			font-size: 40px;
@@ -124,9 +124,9 @@ export default {
 	}
 	&__title {
 		font-family: Oswald;
-		font-size: 18px;
+		font-size: $title-primary;
 		text-transform: uppercase;
-		color: #ffffff;
+		color: $white-primary;
 		margin-bottom: 25px;
 		@include mobile {
 			font-size: 16px;
@@ -135,18 +135,18 @@ export default {
 	}
 	&__desc {
 		margin-bottom: 55px;
-		font-family: $poppinsRegular;
+		font-family: $poppins-regular;
 		font-size: 13px;
 		color: #666666;
 		@include mobile {
-			font-size: 12px;
+			font-size: $text-primary;
 			text-align: center;
 			margin-bottom: 10px;
 		}
 	}
 	&__link {
-		color: #ffffff;
-		font-family: $poppinsMedium;
+		color: $white-primary;
+		font-family: $poppins-medium;
 		font-size: 13px;
 	}
 }

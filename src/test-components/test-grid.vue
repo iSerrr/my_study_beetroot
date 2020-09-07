@@ -53,7 +53,7 @@ export default {
 <style lang="scss">
 .test {
 	width: 100%;
-	background-color: #fff;
+	background-color: $white-primary;
 }
 .test {
 	&__list {
@@ -63,7 +63,7 @@ export default {
 		text-align: center;
 		width: 50px;
 		color: burlywood;
-		font-size: 20px;
+		font-size: $title-secondary;
 		padding: 10px;
 		background-color: blueviolet;
 		margin: 5px;

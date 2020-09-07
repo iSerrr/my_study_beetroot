@@ -1,11 +1,11 @@
 <template>
 	<div id="app">
 		<template v-if="PRODUCTS.length > 0">
-			<template v-if="false">
+			<template v-if="true">
 				<testPanel v-bind:products="PRODUCTS" />
 				<sectionHeader v-bind:slider="isHome" />
 			</template>
-			<template v-if="false">
+			<template v-if="true">
 				<sectionMain />
 			</template>
 			<template v-if="true">
@@ -21,7 +21,7 @@ import sectionHeader from "@/components/header/header.vue";
 import sectionMain from "@/components/main";
 import sectionSubscribe from "@/components/subscribe";
 import testPanel from "@/test-components/v-test-menu";
-import sectionFooter from "@/components/footer";
+import sectionFooter from "@/components/footer/footer";
 
 import { mapGetters } from "vuex";
 import { mapActions } from "vuex";
@@ -60,8 +60,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "assets/scss/main.scss";
-
 body {
 	width: 100%;
 	height: 100vh;

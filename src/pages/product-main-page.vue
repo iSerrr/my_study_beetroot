@@ -5,9 +5,12 @@
 		<li class="product-page__card">
 			<productCardFull v-bind:productP="product" />
 		</li>
+
+		<template v-if="false">
 		<li class="product-page__nav-bar">
 			<productNavBar />
 		</li>
+		</template>
 		<li v-if=(product.id) class="product-page__content">
 			<productReviews v-bind:productId="product.id" />
 			<div></div>
@@ -61,7 +64,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .product-page {
 	width: 100%;

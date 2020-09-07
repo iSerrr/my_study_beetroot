@@ -40,6 +40,12 @@ export default {
 	height: 100%;
 	width: 100%;
 	background: linear-gradient(135deg, #7564e2, 60%, #a394ef);
+	@include mobile {
+		display: none;
+	}
+	@include tablets {
+		display: none;
+	}
 	&:hover {
 		& .middle-card__img {
 			transform: translateY(-50%) scale(1.2);
@@ -49,24 +55,24 @@ export default {
 		display: inline-block;
 		padding: 3px 6px;
 		border-radius: 5px;
-		background-color: #111111;
-		color: #ffffff;
-		font-family: $poppinsRegular;
-		font-size: 11px;
+		background-color: $black-secondary;
+		color: $white-primary;
+		font-family: $poppins-regular;
+		font-size: $text-primary;;
 		font-weight: 500;
 		margin-bottom: 50px;
 	}
 	&__style {
-		color: #ffffff;
-		font-family: $poppinsMedium;
-		font-size: 12px;
+		color: $white-primary;
+		font-family: $poppins-medium;
+		font-size: $text-primary;
 		text-transform: uppercase;
 		letter-spacing: 1.8px;
 		margin-bottom: 20px;
 	}
 	&__brend {
-		color: #ffffff;
-		font-family: $oswaldRegular;
+		color: $white-primary;
+		font-family: $oswald-regular;
 		font-size: 25px;
 		line-height: 30px;
 		margin-bottom: 3px;
@@ -82,8 +88,8 @@ export default {
 }
 .middle-title {
 	width: 150px;
-	color: #ffffff;
-	font-family: $oswaldRegular;
+	color: $white-primary;
+	font-family: $oswald-regular;
 	font-size: 25px;
 	line-height: 30px;
 	margin-bottom: 45px;

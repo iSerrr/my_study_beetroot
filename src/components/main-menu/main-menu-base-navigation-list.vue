@@ -5,19 +5,21 @@
 				Home
 			</router-link>
 		</li>
-		<li class="basic-navigation__item">
-			<a href="#" class="basic-navigation__link">Clothing</a>
+		<li v-on:click="onMenuToggle()" class="basic-navigation__item">
+			<router-link class="basic-navigation__link" :to="'/catalog/clothing/all'"
+				>Clothing</router-link
+			>
 		</li>
-		<li class="basic-navigation__item">
-			<a href="#" class="basic-navigation__link">Shoes</a>
+		<li v-on:click="onMenuToggle()" class="basic-navigation__item">
+			<router-link class="basic-navigation__link" :to="'/catalog/shoes/all'"
+				>Shoes</router-link
+			>
 		</li>
 		<li class="basic-navigation__item">
 			<a href="#" class="basic-navigation__link">Equip</a>
 		</li>
 		<li class="basic-navigation__item">
-			<a href="#" class="basic-navigation__link">
-				Blogs
-			</a>
+			<a href="#" class="basic-navigation__link"> Blogs </a>
 		</li>
 		<li class="basic-navigation__item">
 			<a href="#" class="basic-navigation__link">Last news</a>
@@ -77,11 +79,11 @@ export default {
 		}
 	}
 	&__link {
-		color: #ffffff;
-		font-family: $poppinsSemiBold;
-		font-size: 12px;
+		color: $white-primary;
+		font-family: $poppins-semi-bold;
+		font-size: $text-primary;
 		@include mobile {
-			font-size: 20px;
+			font-size: $title-secondary;
 		}
 		@include tablets {
 			font-size: 30px;

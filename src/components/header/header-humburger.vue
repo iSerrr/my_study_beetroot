@@ -1,7 +1,7 @@
 <template>
 	<button
-		:class="{ 'is-active':  menuIsActive }"
-		class="hamburger hamburger--arrow"
+		:class="{ 'is-active': menuIsActive }"
+		class="hamburger hamburger--arrow hamburger--slider"
 		type="button"
 	>
 		<span class="hamburger-box">
@@ -12,20 +12,17 @@
 
 <script>
 export default {
-    props: {
-        menuIsActive: Boolean,
-    },    
-}
+	props: {
+		menuIsActive: Boolean,
+	},
+};
 </script>
 
 <style lang="scss" scoped>
-// Hamburger
-// ==================================================
-
 $hamburger-padding-x: 15px !default;
 $hamburger-padding-y: 15px !default;
-$hamburger-layer-width: 20px !default;
-$hamburger-layer-height: 2px !default;
+$hamburger-layer-width: 25px !default;
+$hamburger-layer-height: 3px !default;
 $hamburger-layer-spacing: 3px !default;
 $hamburger-layer-color: rgb(255, 255, 255) !default;
 $hamburger-layer-border-radius: 4px !default;
@@ -42,9 +39,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
 // Types (Remove or comment out what you don’t need)
 // ==================================================
-$hamburger-types: (
-	arrow,
-) !default;
+$hamburger-types: (arrow, slider) !default;
 
 .hamburger {
 	padding: $hamburger-padding-y $hamburger-padding-x;
@@ -129,24 +124,119 @@ $hamburger-types: (
 	}
 }
 
-@if index($hamburger-types, arrow) {
-	/*
+	@if index($hamburger-types, arrow) {
+		/*
    * Arrow
    */
-	.hamburger--arrow.is-active {
-		.hamburger-inner {
-			&::before {
-				transform: translate3d($hamburger-layer-width * -0.2, 0, 0)
-					rotate(-45deg)
-					scale(0.7, 1);
-			}
+		.hamburger--arrow.is-active {
+			.hamburger-inner {
+				&::before {
+					transform: translate3d($hamburger-layer-width * -0.2, 0, 0)
+						rotate(-45deg)
+						scale(0.7, 1);
+				}
 
-			&::after {
-				transform: translate3d($hamburger-layer-width * -0.2, 0, 0)
-					rotate(45deg)
-					scale(0.7, 1);
+				&::after {
+					transform: translate3d($hamburger-layer-width * -0.2, 0, 0)
+						rotate(45deg)
+						scale(0.7, 1);
+				}
 			}
 		}
 	}
-}
+
+
+@include laptops {
+@if index($hamburger-types, slider) {
+	/*
+   * Slider
+   */
+	.hamburger--slider {
+		.hamburger-inner {
+			top: $hamburger-layer-height / 2;
+
+			&::before {
+				top: $hamburger-layer-height + $hamburger-layer-spacing;
+				transition-property: transform, opacity;
+				transition-timing-function: ease;
+				transition-duration: 0.15s;
+			}
+
+			&::after {
+				top: ($hamburger-layer-height * 2) +
+					($hamburger-layer-spacing * 2);
+			}
+		}
+
+		&.is-active {
+			.hamburger-inner {
+				$y-offset: $hamburger-layer-spacing + $hamburger-layer-height;
+
+				transform: translate3d(0, $y-offset, 0) rotate(45deg);
+
+				&::before {
+					transform: rotate(-45deg)
+						translate3d(
+							$hamburger-layer-width / -7,
+							$hamburger-layer-spacing * -1,
+							0
+						);
+					opacity: 0;
+				}
+
+				&::after {
+					transform: translate3d(0, $y-offset * -2, 0) rotate(-90deg);
+				}
+			}
+		}
+	}
+}}
+
+
+@include desktop {
+@if index($hamburger-types, slider) {
+	/*
+   * Slider
+   */
+	.hamburger--slider {
+		.hamburger-inner {
+			top: $hamburger-layer-height / 2;
+
+			&::before {
+				top: $hamburger-layer-height + $hamburger-layer-spacing;
+				transition-property: transform, opacity;
+				transition-timing-function: ease;
+				transition-duration: 0.15s;
+			}
+
+			&::after {
+				top: ($hamburger-layer-height * 2) +
+					($hamburger-layer-spacing * 2);
+			}
+		}
+
+		&.is-active {
+			.hamburger-inner {
+				$y-offset: $hamburger-layer-spacing + $hamburger-layer-height;
+
+				transform: translate3d(0, $y-offset, 0) rotate(45deg);
+
+				&::before {
+					transform: rotate(-45deg)
+						translate3d(
+							$hamburger-layer-width / -7,
+							$hamburger-layer-spacing * -1,
+							0
+						);
+					opacity: 0;
+				}
+
+				&::after {
+					transform: translate3d(0, $y-offset * -2, 0) rotate(-90deg);
+				}
+			}
+		}
+	}
+}}
+
 </style>

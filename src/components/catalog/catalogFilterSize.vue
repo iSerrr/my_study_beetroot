@@ -12,29 +12,26 @@
 			></i>
 		</h2>
 		<transition name="fade">
+			<template v-if="OPTIONS.size.shoes">
 			<ul v-show="categories" :class="title" class="filter__list">
 				<li
-					v-for="(item, index) of OPTIONS.color"
+					v-for="(item, index) of OPTIONS.size.shoes"
 					:key="index"
 					class="filter__item"
-					@click="onFilter()"
 				>
 					<input
-						v-model="colorsChecked"
+						v-model="sizesChecked"
 						class="filter__checkbox"
 						type="checkbox"
 						:id="item"
 						:value="item"
 					/>
-					<label 
-                    class="filter__label" 
-                    :for="item"
-                    :style="`background-color:${item};`"
-                    >
-						
+					<label class="filter__label" :for="item">
+						{{ item }}
 					</label>
 				</li>
 			</ul>
+			</template>
 		</transition>
 	</div>
 </template>
@@ -49,7 +46,7 @@ export default {
 	data() {
 		return {
 			categories: true,
-			colorsChecked: [],
+			sizesChecked: [],
 		};
 	},
 	computed: {
@@ -60,15 +57,15 @@ export default {
 			this.categories = !this.categories;
 		},
 		onReset() {
-			this.colorsChecked = [];
-			this.$emit("filterColors", []);
+			this.sizesChecked =  [];
+			this.sizesChecked();
 		}
 	},
 	watch: {
-		colorsChecked() {
-			this.$emit("filterColors", this.colorsChecked);
-		}
-	}
+		sizesChecked() {
+			this.$emit("filterSizes", this.sizesChecked);
+		},
+	},
 };
 </script>
 
@@ -80,14 +77,14 @@ export default {
 		justify-content: space-between;
 		cursor: pointer;
 		position: relative;
-		color: #111111;
-		font-family: $poppinsSemiBold;
-		font-size: 12px;
+		color: $black-secondary;
+		font-family: $poppins-semi-bold;
+		font-size: $text-primary;
 		text-transform: uppercase;
 		letter-spacing: 1.2px;
 	}
 	&__icon {
-		font-size: 18px;
+		font-size: $title-primary;
 		position: absolute;
 		top: 50%;
 		left: -20px;
@@ -99,50 +96,40 @@ export default {
 	}
 	.icon-reset {
 		font-size: 10px;
-		color: #bbbbbb;
+		color: $grey-secondary;
 	}
 	&__list {
-        margin-top: 25px;
+		margin-top: 25px;
 		overflow: hidden;
-        max-height: 300px;
-        display: flex;
-        flex-wrap: wrap;
+		max-height: 300px;
+		display: flex;
+		flex-wrap: wrap;
 	}
 	&__item {
-        width: 30px;
-        height: 30px;
-		cursor: pointer;
-		margin: 0 10px 10px 0;
+		width: 50px;
+		height: 50px;
+		border: 0.5px solid #e6e6e6;
 	}
 	&__checkbox {
 		display: none;
-		&:checked + label::before{
-            opacity: unset;
-
+		&:checked + label {
+			box-shadow: 0 5px 20px rgba(58, 84, 214, 0.55);
+			background-color: $blue-primary;
+			color: $white-primary;
 		}
 	}
 	&__label {
 		position: relative;
-		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		cursor: pointer;
 		width: 100%;
 		height: 100%;
-		margin: 5px;
-		border-radius: 50%;
-		border: 1px dotted rgba(0, 0, 0, 0.377);
-		&::before {
-			font-family: "icomoon" !important;
-			content: "\e901";
-			position: absolute;
-			color: #fff;
-			font-size: 14px;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			opacity: 0;
-			transition: all 100ms ease-in-out;
-			text-shadow: 0 0 2px #000;
-		}
+		color: $black-secondary;
+		font-family: $poppins-regular;
+		font-size: $text-primary;
+		text-transform: uppercase;
 	}
 }
 .fade-leave-active {

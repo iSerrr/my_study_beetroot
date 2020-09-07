@@ -113,16 +113,16 @@ export default {
 		}
 	}
 	&__notice {
-		color: #bbbbbb;
-		font-family: $poppinsMedium;
-		font-size: 12px;
+		color: $grey-secondary;
+		font-family: $poppins-medium;
+		font-size: $text-primary;
 		letter-spacing: 1.8px;
 		text-transform: uppercase;
 		margin-bottom: 25px;
 	}
 	&__title {
-		color: #111111;
-		font-family: $oswaldRegular;
+		color: $black-secondary;
+		font-family: $oswald-regular;
 		font-size: 36px;
 		margin-bottom: 25px;
 		@include tablets {
@@ -136,9 +136,9 @@ export default {
 	&__desc {
 		text-align: center;
 		width: 493px;
-		color: #888888;
-		font-family: $poppinsRegular;
-		font-size: 18px;
+		color: $grey-primary;
+		font-family: $poppins-regular;
+		font-size: $title-primary;
 		line-height: 30px;
 		margin-bottom: 50px;
 		@include tablets {
@@ -154,8 +154,8 @@ export default {
 		}
 	}
 	&__price {
-		color: #3a54d6;
-		font-family: $poppinsSemiBold;
+		color: $blue-primary;
+		font-family: $poppins-semi-bold;
 		font-size: 48px;
 		margin-bottom: 70px;
 		@include tablets {
@@ -168,8 +168,8 @@ export default {
 		}
 	}
 	&__old-price {
-		color: #111111;
-		font-family: $poppinsMedium;
+		color: $black-secondary;
+		font-family: $poppins-medium;
 		font-size: 30px;
 		text-decoration: line-through;
 		margin-left: 45px;
@@ -209,18 +209,18 @@ export default {
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
-		border-right: 1px solid #000;
-		font-family: $poppinsMedium;
+		border-right: 1px solid $black-primary;
+		font-family: $poppins-medium;
 		&:last-child {
 			border: none;
 		}
 	}
 	&__value {
-		color: #111111;
+		color: $black-secondary;
 		font-size: 25px;
 	}
 	&__desc {
-		color: #3a54d6;
+		color: $blue-primary;
 		font-size: 10px;
 		text-transform: uppercase;
 		letter-spacing: 1px;

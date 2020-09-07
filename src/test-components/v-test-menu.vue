@@ -100,14 +100,14 @@ export default {
 		cursor: pointer;
 		font-size: 30px;
 		&:hover {
-			color: #fff;
+			color: $white-primary;
 		}
 	}
 	&__link {
 		display: block;
 		margin: 10px;
-		font-size: 18px;
-		color: #fff;
+		font-size: $title-primary;
+		color: $white-primary;
 		&:hover {
 			text-decoration: underline;
 		}
@@ -122,7 +122,7 @@ export default {
 		cursor: pointer;
 		margin: 15px 10px;
 		&:hover {
-			color: #fff;
+			color: $white-primary;
 		}
 	}
 	&__link {
