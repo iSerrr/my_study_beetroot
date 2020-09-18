@@ -1,6 +1,5 @@
 <template>
 	<div class="home__conteiner">
-			<tempate v-if="true">
 		<ul ref="home" class="home__list">
 			<li
 				v-bind:style="`height:${gridItemHeight}px;`"
@@ -17,7 +16,7 @@
 				<sales />
 			</li>
 		</ul>
-	</tempate>
+
 			<productPopular />
 		<tempate v-if="false">
 		<ul

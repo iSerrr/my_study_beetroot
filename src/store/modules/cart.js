@@ -18,6 +18,10 @@ export default {
 				state.cart.push(product)
 			}
 		},
+		cartResetMut(state) {
+			state.cart = [];
+			console.log(123);
+		}
 	},
 	getters: {
 		CART: (state) => {

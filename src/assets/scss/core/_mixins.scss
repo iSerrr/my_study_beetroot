@@ -52,6 +52,11 @@
 	left: 50%;
 	transform: translateX(-50%);
 }
+@mixin posY_50 {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
 //  ! Auto build font-face file
 @mixin font($font_name, $file_name) {
 	@font-face {

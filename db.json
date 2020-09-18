@@ -193,27 +193,6 @@
       "quanImg": 4
     },
     {
-      "id": "p5ef76cc",
-      "brand": "Nike",
-      "category": "shoes",
-      "style": "running",
-      "title": "Air Zoom Alphafly Next",
-      "options": {
-        "colors": [
-          "white"
-        ],
-        "sizes": [
-          8.5,
-          9,
-          9.5,
-          10,
-          10.5
-        ]
-      },
-      "price": 305,
-      "quanImg": 4
-    },
-    {
       "id": "p355549",
       "brand": "Adidas",
       "category": "shoes",
@@ -558,7 +537,9 @@
       "style": "lifestyle",
       "title": "LeBron 7 QS",
       "options": {
-        "colors": ["black"],
+        "colors": [
+          "black"
+        ],
         "sizes": [
           8.5,
           9,
@@ -609,7 +590,26 @@
       },
       "price": 285,
       "quanImg": 3
-    }
+    },
+    {
+      "id": "p5cc7ef4",
+      "brand": "O'NEAL",
+      "category": "bicycle",
+      "style": "helmets",
+      "title": "BLADE POLYACRYLITE DELTA",
+      "options": {
+        "colors": [
+          "red"
+        ],
+        "sizes": [
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      "price": "185",
+      "quanImg": 3
+    }   
   ],
   "users": [
     {
@@ -732,6 +732,25 @@
         10,
         10.5,
         11
+      ]
+    },
+    {
+      "name": "bicycle",
+      "styles": [
+        "helmets",
+        "jerseys",
+        "overshoes",
+        "gloves",
+        "goggles",
+        "protectors"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
       ]
     }
   ],

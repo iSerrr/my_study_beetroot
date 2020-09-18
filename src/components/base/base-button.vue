@@ -61,6 +61,12 @@ export default {
 		max-width: 300px;
 		margin: 0 auto;
 	}
+	@media (min-width: 769px) and (max-width: 895px) {
+			
+				margin: 30px 0;
+		
+
+		}
 	&.reverse {
 		background-color: $white-primary;
 		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);

@@ -28,7 +28,7 @@
 <script>
 import { mapGetters } from "vuex";
 
-import baseButtonSecond from "../base-button-second";
+import baseButtonSecond from "@/components/base/base-button-second";
 export default {
 	components: {
 		baseButtonSecond,
@@ -36,7 +36,7 @@ export default {
 	data() {
 		return {
 			hide: false,
-			sliderData: ["p3813c7d", "p94e849", "pbc5060"],
+			sliderData: ["p3813c7d", "p94e849"],
 			imgSlider: 1,
 		};
 	},

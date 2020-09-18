@@ -228,7 +228,9 @@ export default {
 			Axios.post( 'http://localhost:3000/products',
 			postData)
 			.then(() => console.log('SUCCESS!!'))
-        	.catch(() => console.log('FAILURE!!'))
+			.catch(() => console.log('FAILURE!!'))
+			location.reload()
+			
         },
 		onChangeCategory(event) {
 			this.styles = this.CATEGORIES[event.target.value].styles;

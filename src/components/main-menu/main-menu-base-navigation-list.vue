@@ -16,10 +16,13 @@
 			>
 		</li>
 		<li class="basic-navigation__item">
-			<a href="#" class="basic-navigation__link">Equip</a>
+			<router-link class="basic-navigation__link" :to="'/catalog/bicycle/all'"
+				>Bicycle</router-link
+			>
+		</li>
 		</li>
 		<li class="basic-navigation__item">
-			<a href="#" class="basic-navigation__link"> Blogs </a>
+			<a href="#" class="basic-navigation__link">Blogs</a>
 		</li>
 		<li class="basic-navigation__item">
 			<a href="#" class="basic-navigation__link">Last news</a>

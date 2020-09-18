@@ -54,7 +54,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import ratingBar from "@/components/base-rating-bar";
+import ratingBar from "@/components/base/base-rating-bar";
 
 export default {
 	components: {

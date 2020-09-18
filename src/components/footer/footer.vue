@@ -20,8 +20,8 @@
 
 <script>
 import footerNavList from "@/components/footer/footer-nav-list";
-import socialList from "@/components/base-social-list";
-import paymentMethods from "@/components/the-payment-methods";
+import socialList from "@/components/base/base-social-list";
+import paymentMethods from "@/components/footer/the-payment-methods";
 import ourTeam from "@/components/footer/the-our-team";
 
 export default {

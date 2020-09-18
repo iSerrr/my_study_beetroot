@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import baseButtonSecond from '@/components/base-button-second'
+import baseButtonSecond from '@/components/base/base-button-second'
 import router from "@/route/index";
 
 export default {

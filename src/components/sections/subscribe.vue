@@ -12,6 +12,7 @@
 				type="email"
 				placeholder="Enter your email"
 				required
+				pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
 			/>
 			<button class="subscribe-to-our__button">
 				<i class="icon-envelope"></i>
@@ -102,6 +103,15 @@ export default {};
 		border-radius: 35px;
 		box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 		padding-left: 32px;
+		&:invalid:not(:placeholder-shown) {
+			border-color: #d80000;
+		}
+		&:valid:not(:placeholder-shown) {
+			border-color: #7cff24;
+		}
+		&:focus {
+			border-color: #3695ff;
+		}
 	}
 	&__button {
 		background-color: red;

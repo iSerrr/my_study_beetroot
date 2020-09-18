@@ -35,7 +35,7 @@ export default {};
 			transform: translateX(calc(-100% - 30px));
 			font-size: 35px;
 			color: $white-primary;
-			@media (max-width: 950px) {
+			@media (max-width: 1080px) {
 			  display: none;
 		  }
 		}

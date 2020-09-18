@@ -91,8 +91,8 @@
 <script>
 import { mapGetters, mapMutations } from "vuex";
 import productSlider from "@/components/product-cards/product-slider.vue";
-import buttonMain from "@/components/base-button.vue";
-import ratingBar from "@/components/base-rating-bar.vue";
+import buttonMain from "@/components/base/base-button.vue";
+import ratingBar from "@/components/base/base-rating-bar.vue";
 
 export default {
 	components: {

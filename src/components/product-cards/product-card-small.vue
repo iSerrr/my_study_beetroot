@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import buttonMain from "@/components/base-button.vue";
+import buttonMain from "@/components/base/base-button.vue";
 import router from "@/route/index";
 import { mapMutations } from "vuex";
 

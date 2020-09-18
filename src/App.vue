@@ -2,7 +2,6 @@
 	<div id="app">
 		<template v-if="PRODUCTS.length > 0">
 			<template v-if="true">
-				<testPanel v-bind:products="PRODUCTS" />
 				<sectionHeader v-bind:slider="isHome" />
 			</template>
 			<template v-if="true">
@@ -18,9 +17,8 @@
 
 <script>
 import sectionHeader from "@/components/header/header.vue";
-import sectionMain from "@/components/main";
-import sectionSubscribe from "@/components/subscribe";
-import testPanel from "@/test-components/v-test-menu";
+import sectionMain from "@/components/sections/main";
+import sectionSubscribe from "@/components/sections/subscribe";
 import sectionFooter from "@/components/footer/footer";
 
 import { mapGetters } from "vuex";
@@ -29,7 +27,6 @@ import router from "./route/index";
 
 export default {
 	components: {
-		testPanel,
 		sectionHeader,
 		sectionMain,
 		sectionSubscribe,
@@ -39,7 +36,6 @@ export default {
 		return {
 			classClose: false,
 			prod: null,
-			testMenuActive: false,
 		};
 	},
 	methods: {

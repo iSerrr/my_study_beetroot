@@ -8,14 +8,7 @@ const catalog = () => import('../pages/catalog')
 const productPage = () => import('../pages/product-main-page')
 const cart = () => import('../pages/cart')
 const contacts = () => import('../pages/contacts')
-
-//? Only test mode files
-import testUploadPage from '../test-components/v-test-upload-page'
-import test from '../test-components/test-grid'
-import addReviews from '../test-components/add-reviews'
-import testAddProduct from '../test-components/add-new-product'
-import testSlider from '../test-components/test-slider'
-import testRespons from '../test-components/test-responsible'
+const addProduct = () => import('../pages/add-product')
 
 const routes = [
 	{ path: '/page/:id', name: 'page', component: productPage },
@@ -23,14 +16,7 @@ const routes = [
 	{ path: '/catalog/:category/:id', name: 'catalog', component: catalog },
 	{ path: '/cart', name: 'cart', component: cart },
 	{ path: '/contacts', name: 'contacts', component: contacts },
-	
-	//? Only test mode files
-	{ path: '/addreviews', name: 'addReviews', component: addReviews },
-	{ path: '/test', name: 'test', component: test },
-	{ path: '/test-upload', name: 'upload', component: testUploadPage },
-	{ path: '/test-add-product', name: 'testAddProduct', component:testAddProduct },
-	{ path: '/test-slider', name: 'testSlider', component:testSlider },
-	{ path: '/test-respons', name: 'testRespons', component:testRespons },
+	{ path: '/add-product', name: 'addProduct', component:addProduct },
 ]
 
 const router = new VueRouter({

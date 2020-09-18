@@ -11,10 +11,17 @@
 			</li>
 		</ul>
 		<div class="cart__content">
-			<component v-bind:is="currentTabComponent"></component>
-			<div v-show="false" class="cart__payment"></div>
+			<component  
+			v-if="page != 1"
+			v-bind:is="currentTabComponent"></component>
+			<cartShiping
+			v-if="page == 1"
+			v-on:onValided="shippingValid"
+			/>
 		</div>
-		<div class="cart__nav-btn">
+		<div 
+		v-show="page < 2"
+		class="cart__nav-btn">
 			<button
 				v-on:click="onPrevTabs"
 				v-show="page > 0"
@@ -34,9 +41,11 @@
 </template>
 
 <script>
-import cartCheckout from "@/components/cart/cart-checkout";
 import cartProductCard from "@/components/cart/cart-product-card";
+import cartCheckout from "@/components/cart/cart-checkout";
 import cartShiping from "@/components/cart/cart-shipping";
+import cartFinish from "@/components/cart/cart-finish"
+import { mapGetters } from 'vuex';
 
 export default {
 	components: {
@@ -46,12 +55,14 @@ export default {
 	},
 	data() {
 		return {
-			tabsLink: ["Checkout", "Shipping information", "Payment"],
-			tabs: [cartCheckout, cartShiping],
+			tabsLink: ["Checkout", "Shipping information", "Finish"],
+			tabs: [cartCheckout, cartShiping, cartFinish],
 			page: 0,
+			condition: false,
 		};
 	},
 	computed: {
+		...mapGetters(['CART']),
 		currentTabComponent: function () {
 			return this.tabs[this.page];
 		},
@@ -59,13 +70,27 @@ export default {
 	methods: {
 		onNextTabs() {
 			if (this.page > 1) return;
-			this.page++;
+			if(this.condition) this.page++;
+			this.condition = false;
 		},
 		onPrevTabs() {
 			if (this.page < 1) return;
 			this.page--;
+			this.condition = !this.condition;
 		},
+		shippingValid() {
+			this.condition = true;
+		}
 	},
+	watch: {
+		CART() {
+			if (this.CART.length > 0) this.condition = true;
+			if (this.CART.length < 1) this.page = 0;
+		}
+	},
+	mounted() {
+		if (this.CART.length > 0) this.condition = true;
+	}
 };
 </script>
 
